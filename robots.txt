@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://jamesdemon923.github.io/sitemap.xml
+Sitemap: https://jamesdemon923.github.io/james/sitemap.xml
