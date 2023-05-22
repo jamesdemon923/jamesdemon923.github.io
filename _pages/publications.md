@@ -3,7 +3,7 @@ layout: page
 permalink: /publications/
 title: publications
 description: publications by categories in reversed chronological order.
-years: [1986,1967]
+years: [1999,1986,1967]
 nav: true
 nav_order: 1
 ---
