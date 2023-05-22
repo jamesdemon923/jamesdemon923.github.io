@@ -13,15 +13,17 @@ profile:
     <!--<p>123 your address street</p>-->
     <p>Gainesville, Florida 32608</p>
 
-news: true  # includes a list of news items
-latest_posts: true  # includes a list of the newest posts
+news: false  # includes a list of news items
+latest_posts: false  # includes a list of the newest posts
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+Hi! I'm Haolan Xu(许皓岚), currently a Master student in University of Florida, supervised by [Prof. Jorg Peters](https://www.cise.ufl.edu/~jorg/). 
+
+My research mainly focuses on modeling and rendering. 
+
+Besides the research, I’m a big fan of video games([Red Dead Redemption](https://www.rockstargames.com/reddeadredemption2/), [Call of Duty](https://www.callofduty.com/)), as well as a devoted basketball fan.
 
