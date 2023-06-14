@@ -156,9 +156,9 @@ disqus_shortname: haolanxu # put your disqus shortname
 # External sources.
 # If you have blog posts published on medium.com or other external sources,
 # you can display them in your blog by adding a link to the RSS feed.
-external_sources:
-  - name: jamesdemon923.com
-    rss_url: https://jamesdemon923.github.io/
+# external_sources:
+  # - name: Haolanxu
+  # rss_url: https://www.zhihu.com/people/xu-hao-lan-24
 
 # -----------------------------------------------------------------------------
 # Collections
