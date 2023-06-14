@@ -14,7 +14,7 @@ toc:
 
 Optical flow is the pattern of apparent motion of image objects between two consecutive frames caused by the movement of object or camera. It is 2D vector field where each vector is a displacement vector showing the movement of points from first frame to second. Consider the image below.
 
-![optical_flow_basic1.jpg](https://docs.opencv.org/3.4/optical_flow_basic1.jpg)
+![optical_flow_basic1.jpg](https://docs.opencv.org/3.4/optical_flow_basic1.jpg#pic_center)
 
 It shows a ball moving in 5 consecutive frames. The arrow shows its displacement vector.
 
@@ -24,11 +24,11 @@ Optical flow works on several assumptions:
 
 2. Neighboring pixels have similar motion.
 
-Consider a pixel $I(x,y,t)$ in first frame (A new dimension, time, is added here). It moves by distance ($dx$,$dy$) in next frame taken after $dt$ time. Since those pixels are the same and intensity does not change:
+Consider a pixel $$I(x,y,t)$$ in first frame (A new dimension, time, is added here). It moves by distance $$(dx,dy)$$ in next frame taken after $$dt$$ time. Since those pixels are the same and intensity does not change:
 $$
 I(x,y,t)=I(x+dx,y+dy,t+dt)
 $$
-Then take taylor series approximation of right-hand side, remove common terms and divide by $dt$ to get the following equation:
+Then take taylor series approximation of right-hand side, remove common terms and divide by $$dt$$ to get the following equation:
 $$
 f_{x}u+f_{y}v+f_{t}=0
 $$
@@ -37,7 +37,7 @@ $$
 f_{x}=\cfrac{∂f}{∂x};f_{y}=\cfrac{∂f}{∂y}\\
 u=\cfrac{dx}{dt};v=\cfrac{dy}{dt}
 $$
-Above equation is called **Optical Flow equation**. In it, we can find $f_{x}$ and $f_{y}$, they are image gradients. Similarly ft is the gradient along time. But (u,v) is unknown. We cannot solve this one equation with two unknown variables. So several methods are provided to solve this problem and one of them is Lucas-Kanade.
+Above equation is called **Optical Flow equation**. In it, we can find $$f_{x}$$ and $$f_{y}$$, they are image gradients. Similarly ft is the gradient along time. But (u,v) is unknown. We cannot solve this one equation with two unknown variables. So several methods are provided to solve this problem and one of them is Lucas-Kanade.
 
 ## Algorithms
 
@@ -55,11 +55,11 @@ There is also an algorithm called "sparse optical flow" that tracks only a subse
 
 #### [FlowNet](https://arxiv.org/pdf/1504.06852.pdf)
 
-![image-20230614162048802](C:\Users\James\AppData\Roaming\Typora\typora-user-images\image-20230614162048802.png#pic_center)
+<img src="C:\Users\James\AppData\Roaming\Typora\typora-user-images\image-20230614162048802.png#pic_center" alt="image-20230614162048802" style="zoom: 67%;" />
 
 #### [FlowNet 2.0](https://arxiv.org/pdf/1612.01925.pdf)
 
-![image-20230614162009118](C:\Users\James\AppData\Roaming\Typora\typora-user-images\image-20230614162009118.png#pic_center)
+<img src="C:\Users\James\AppData\Roaming\Typora\typora-user-images\image-20230614162009118.png#pic_center" alt="image-20230614162009118" style="zoom:67%;" />
 
 #### [PWC-Net](https://arxiv.org/pdf/1709.02371.pdf)
 
