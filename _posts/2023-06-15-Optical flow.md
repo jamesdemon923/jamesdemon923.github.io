@@ -14,7 +14,7 @@ toc:
 
 Optical flow is the pattern of apparent motion of image objects between two consecutive frames caused by the movement of object or camera. It is 2D vector field where each vector is a displacement vector showing the movement of points from first frame to second. Consider the image below.
 
-{% include figure.html path="assets/img/optical_flow/optical_flow_basic.jpg" width = "100" height = "100" div align=right %}
+<img src="assets/img/optical_flow/optical_flow_basic.jpg" width="100" height="100" align="center" />
 
 It shows a ball moving in 5 consecutive frames. The arrow shows its displacement vector.
 
