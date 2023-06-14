@@ -10,9 +10,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>What is optical flow | Haolan  Xu</title>
+    <title>Optical flow | Haolan  Xu</title>
     <meta name="author" content="Haolan  Xu">
-    <meta name="description" content="About the optical flow">
+    <meta name="description" content="About the optical flow and related algorithms">
     <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
 
 
@@ -132,7 +132,7 @@
 <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">What is optical flow</h1>
+    <h1 class="post-title">Optical flow</h1>
     <p class="post-meta">June 14, 2023</p>
     <p class="post-tags">
       <a href="/blog/2023"> <i class="fas fa-calendar fa-sm"></i> 2023 </a>
@@ -151,9 +151,65 @@
   <article class="post-content">
     
     <div id="markdown-content">
-      <h2 id="introduction">Introduction</h2>
+      <h2 id="optical-flow">Optical flow</h2>
 
-<h2 id="what-is-optical-flow">What is optical flow</h2>
+<p>Optical flow is the pattern of apparent motion of image objects between two consecutive frames caused by the movement of object or camera. It is 2D vector field where each vector is a displacement vector showing the movement of points from first frame to second. Consider the image below.</p>
+
+<p><img src="https://docs.opencv.org/3.4/optical_flow_basic1.jpg" alt="optical_flow_basic1.jpg"></p>
+
+<p>It shows a ball moving in 5 consecutive frames. The arrow shows its displacement vector.</p>
+
+<p>Optical flow works on several assumptions:</p>
+
+<ol>
+  <li>
+    <p>The pixel intensities of an object do not change between consecutive frames.</p>
+  </li>
+  <li>
+    <p>Neighboring pixels have similar motion.</p>
+  </li>
+</ol>
+
+<p>Consider a pixel $I(x,y,t)$ in first frame (A new dimension, time, is added here). It moves by distance ($dx$,$dy$) in next frame taken after $dt$ time. Since those pixels are the same and intensity does not change:
+\(I(x,y,t)=I(x+dx,y+dy,t+dt)\)
+Then take taylor series approximation of right-hand side, remove common terms and divide by $dt$ to get the following equation:
+\(f_{x}u+f_{y}v+f_{t}=0\)
+where:
+\(f_{x}=\cfrac{∂f}{∂x};f_{y}=\cfrac{∂f}{∂y}\\
+u=\cfrac{dx}{dt};v=\cfrac{dy}{dt}\)
+Above equation is called <strong>Optical Flow equation</strong>. In it, we can find $f_{x}$ and $f_{y}$, they are image gradients. Similarly ft is the gradient along time. But (u,v) is unknown. We cannot solve this one equation with two unknown variables. So several methods are provided to solve this problem and one of them is Lucas-Kanade.</p>
+
+<h2 id="algorithms">Algorithms</h2>
+
+<h3 id="traditional-algorithms">Traditional algorithms</h3>
+
+<p>The ideal output of an optical flow algorithm is an estimated correlation of the velocity of each pixel in two frames, or equivalently, a vector of displacements for each pixel in one image, indicating the relative position of that pixel in the other image, which is often called “dense optical flow” if every pixel in the image is used.</p>
+
+<p>There is also an algorithm called “sparse optical flow” that tracks only a subset of points in the image. This algorithm is usually fast and reliable because it focuses attention only on specific points that can be easily tracked, and the computational cost of sparse tracking is much lower than that of dense tracking.</p>
+
+<h4 id="lucas-kanade-optical-flow-sparse-optical-flow"><a href="https://dl.acm.org/doi/10.5555/1623264.1623280" rel="external nofollow noopener" target="_blank">Lucas-Kanade Optical flow (sparse optical flow)</a></h4>
+
+<h4 id="horn-schunck-optical-flow-dense-optical-flow">Horn-Schunck Optical flow (dense optical flow)</h4>
+
+<h3 id="deep-learning-algorithms">Deep learning algorithms</h3>
+
+<h4 id="flownet"><a href="https://arxiv.org/pdf/1504.06852.pdf" rel="external nofollow noopener" target="_blank">FlowNet</a></h4>
+
+<p><img src="C:\Users\James\AppData\Roaming\Typora\typora-user-images\image-20230614162048802.png#pic_center" alt="image-20230614162048802"></p>
+
+<h4 id="flownet-20"><a href="https://arxiv.org/pdf/1612.01925.pdf" rel="external nofollow noopener" target="_blank">FlowNet 2.0</a></h4>
+
+<p><img src="C:\Users\James\AppData\Roaming\Typora\typora-user-images\image-20230614162009118.png#pic_center" alt="image-20230614162009118"></p>
+
+<h4 id="pwc-net"><a href="https://arxiv.org/pdf/1709.02371.pdf" rel="external nofollow noopener" target="_blank">PWC-Net</a></h4>
+
+<p>Refer to Figure,3</p>
+
+<h4 id="maskflownet"><a href="https://arxiv.org/pdf/2003.10955.pdf" rel="external nofollow noopener" target="_blank">MaskFlownet</a></h4>
+
+<p>Maskflownest takes the effect of occlusion into account when solving for the optical flow field</p>
+
+<h4 id="ppac-hd3"><a href="https://arxiv.org/pdf/2003.14407.pdf" rel="external nofollow noopener" target="_blank">PPAC-HD3</a></h4>
 
     </div>
   </article>
@@ -172,7 +228,7 @@
   
 
   <li class="my-2">
-    <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2023/IMGUI/">How to use IMGUI</a>
+    <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2023/IMGUI/">How to use ImGui</a>
   </li>
 
   

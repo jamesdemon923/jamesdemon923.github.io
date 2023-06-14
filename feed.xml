@@ -1,9 +1,73 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://jamesdemon923.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jamesdemon923.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-06-14T01:44:21+00:00</updated><id>https://jamesdemon923.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
-</subtitle><entry><title type="html">How to use IMGUI</title><link href="https://jamesdemon923.github.io/blog/2023/IMGUI/" rel="alternate" type="text/html" title="How to use IMGUI" /><published>2023-06-14T00:00:00+00:00</published><updated>2023-06-14T00:00:00+00:00</updated><id>https://jamesdemon923.github.io/blog/2023/IMGUI</id><content type="html" xml:base="https://jamesdemon923.github.io/blog/2023/IMGUI/"><![CDATA[<h2 id="what-is-imgui">What is IMGUI</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://jamesdemon923.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jamesdemon923.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-06-14T21:14:55+00:00</updated><id>https://jamesdemon923.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+</subtitle><entry><title type="html">How to use ImGui</title><link href="https://jamesdemon923.github.io/blog/2023/IMGUI/" rel="alternate" type="text/html" title="How to use ImGui" /><published>2023-06-14T00:00:00+00:00</published><updated>2023-06-14T00:00:00+00:00</updated><id>https://jamesdemon923.github.io/blog/2023/IMGUI</id><content type="html" xml:base="https://jamesdemon923.github.io/blog/2023/IMGUI/"><![CDATA[<h2 id="what-is-imgui">What is ImGui</h2>
 
-<h2 id="how-to-use-it">How to use it</h2>]]></content><author><name></name></author><category term="Tool" /><category term="Note" /><summary type="html"><![CDATA[How to use IMGUI]]></summary></entry><entry><title type="html">What is optical flow</title><link href="https://jamesdemon923.github.io/blog/2023/Optical-flow/" rel="alternate" type="text/html" title="What is optical flow" /><published>2023-06-14T00:00:00+00:00</published><updated>2023-06-14T00:00:00+00:00</updated><id>https://jamesdemon923.github.io/blog/2023/Optical%20flow</id><content type="html" xml:base="https://jamesdemon923.github.io/blog/2023/Optical-flow/"><![CDATA[<h2 id="introduction">Introduction</h2>
+<p>ImGui stands for “Immediate Mode Graphical User Interface”. It is a programming paradigm used in user interface development where UI elements are updated and rendered each frame. In contrast to retained mode GUI, IMGUI does not keep a persistent model of the UI state.</p>
 
-<h2 id="what-is-optical-flow">What is optical flow</h2>]]></content><author><name></name></author><category term="Vision" /><category term="Report" /><summary type="html"><![CDATA[About the optical flow]]></summary></entry><entry><title type="html">What is NeRF (Neural Radiance Fields)</title><link href="https://jamesdemon923.github.io/blog/2023/NeRF/" rel="alternate" type="text/html" title="What is NeRF (Neural Radiance Fields)" /><published>2023-06-13T00:00:00+00:00</published><updated>2023-06-13T00:00:00+00:00</updated><id>https://jamesdemon923.github.io/blog/2023/NeRF</id><content type="html" xml:base="https://jamesdemon923.github.io/blog/2023/NeRF/"><![CDATA[<h2 id="introduction">Introduction</h2>
+<p>Every frame, the entire user interface is recreated using a series of function calls, each of which may cause immediate rendering of UI elements on the screen. User interactions, like button clicks or slider changes, are processed in the same function that draws the UI element, typically by returning a value indicating the interaction.</p>
+
+<p>One of the most prominent libraries implementing the IMGUI approach is <a href="https://github.com/ocornut/imgui"><strong>Dear ImGui</strong></a>. It is a bloat-free graphical user interface library for C++ primarily used for tools and game development.</p>
+
+<h2 id="how-to-use-it">How to use it</h2>
+
+<p>Integrating ImGui into our project will require some setup. We will need to initialize ImGui, set up the platform and renderer bindings, and integrate ImGui’s rendering into our main render loop. In the case of OpenGL, we would typically use the imgui_impl_glfw.cpp and imgui_impl_opengl3.cpp (or imgui_impl_opengl2.cpp, depending on the version of OpenGL we are using) files to set up the necessary bindings.</p>]]></content><author><name></name></author><category term="Tool" /><category term="Note" /><summary type="html"><![CDATA[A tutorial of ImGui]]></summary></entry><entry><title type="html">Optical flow</title><link href="https://jamesdemon923.github.io/blog/2023/Optical-flow/" rel="alternate" type="text/html" title="Optical flow" /><published>2023-06-14T00:00:00+00:00</published><updated>2023-06-14T00:00:00+00:00</updated><id>https://jamesdemon923.github.io/blog/2023/Optical%20flow</id><content type="html" xml:base="https://jamesdemon923.github.io/blog/2023/Optical-flow/"><![CDATA[<h2 id="optical-flow">Optical flow</h2>
+
+<p>Optical flow is the pattern of apparent motion of image objects between two consecutive frames caused by the movement of object or camera. It is 2D vector field where each vector is a displacement vector showing the movement of points from first frame to second. Consider the image below.</p>
+
+<p><img src="https://docs.opencv.org/3.4/optical_flow_basic1.jpg" alt="optical_flow_basic1.jpg" /></p>
+
+<p>It shows a ball moving in 5 consecutive frames. The arrow shows its displacement vector.</p>
+
+<p>Optical flow works on several assumptions:</p>
+
+<ol>
+  <li>
+    <p>The pixel intensities of an object do not change between consecutive frames.</p>
+  </li>
+  <li>
+    <p>Neighboring pixels have similar motion.</p>
+  </li>
+</ol>
+
+<p>Consider a pixel $I(x,y,t)$ in first frame (A new dimension, time, is added here). It moves by distance ($dx$,$dy$) in next frame taken after $dt$ time. Since those pixels are the same and intensity does not change:
+\(I(x,y,t)=I(x+dx,y+dy,t+dt)\)
+Then take taylor series approximation of right-hand side, remove common terms and divide by $dt$ to get the following equation:
+\(f_{x}u+f_{y}v+f_{t}=0\)
+where:
+\(f_{x}=\cfrac{∂f}{∂x};f_{y}=\cfrac{∂f}{∂y}\\
+u=\cfrac{dx}{dt};v=\cfrac{dy}{dt}\)
+Above equation is called <strong>Optical Flow equation</strong>. In it, we can find $f_{x}$ and $f_{y}$, they are image gradients. Similarly ft is the gradient along time. But (u,v) is unknown. We cannot solve this one equation with two unknown variables. So several methods are provided to solve this problem and one of them is Lucas-Kanade.</p>
+
+<h2 id="algorithms">Algorithms</h2>
+
+<h3 id="traditional-algorithms">Traditional algorithms</h3>
+
+<p>The ideal output of an optical flow algorithm is an estimated correlation of the velocity of each pixel in two frames, or equivalently, a vector of displacements for each pixel in one image, indicating the relative position of that pixel in the other image, which is often called “dense optical flow” if every pixel in the image is used.</p>
+
+<p>There is also an algorithm called “sparse optical flow” that tracks only a subset of points in the image. This algorithm is usually fast and reliable because it focuses attention only on specific points that can be easily tracked, and the computational cost of sparse tracking is much lower than that of dense tracking.</p>
+
+<h4 id="lucas-kanade-optical-flow-sparse-optical-flow"><a href="https://dl.acm.org/doi/10.5555/1623264.1623280">Lucas-Kanade Optical flow (sparse optical flow)</a></h4>
+
+<h4 id="horn-schunck-optical-flow-dense-optical-flow">Horn-Schunck Optical flow (dense optical flow)</h4>
+
+<h3 id="deep-learning-algorithms">Deep learning algorithms</h3>
+
+<h4 id="flownet"><a href="https://arxiv.org/pdf/1504.06852.pdf">FlowNet</a></h4>
+
+<p><img src="C:\Users\James\AppData\Roaming\Typora\typora-user-images\image-20230614162048802.png#pic_center" alt="image-20230614162048802" /></p>
+
+<h4 id="flownet-20"><a href="https://arxiv.org/pdf/1612.01925.pdf">FlowNet 2.0</a></h4>
+
+<p><img src="C:\Users\James\AppData\Roaming\Typora\typora-user-images\image-20230614162009118.png#pic_center" alt="image-20230614162009118" /></p>
+
+<h4 id="pwc-net"><a href="https://arxiv.org/pdf/1709.02371.pdf">PWC-Net</a></h4>
+
+<p>Refer to Figure,3</p>
+
+<h4 id="maskflownet"><a href="https://arxiv.org/pdf/2003.10955.pdf">MaskFlownet</a></h4>
+
+<p>Maskflownest takes the effect of occlusion into account when solving for the optical flow field</p>
+
+<h4 id="ppac-hd3"><a href="https://arxiv.org/pdf/2003.14407.pdf">PPAC-HD3</a></h4>]]></content><author><name></name></author><category term="Vision" /><category term="Report" /><summary type="html"><![CDATA[About the optical flow and related algorithms]]></summary></entry><entry><title type="html">What is NeRF (Neural Radiance Fields)</title><link href="https://jamesdemon923.github.io/blog/2023/NeRF/" rel="alternate" type="text/html" title="What is NeRF (Neural Radiance Fields)" /><published>2023-06-13T00:00:00+00:00</published><updated>2023-06-13T00:00:00+00:00</updated><id>https://jamesdemon923.github.io/blog/2023/NeRF</id><content type="html" xml:base="https://jamesdemon923.github.io/blog/2023/NeRF/"><![CDATA[<h2 id="introduction">Introduction</h2>
 
 <h2 id="nerf">NeRF</h2>]]></content><author><name></name></author><category term="Graphics" /><category term="Vision" /><category term="Report" /><summary type="html"><![CDATA[NeRF]]></summary></entry><entry><title type="html">Morphable model of 3D faces</title><link href="https://jamesdemon923.github.io/blog/2023/3DMM/" rel="alternate" type="text/html" title="Morphable model of 3D faces" /><published>2023-06-12T14:14:00+00:00</published><updated>2023-06-12T14:14:00+00:00</updated><id>https://jamesdemon923.github.io/blog/2023/3DMM</id><content type="html" xml:base="https://jamesdemon923.github.io/blog/2023/3DMM/"><![CDATA[<h2 id="introduction">Introduction</h2>
 
