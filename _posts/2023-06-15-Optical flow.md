@@ -16,8 +16,7 @@ Optical flow is the pattern of apparent motion of image objects between two cons
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-    <div aligh="center">
-        {% include figure.html path="assets/img/optical_flow/optical_flow_basic.jpg" %}
+        {% include figure.html path="assets/img/optical_flow/optical_flow_basic.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
 
@@ -72,27 +71,19 @@ There is also an algorithm called "sparse optical flow" that tracks only a subse
 
 #### [FlowNet](https://arxiv.org/pdf/1504.06852.pdf)
 
-
-
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-    <div aligh="center">
-        {% include figure.html path="assets/img/optical_flow/Structure of FlowNet.png" %}
+        {% include figure.html path="assets/img/optical_flow/Structure of FlowNet.png" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
 
 #### [FlowNet 2.0](https://arxiv.org/pdf/1612.01925.pdf)
 
-
-
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-    <div aligh="center">
-        {% include figure.html path="assets/img/optical_flow/Structure of FlowNet2.png" %}
+        {% include figure.html path="assets/img/optical_flow/Structure of FlowNet2.png" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
-
-
 
 #### [PWC-Net](https://arxiv.org/pdf/1709.02371.pdf)
 
