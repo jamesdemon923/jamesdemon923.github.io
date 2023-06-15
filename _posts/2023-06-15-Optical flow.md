@@ -26,30 +26,28 @@ Optical flow works on several assumptions:
 
 Consider a pixel $$I(x,y,t)$$ in first frame (A new dimension, time, is added here). It moves by distance $$(dx,dy)$$ in next frame taken after $$dt$$ time. Since those pixels are the same and intensity does not change:
 
-\begin{equation}
 
+$$
 I(x,y,t)=I(x+dx,y+dy,t+dt)
+$$
 
-\end{equation}
 
 Then take taylor series approximation of right-hand side, remove common terms and divide by $$dt$$ to get the following equation:
 
-\begin{equation}
 
+$$
 f_{x}u+f_{y}v+f_{t}=0
-
-\end{equation}
-
+$$
 
 
 where:
 
-\begin{equation}
 
+$$
 f_{x}=\cfrac{∂f}{∂x};f_{y}=\cfrac{∂f}{∂y}\\\
 u=\cfrac{dx}{dt};v=\cfrac{dy}{dt}
+$$
 
-\end{equation}
 
 Above equation is called **Optical Flow equation**. In it, we can find $$f_{x}$$ and $$f_{y}$$, they are image gradients. Similarly ft is the gradient along time. But (u,v) is unknown. We cannot solve this one equation with two unknown variables. So several methods are provided to solve this problem and one of them is Lucas-Kanade.
 
