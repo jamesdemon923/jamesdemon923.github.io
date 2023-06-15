@@ -14,7 +14,15 @@ toc:
 
 Optical flow is the pattern of apparent motion of image objects between two consecutive frames caused by the movement of object or camera. It is 2D vector field where each vector is a displacement vector showing the movement of points from first frame to second. Consider the image below.
 
-<img src="assets/img/optical_flow/optical_flow_basic.jpg" width="100" height="100" align="center" />
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+    <div aligh="center">
+        {% include figure.html path="assets/img/optical_flow/optical_flow_basic.jpg" %}
+    </div>
+</div>
+<div class="caption">
+    Optical flow
+</div>
 
 It shows a ball moving in 5 consecutive frames. The arrow shows its displacement vector.
 
@@ -67,11 +75,27 @@ There is also an algorithm called "sparse optical flow" that tracks only a subse
 
 #### [FlowNet](https://arxiv.org/pdf/1504.06852.pdf)
 
-<img src="assets/img/optical_flow/Structure of FlowNet.png" width="100" height="100" align="center" />
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+    <div aligh="center">
+        {% include figure.html path="assets/img/optical_flow/Structure of FlowNet.png" %}
+    </div>
+</div>
+<div class="caption">
+    The structure of FlowNet
+</div>
 
 #### [FlowNet 2.0](https://arxiv.org/pdf/1612.01925.pdf)
 
-<img src="assets/img/optical_flow/Structure of FlowNet2.png" width="100" height="100" align="center" />
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+    <div aligh="center">
+        {% include figure.html path="assets/img/optical_flow/Structure of FlowNet2.png" %}
+    </div>
+</div>
+<div class="caption">
+    The structure of FlowNet2
+</div>
 
 #### [PWC-Net](https://arxiv.org/pdf/1709.02371.pdf)
 
