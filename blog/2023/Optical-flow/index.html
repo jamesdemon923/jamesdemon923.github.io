@@ -170,16 +170,32 @@
   </li>
 </ol>
 
-<p>Consider a pixel \(I(x,y,t)\) in first frame (A new dimension, time, is added here). It moves by distance \((dx,dy)\) in next frame taken after \(dt\) time. Since those pixels are the same and intensity does not change:
-\(I(x,y,t)=I(x+dx,y+dy,t+dt)\)
-Then take taylor series approximation of right-hand side, remove common terms and divide by \(dt\) to get the following equation:</p>
+<p>Consider a pixel \(I(x,y,t)\) in first frame (A new dimension, time, is added here). It moves by distance \((dx,dy)\) in next frame taken after \(dt\) time. Since those pixels are the same and intensity does not change:</p>
 
-<p>\(f_{x}u+f_{y}v+f_{t}=0\)
-where:</p>
+<p>\begin{equation}</p>
 
-<p>\(f_{x}=\cfrac{∂f}{∂x};f_{y}=\cfrac{∂f}{∂y}\\
-u=\cfrac{dx}{dt};v=\cfrac{dy}{dt}\)
-Above equation is called <strong>Optical Flow equation</strong>. In it, we can find \(f_{x}\) and \(f_{y}\), they are image gradients. Similarly ft is the gradient along time. But (u,v) is unknown. We cannot solve this one equation with two unknown variables. So several methods are provided to solve this problem and one of them is Lucas-Kanade.</p>
+<p>I(x,y,t)=I(x+dx,y+dy,t+dt)</p>
+
+<p>\end{equation}</p>
+
+<p>Then take taylor series approximation of right-hand side, remove common terms and divide by \(dt\) to get the following equation:</p>
+
+<p>\begin{equation}</p>
+
+<p>f_{x}u+f_{y}v+f_{t}=0</p>
+
+<p>\end{equation}</p>
+
+<p>where:</p>
+
+<p>\begin{equation}</p>
+
+<p>f_{x}=\cfrac{∂f}{∂x};f_{y}=\cfrac{∂f}{∂y}\<br>
+u=\cfrac{dx}{dt};v=\cfrac{dy}{dt}</p>
+
+<p>\end{equation}</p>
+
+<p>Above equation is called <strong>Optical Flow equation</strong>. In it, we can find \(f_{x}\) and \(f_{y}\), they are image gradients. Similarly ft is the gradient along time. But (u,v) is unknown. We cannot solve this one equation with two unknown variables. So several methods are provided to solve this problem and one of them is Lucas-Kanade.</p>
 
 <h2 id="algorithms">Algorithms</h2>
 
@@ -197,7 +213,11 @@ Above equation is called <strong>Optical Flow equation</strong>. In it, we can f
 
 <h4 id="flownet"><a href="https://arxiv.org/pdf/1504.06852.pdf" rel="external nofollow noopener" target="_blank">FlowNet</a></h4>
 
+<p><img src="assets/img/optical_flow/Structure%20of%20FlowNet.png" width="100" height="100" align="center"></p>
+
 <h4 id="flownet-20"><a href="https://arxiv.org/pdf/1612.01925.pdf" rel="external nofollow noopener" target="_blank">FlowNet 2.0</a></h4>
+
+<p><img src="assets/img/optical_flow/Structure%20of%20FlowNet2.png" width="100" height="100" align="center"></p>
 
 <h4 id="pwc-net"><a href="https://arxiv.org/pdf/1709.02371.pdf" rel="external nofollow noopener" target="_blank">PWC-Net</a></h4>
 

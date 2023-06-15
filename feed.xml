@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://jamesdemon923.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jamesdemon923.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-06-14T23:10:27+00:00</updated><id>https://jamesdemon923.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://jamesdemon923.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jamesdemon923.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-06-15T00:05:21+00:00</updated><id>https://jamesdemon923.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 </subtitle><entry><title type="html">How to use ImGui</title><link href="https://jamesdemon923.github.io/blog/2023/IMGUI/" rel="alternate" type="text/html" title="How to use ImGui" /><published>2023-06-14T00:00:00+00:00</published><updated>2023-06-14T00:00:00+00:00</updated><id>https://jamesdemon923.github.io/blog/2023/IMGUI</id><content type="html" xml:base="https://jamesdemon923.github.io/blog/2023/IMGUI/"><![CDATA[<h2 id="what-is-imgui">What is ImGui</h2>
 
 <p>ImGui stands for “Immediate Mode Graphical User Interface”. It is a programming paradigm used in user interface development where UI elements are updated and rendered each frame. In contrast to retained mode GUI, IMGUI does not keep a persistent model of the UI state.</p>
@@ -28,16 +28,32 @@
   </li>
 </ol>
 
-<p>Consider a pixel \(I(x,y,t)\) in first frame (A new dimension, time, is added here). It moves by distance \((dx,dy)\) in next frame taken after \(dt\) time. Since those pixels are the same and intensity does not change:
-\(I(x,y,t)=I(x+dx,y+dy,t+dt)\)
-Then take taylor series approximation of right-hand side, remove common terms and divide by \(dt\) to get the following equation:</p>
+<p>Consider a pixel \(I(x,y,t)\) in first frame (A new dimension, time, is added here). It moves by distance \((dx,dy)\) in next frame taken after \(dt\) time. Since those pixels are the same and intensity does not change:</p>
 
-<p>\(f_{x}u+f_{y}v+f_{t}=0\)
-where:</p>
+<p>\begin{equation}</p>
 
-<p>\(f_{x}=\cfrac{∂f}{∂x};f_{y}=\cfrac{∂f}{∂y}\\
-u=\cfrac{dx}{dt};v=\cfrac{dy}{dt}\)
-Above equation is called <strong>Optical Flow equation</strong>. In it, we can find \(f_{x}\) and \(f_{y}\), they are image gradients. Similarly ft is the gradient along time. But (u,v) is unknown. We cannot solve this one equation with two unknown variables. So several methods are provided to solve this problem and one of them is Lucas-Kanade.</p>
+<p>I(x,y,t)=I(x+dx,y+dy,t+dt)</p>
+
+<p>\end{equation}</p>
+
+<p>Then take taylor series approximation of right-hand side, remove common terms and divide by \(dt\) to get the following equation:</p>
+
+<p>\begin{equation}</p>
+
+<p>f_{x}u+f_{y}v+f_{t}=0</p>
+
+<p>\end{equation}</p>
+
+<p>where:</p>
+
+<p>\begin{equation}</p>
+
+<p>f_{x}=\cfrac{∂f}{∂x};f_{y}=\cfrac{∂f}{∂y}\<br />
+u=\cfrac{dx}{dt};v=\cfrac{dy}{dt}</p>
+
+<p>\end{equation}</p>
+
+<p>Above equation is called <strong>Optical Flow equation</strong>. In it, we can find \(f_{x}\) and \(f_{y}\), they are image gradients. Similarly ft is the gradient along time. But (u,v) is unknown. We cannot solve this one equation with two unknown variables. So several methods are provided to solve this problem and one of them is Lucas-Kanade.</p>
 
 <h2 id="algorithms">Algorithms</h2>
 
@@ -55,7 +71,11 @@ Above equation is called <strong>Optical Flow equation</strong>. In it, we can f
 
 <h4 id="flownet"><a href="https://arxiv.org/pdf/1504.06852.pdf">FlowNet</a></h4>
 
+<p><img src="assets/img/optical_flow/Structure of FlowNet.png" width="100" height="100" align="center" /></p>
+
 <h4 id="flownet-20"><a href="https://arxiv.org/pdf/1612.01925.pdf">FlowNet 2.0</a></h4>
+
+<p><img src="assets/img/optical_flow/Structure of FlowNet2.png" width="100" height="100" align="center" /></p>
 
 <h4 id="pwc-net"><a href="https://arxiv.org/pdf/1709.02371.pdf">PWC-Net</a></h4>
 
