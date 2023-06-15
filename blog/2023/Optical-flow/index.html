@@ -157,7 +157,6 @@
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-    <div aligh="center">
         <figure>
 
   <picture>
@@ -168,7 +167,7 @@
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/optical_flow/optical_flow_basic.jpg" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    <img src="/assets/img/optical_flow/optical_flow_basic.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
   </picture>
 
@@ -177,62 +176,52 @@
     </div>
 </div>
 
-It shows a ball moving in 5 consecutive frames. The arrow shows its displacement vector.
+<p>It shows a ball moving in 5 consecutive frames. The arrow shows its displacement vector.</p>
 
-Optical flow works on several assumptions:
+<p>Optical flow works on several assumptions:</p>
 
-1. The pixel intensities of an object do not change between consecutive frames.
+<ol>
+  <li>
+    <p>The pixel intensities of an object do not change between consecutive frames.</p>
+  </li>
+  <li>
+    <p>Neighboring pixels have similar motion.</p>
+  </li>
+</ol>
 
-2. Neighboring pixels have similar motion.
+<p>Consider a pixel \(I(x,y,t)\) in first frame (A new dimension, time, is added here). It moves by distance \((dx,dy)\) in next frame taken after \(dt\) time. Since those pixels are the same and intensity does not change:</p>
 
-Consider a pixel $$I(x,y,t)$$ in first frame (A new dimension, time, is added here). It moves by distance $$(dx,dy)$$ in next frame taken after $$dt$$ time. Since those pixels are the same and intensity does not change:
+\[I(x,y,t)=I(x+dx,y+dy,t+dt)\]
 
+<p>Then take taylor series approximation of right-hand side, remove common terms and divide by \(dt\) to get the following equation:</p>
 
-$$
-I(x,y,t)=I(x+dx,y+dy,t+dt)
-$$
+\[f_{x}u+f_{y}v+f_{t}=0\]
 
+<p>where:</p>
 
-Then take taylor series approximation of right-hand side, remove common terms and divide by $$dt$$ to get the following equation:
+\[f_{x}=\cfrac{∂f}{∂x};f_{y}=\cfrac{∂f}{∂y}\\\
+u=\cfrac{dx}{dt};v=\cfrac{dy}{dt}\]
 
+<p>Above equation is called <strong>Optical Flow equation</strong>. In it, we can find \(f_{x}\) and \(f_{y}\), they are image gradients. Similarly ft is the gradient along time. But (u,v) is unknown. We cannot solve this one equation with two unknown variables. So several methods are provided to solve this problem and one of them is Lucas-Kanade.</p>
 
-$$
-f_{x}u+f_{y}v+f_{t}=0
-$$
+<h2 id="algorithms">Algorithms</h2>
 
+<h3 id="traditional-algorithms">Traditional algorithms</h3>
 
-where:
+<p>The ideal output of an optical flow algorithm is an estimated correlation of the velocity of each pixel in two frames, or equivalently, a vector of displacements for each pixel in one image, indicating the relative position of that pixel in the other image, which is often called “dense optical flow” if every pixel in the image is used.</p>
 
+<p>There is also an algorithm called “sparse optical flow” that tracks only a subset of points in the image. This algorithm is usually fast and reliable because it focuses attention only on specific points that can be easily tracked, and the computational cost of sparse tracking is much lower than that of dense tracking.</p>
 
-$$
-f_{x}=\cfrac{∂f}{∂x};f_{y}=\cfrac{∂f}{∂y}\\\
-u=\cfrac{dx}{dt};v=\cfrac{dy}{dt}
-$$
+<h4 id="lucas-kanade-optical-flow-sparse-optical-flow"><a href="https://dl.acm.org/doi/10.5555/1623264.1623280" rel="external nofollow noopener" target="_blank">Lucas-Kanade Optical flow (sparse optical flow)</a></h4>
 
+<h4 id="horn-schunck-optical-flow-dense-optical-flow">Horn-Schunck Optical flow (dense optical flow)</h4>
 
-Above equation is called **Optical Flow equation**. In it, we can find $$f_{x}$$ and $$f_{y}$$, they are image gradients. Similarly ft is the gradient along time. But (u,v) is unknown. We cannot solve this one equation with two unknown variables. So several methods are provided to solve this problem and one of them is Lucas-Kanade.
+<h3 id="deep-learning-algorithms">Deep learning algorithms</h3>
 
-## Algorithms
-
-### Traditional algorithms
-
-The ideal output of an optical flow algorithm is an estimated correlation of the velocity of each pixel in two frames, or equivalently, a vector of displacements for each pixel in one image, indicating the relative position of that pixel in the other image, which is often called "dense optical flow" if every pixel in the image is used.
-
-There is also an algorithm called "sparse optical flow" that tracks only a subset of points in the image. This algorithm is usually fast and reliable because it focuses attention only on specific points that can be easily tracked, and the computational cost of sparse tracking is much lower than that of dense tracking.
-
-#### [Lucas-Kanade Optical flow (sparse optical flow)](https://dl.acm.org/doi/10.5555/1623264.1623280)
-
-#### Horn-Schunck Optical flow (dense optical flow)
-
-### Deep learning algorithms
-
-#### [FlowNet](https://arxiv.org/pdf/1504.06852.pdf)
-
-
+<h4 id="flownet"><a href="https://arxiv.org/pdf/1504.06852.pdf" rel="external nofollow noopener" target="_blank">FlowNet</a></h4>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-    <div aligh="center">
         <figure>
 
   <picture>
@@ -243,7 +232,7 @@ There is also an algorithm called "sparse optical flow" that tracks only a subse
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/optical_flow/Structure%20of%20FlowNet.png" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    <img src="/assets/img/optical_flow/Structure%20of%20FlowNet.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
   </picture>
 
@@ -252,13 +241,10 @@ There is also an algorithm called "sparse optical flow" that tracks only a subse
     </div>
 </div>
 
-#### [FlowNet 2.0](https://arxiv.org/pdf/1612.01925.pdf)
-
-
+<h4 id="flownet-20"><a href="https://arxiv.org/pdf/1612.01925.pdf" rel="external nofollow noopener" target="_blank">FlowNet 2.0</a></h4>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-    <div aligh="center">
         <figure>
 
   <picture>
@@ -269,7 +255,7 @@ There is also an algorithm called "sparse optical flow" that tracks only a subse
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/optical_flow/Structure%20of%20FlowNet2.png" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    <img src="/assets/img/optical_flow/Structure%20of%20FlowNet2.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
   </picture>
 
@@ -278,20 +264,15 @@ There is also an algorithm called "sparse optical flow" that tracks only a subse
     </div>
 </div>
 
+<h4 id="pwc-net"><a href="https://arxiv.org/pdf/1709.02371.pdf" rel="external nofollow noopener" target="_blank">PWC-Net</a></h4>
 
+<p>Refer to Figure,3</p>
 
-#### [PWC-Net](https://arxiv.org/pdf/1709.02371.pdf)
+<h4 id="maskflownet"><a href="https://arxiv.org/pdf/2003.10955.pdf" rel="external nofollow noopener" target="_blank">MaskFlownet</a></h4>
 
-Refer to Figure,3
+<p>Maskflownest takes the effect of occlusion into account when solving for the optical flow field</p>
 
-#### [MaskFlownet](https://arxiv.org/pdf/2003.10955.pdf)
-
-Maskflownest takes the effect of occlusion into account when solving for the optical flow field
-
-#### [PPAC-HD3](https://arxiv.org/pdf/2003.14407.pdf)
-</div>
-</div>
-</div>
+<h4 id="ppac-hd3"><a href="https://arxiv.org/pdf/2003.14407.pdf" rel="external nofollow noopener" target="_blank">PPAC-HD3</a></h4>
 
     </div>
   </article>
