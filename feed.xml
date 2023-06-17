@@ -1,5 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://jamesdemon923.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jamesdemon923.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-06-17T04:46:10+00:00</updated><id>https://jamesdemon923.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
-</subtitle><entry><title type="html">How to use ImGui</title><link href="https://jamesdemon923.github.io/blog/2023/IMGUI/" rel="alternate" type="text/html" title="How to use ImGui" /><published>2023-06-14T00:00:00+00:00</published><updated>2023-06-14T00:00:00+00:00</updated><id>https://jamesdemon923.github.io/blog/2023/IMGUI</id><content type="html" xml:base="https://jamesdemon923.github.io/blog/2023/IMGUI/"><![CDATA[<h2 id="what-is-imgui">What is ImGui</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://jamesdemon923.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jamesdemon923.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-06-17T05:09:54+00:00</updated><id>https://jamesdemon923.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+</subtitle><entry><title type="html">Understand Nanite</title><link href="https://jamesdemon923.github.io/blog/2023/Nanite/" rel="alternate" type="text/html" title="Understand Nanite" /><published>2023-06-16T00:00:00+00:00</published><updated>2023-06-16T00:00:00+00:00</updated><id>https://jamesdemon923.github.io/blog/2023/Nanite</id><content type="html" xml:base="https://jamesdemon923.github.io/blog/2023/Nanite/"><![CDATA[<h2 id="introduction">Introduction</h2>
+
+<h3 id="example-of-sub-heading-1">Example of Sub-Heading 1</h3>
+
+<h2 id="what-is-nanite">What is Nanite</h2>
+<h3 id="example-of-sub-heading-1-1">Example of Sub-Heading 1</h3>
+
+<h3 id="example-of-sub-heading-2">Example of Sub-Heading 2</h3>]]></content><author><name></name></author><category term="Graphics" /><category term="Report" /><summary type="html"><![CDATA[What is Nanite]]></summary></entry><entry><title type="html">How to use ImGui</title><link href="https://jamesdemon923.github.io/blog/2023/IMGUI/" rel="alternate" type="text/html" title="How to use ImGui" /><published>2023-06-14T00:00:00+00:00</published><updated>2023-06-14T00:00:00+00:00</updated><id>https://jamesdemon923.github.io/blog/2023/IMGUI</id><content type="html" xml:base="https://jamesdemon923.github.io/blog/2023/IMGUI/"><![CDATA[<h2 id="what-is-imgui">What is ImGui</h2>
 
 <p>ImGui stands for “Immediate Mode Graphical User Interface”. It is a programming paradigm used in user interface development where UI elements are updated and rendered each frame. In contrast to retained mode GUI, IMGUI does not keep a persistent model of the UI state.</p>
 
@@ -195,13 +202,17 @@ u=\cfrac{dx}{dt};v=\cfrac{dy}{dt}\]
 
 <h4 id="ppac-hd3"><a href="https://arxiv.org/pdf/2003.14407.pdf">PPAC-HD3</a></h4>]]></content><author><name></name></author><category term="Vision" /><category term="Report" /><summary type="html"><![CDATA[About the optical flow and related algorithms]]></summary></entry><entry><title type="html">What is NeRF (Neural Radiance Fields)</title><link href="https://jamesdemon923.github.io/blog/2023/NeRF/" rel="alternate" type="text/html" title="What is NeRF (Neural Radiance Fields)" /><published>2023-06-13T00:00:00+00:00</published><updated>2023-06-13T00:00:00+00:00</updated><id>https://jamesdemon923.github.io/blog/2023/NeRF</id><content type="html" xml:base="https://jamesdemon923.github.io/blog/2023/NeRF/"><![CDATA[<h2 id="introduction">Introduction</h2>
 
+<p>David Marr, the pioneer of computer vision, once defined the ultimate computer vision problem as the output of a three-dimensional object’s position and shape, which is “reconstructed” from the input of a two-dimensional image; other tasks, such as recognition, detection, etc., in Marr’s theory, can only be called “Pattern Recognition” problems, not “Computer Vision” problems. The difference is that Marr proved that if the ultimate problem can be solved, then all other problems can be solved. So in terms of the whole field of computer vision, NeRF (Neural Radiance Fields) is solving the most fundamental problem of computer vision, and the effect it shows is the most fundamental progress in the field of computer vision.</p>
+
 <h2 id="nerf">NeRF</h2>
+
+<p>NeRF (Neural Radiance Fields) fits Radiance Fields with a neural network, which is specifically a multilayer perceptron. And it is actually an implicit scene representation because a 3D model cannot be seen directly like point cloud, mesh, or voxel. It can represent the scene as the volume density and color value of any point in space. With the scene representation in the form of NeRF, we can render the scene and generate a simulated image of the new view.</p>
 
 <h3 id="radiance-field">Radiance field</h3>
 
 <h3 id="volume-rendering">Volume rendering</h3>
 
-<h3 id="details-about-techniques">Details about techniques</h3>]]></content><author><name></name></author><category term="Graphics" /><category term="Vision" /><category term="Report" /><summary type="html"><![CDATA[NeRF]]></summary></entry><entry><title type="html">Morphable model of 3D faces</title><link href="https://jamesdemon923.github.io/blog/2023/3DMM/" rel="alternate" type="text/html" title="Morphable model of 3D faces" /><published>2023-06-12T14:14:00+00:00</published><updated>2023-06-12T14:14:00+00:00</updated><id>https://jamesdemon923.github.io/blog/2023/3DMM</id><content type="html" xml:base="https://jamesdemon923.github.io/blog/2023/3DMM/"><![CDATA[<h2 id="introduction">Introduction</h2>
+<p>###</p>]]></content><author><name></name></author><category term="Graphics" /><category term="Vision" /><category term="Report" /><summary type="html"><![CDATA[NeRF]]></summary></entry><entry><title type="html">Morphable model of 3D faces</title><link href="https://jamesdemon923.github.io/blog/2023/3DMM/" rel="alternate" type="text/html" title="Morphable model of 3D faces" /><published>2023-06-12T14:14:00+00:00</published><updated>2023-06-12T14:14:00+00:00</updated><id>https://jamesdemon923.github.io/blog/2023/3DMM</id><content type="html" xml:base="https://jamesdemon923.github.io/blog/2023/3DMM/"><![CDATA[<h2 id="introduction">Introduction</h2>
 
 <h3 id="example-of-sub-heading-1">Example of Sub-Heading 1</h3>
 
@@ -212,12 +223,24 @@ u=\cfrac{dx}{dt};v=\cfrac{dy}{dt}\]
 
 <h2 id="introduction">Introduction</h2>
 
-<h3 id="example-of-sub-heading-1">Example of Sub-Heading 1</h3>
+<p>###</p>
 
-<h2 id="fluid-simulation">Fluid Simulation</h2>
-<h3 id="example-of-sub-heading-1-1">Example of Sub-Heading 1</h3>
+<h2 id="fluid-simulation-at-different-scales">Fluid simulation at different scales</h2>
+<h3 id="small">Small</h3>
 
-<h3 id="example-of-sub-heading-2">Example of Sub-Heading 2</h3>]]></content><author><name></name></author><category term="Graphics" /><category term="Simulation" /><category term="Report" /><summary type="html"><![CDATA[Fluid Simulation]]></summary></entry><entry><title type="html">CUDA</title><link href="https://jamesdemon923.github.io/blog/2023/CUDA/" rel="alternate" type="text/html" title="CUDA" /><published>2023-06-10T14:14:00+00:00</published><updated>2023-06-10T14:14:00+00:00</updated><id>https://jamesdemon923.github.io/blog/2023/CUDA</id><content type="html" xml:base="https://jamesdemon923.github.io/blog/2023/CUDA/"><![CDATA[<p>This post shows how to add a table of contents as a sidebar.</p>
+<p>For example, a glass of water, using SPH or directly with particles to simulate, no mesh required.</p>
+
+<p><img src="https://picx.zhimg.com/v2-182256cfd17c43be2cc803fc73392b03_r.jpg?source=1940ef5c" alt="img" /></p>
+
+<h3 id="median">Median</h3>
+
+<p>A small lake is solved on a certain coarse grid using the Navier-Stokes equation (NS equation) or the Euler equation.</p>
+
+<h3 id="large">Large</h3>
+
+<p>Use FFT to simulate the ocean.</p>
+
+<h3 id="smoke">Smoke</h3>]]></content><author><name></name></author><category term="Graphics" /><category term="Simulation" /><category term="Report" /><summary type="html"><![CDATA[Fluid Simulation]]></summary></entry><entry><title type="html">CUDA</title><link href="https://jamesdemon923.github.io/blog/2023/CUDA/" rel="alternate" type="text/html" title="CUDA" /><published>2023-06-10T14:14:00+00:00</published><updated>2023-06-10T14:14:00+00:00</updated><id>https://jamesdemon923.github.io/blog/2023/CUDA</id><content type="html" xml:base="https://jamesdemon923.github.io/blog/2023/CUDA/"><![CDATA[<p>This post shows how to add a table of contents as a sidebar.</p>
 
 <h2 id="what-is-cuda">What is CUDA</h2>
 
