@@ -163,6 +163,70 @@
 
 <p>Follow this <a href="https://www.bilibili.com/video/BV13e4y1m73N/?spm_id_from=333.1007.top_right_bar_window_custom_collection.content.click&amp;vd_source=9d96fa0d747d399ca8c43f2a5c58026a" rel="external nofollow noopener" target="_blank">video in BiliBili</a>.</p>
 
+<h3 id="1-initialize-the-imgui-window">1. Initialize the ImGui Window</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ImGui::Begin("The name of your window");
+...
+ImGui::End();
+</code></pre></div></div>
+
+<h3 id="2-basic-controls">2. Basic Controls</h3>
+
+<p>To learn the basic controls, you can see the style of the demo controls in the window, then go directly to the imgui_demo.cpp and search for the name of the control to see the usage.</p>
+
+<p><strong>Button:</strong></p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="n">ImGui</span><span class="o">::</span><span class="n">Button</span><span class="p">(</span><span class="s">"Button"</span><span class="p">))</span> <span class="p">{</span>
+    <span class="c1">// std::cout &lt;&lt; "\n Button is pressed";</span>
+    <span class="n">Text</span> <span class="o">=</span> <span class="s">"You click the button"</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><strong>Text box:</strong></p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Text is a string</span>
+<span class="n">ImGui</span><span class="o">::</span><span class="n">Text</span><span class="p">(</span><span class="n">Text</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
+<span class="n">ImGui</span><span class="o">::</span><span class="n">InputText</span><span class="p">(</span><span class="s">"Test Text Box"</span><span class="p">,</span> <span class="n">textbox</span><span class="p">,</span> <span class="n">IM_ARRAYSIZE</span><span class="p">(</span><span class="n">textbox</span><span class="p">));</span>
+</code></pre></div></div>
+
+<p><strong>List box:</strong></p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Text is a string</span>
+<span class="n">ImGui</span><span class="o">::</span><span class="n">Text</span><span class="p">(</span><span class="n">Text</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
+<span class="c1">// ImGui list box</span>
+<span class="n">ImGui</span><span class="o">::</span><span class="n">BeginListBox</span><span class="p">(</span><span class="s">"List Box"</span><span class="p">);</span>
+<span class="k">for</span> <span class="p">(</span><span class="kt">size_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">ImGui</span><span class="o">::</span><span class="n">Selectable</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">to_string</span><span class="p">(</span><span class="n">i</span><span class="p">).</span><span class="n">c_str</span><span class="p">()))</span> <span class="p">{</span>
+        <span class="n">Text</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">to_string</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">ImGui</span><span class="o">::</span><span class="n">EndListBox</span><span class="p">();</span>
+</code></pre></div></div>
+
+<p><strong>Combo box:</strong></p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Text is a string</span>
+<span class="n">ImGui</span><span class="o">::</span><span class="n">Text</span><span class="p">(</span><span class="n">Text</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
+<span class="c1">// ImGui combo box</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">ImGui</span><span class="o">::</span><span class="n">BeginCombo</span><span class="p">(</span><span class="s">"Combo Box"</span><span class="p">,</span> <span class="n">Text</span><span class="p">.</span><span class="n">c_str</span><span class="p">()))</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">size_t</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">ImGui</span><span class="o">::</span><span class="n">Selectable</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">to_string</span><span class="p">(</span><span class="n">j</span><span class="p">).</span><span class="n">c_str</span><span class="p">()))</span> <span class="p">{</span>
+            <span class="n">Text</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">to_string</span><span class="p">(</span><span class="n">j</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="n">ImGui</span><span class="o">::</span><span class="n">EndCombo</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><strong>Color Editor:</strong></p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ImVec4</span> <span class="n">color</span><span class="p">;</span>
+<span class="n">ImGui</span><span class="o">::</span><span class="n">ColorEdit4</span><span class="p">(</span><span class="s">"Color Edit"</span><span class="p">,</span> <span class="p">(</span><span class="kt">float</span><span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">color</span><span class="p">,</span><span class="n">ImGuiColorEditFlags_</span><span class="o">::</span><span class="n">ImGuiColorEditFlags_AlphaBar</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h3 id="3-advanced-controls">3. Advanced controls</h3>
+
+
     </div>
   </article>
 
