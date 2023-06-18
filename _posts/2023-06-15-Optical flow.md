@@ -48,7 +48,11 @@ where:
 
 
 $$
-f_{x}=\cfrac{∂f}{∂x};f_{y}=\cfrac{∂f}{∂y}\\\
+f_{x}=\cfrac{∂f}{∂x};f_{y}=\cfrac{∂f}{∂y}
+$$
+
+
+$$
 u=\cfrac{dx}{dt};v=\cfrac{dy}{dt}
 $$
 
