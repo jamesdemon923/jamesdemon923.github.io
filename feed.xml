@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://jamesdemon923.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jamesdemon923.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-06-18T14:39:54+00:00</updated><id>https://jamesdemon923.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://jamesdemon923.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jamesdemon923.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-06-18T19:44:05+00:00</updated><id>https://jamesdemon923.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 </subtitle><entry><title type="html">Understand Nanite</title><link href="https://jamesdemon923.github.io/blog/2023/Nanite/" rel="alternate" type="text/html" title="Understand Nanite" /><published>2023-06-16T00:00:00+00:00</published><updated>2023-06-16T00:00:00+00:00</updated><id>https://jamesdemon923.github.io/blog/2023/Nanite</id><content type="html" xml:base="https://jamesdemon923.github.io/blog/2023/Nanite/"><![CDATA[<h2 id="introduction">Introduction</h2>
 
 <h3 id="example-of-sub-heading-1">Example of Sub-Heading 1</h3>
@@ -265,8 +265,9 @@ ImGui::End();
 
 <p>where:</p>
 
-\[f_{x}=\cfrac{∂f}{∂x};f_{y}=\cfrac{∂f}{∂y}\\\
-u=\cfrac{dx}{dt};v=\cfrac{dy}{dt}\]
+\[f_{x}=\cfrac{∂f}{∂x};f_{y}=\cfrac{∂f}{∂y}\]
+
+\[u=\cfrac{dx}{dt};v=\cfrac{dy}{dt}\]
 
 <p>Above equation is called <strong>Optical Flow equation</strong>. In it, we can find \(f_{x}\) and \(f_{y}\), they are image gradients. Similarly ft is the gradient along time. But (u,v) is unknown. We cannot solve this one equation with two unknown variables. So several methods are provided to solve this problem and one of them is Lucas-Kanade.</p>
 
@@ -338,7 +339,7 @@ u=\cfrac{dx}{dt};v=\cfrac{dy}{dt}\]
 
 <p>Maskflownest takes the effect of occlusion into account when solving for the optical flow field</p>
 
-<h4 id="ppac-hd3"><a href="https://arxiv.org/pdf/2003.14407.pdf">PPAC-HD3</a></h4>]]></content><author><name></name></author><category term="Vision" /><category term="Report" /><summary type="html"><![CDATA[About the optical flow and related algorithms]]></summary></entry><entry><title type="html">What is NeRF (Neural Radiance Fields)</title><link href="https://jamesdemon923.github.io/blog/2023/NeRF/" rel="alternate" type="text/html" title="What is NeRF (Neural Radiance Fields)" /><published>2023-06-13T00:00:00+00:00</published><updated>2023-06-13T00:00:00+00:00</updated><id>https://jamesdemon923.github.io/blog/2023/NeRF</id><content type="html" xml:base="https://jamesdemon923.github.io/blog/2023/NeRF/"><![CDATA[<h2 id="introduction">Introduction</h2>
+<h4 id="ppac-hd3"><a href="https://arxiv.org/pdf/2003.14407.pdf">PPAC-HD3</a></h4>]]></content><author><name></name></author><category term="Vision" /><category term="Report" /><summary type="html"><![CDATA[About the optical flow and related algorithms]]></summary></entry><entry><title type="html">NeRF (Neural Radiance Fields)</title><link href="https://jamesdemon923.github.io/blog/2023/NeRF/" rel="alternate" type="text/html" title="NeRF (Neural Radiance Fields)" /><published>2023-06-13T00:00:00+00:00</published><updated>2023-06-13T00:00:00+00:00</updated><id>https://jamesdemon923.github.io/blog/2023/NeRF</id><content type="html" xml:base="https://jamesdemon923.github.io/blog/2023/NeRF/"><![CDATA[<h2 id="introduction">Introduction</h2>
 
 <p>David Marr, the pioneer of computer vision, once defined the ultimate computer vision problem as the output of a three-dimensional object’s position and shape, which is “reconstructed” from the input of a two-dimensional image; other tasks, such as recognition, detection, etc., in Marr’s theory, can only be called “Pattern Recognition” problems, not “Computer Vision” problems. The difference is that Marr proved that if the ultimate problem can be solved, then all other problems can be solved. So in terms of the whole field of computer vision, NeRF (Neural Radiance Fields) is solving the most fundamental problem of computer vision, and the effect it shows is the most fundamental progress in the field of computer vision.</p>
 
@@ -348,9 +349,7 @@ u=\cfrac{dx}{dt};v=\cfrac{dy}{dt}\]
 
 <h3 id="radiance-field">Radiance field</h3>
 
-<h3 id="volume-rendering">Volume rendering</h3>
-
-<p>###</p>]]></content><author><name></name></author><category term="Graphics" /><category term="Vision" /><category term="Report" /><summary type="html"><![CDATA[NeRF]]></summary></entry><entry><title type="html">Morphable model of 3D faces</title><link href="https://jamesdemon923.github.io/blog/2023/3DMM/" rel="alternate" type="text/html" title="Morphable model of 3D faces" /><published>2023-06-12T14:14:00+00:00</published><updated>2023-06-12T14:14:00+00:00</updated><id>https://jamesdemon923.github.io/blog/2023/3DMM</id><content type="html" xml:base="https://jamesdemon923.github.io/blog/2023/3DMM/"><![CDATA[<h2 id="introduction">Introduction</h2>
+<h3 id="volume-rendering">Volume rendering</h3>]]></content><author><name></name></author><category term="Graphics" /><category term="Vision" /><category term="Report" /><summary type="html"><![CDATA[Introduction to NeRF]]></summary></entry><entry><title type="html">Morphable model of 3D faces</title><link href="https://jamesdemon923.github.io/blog/2023/3DMM/" rel="alternate" type="text/html" title="Morphable model of 3D faces" /><published>2023-06-12T14:14:00+00:00</published><updated>2023-06-12T14:14:00+00:00</updated><id>https://jamesdemon923.github.io/blog/2023/3DMM</id><content type="html" xml:base="https://jamesdemon923.github.io/blog/2023/3DMM/"><![CDATA[<h2 id="introduction">Introduction</h2>
 
 <h3 id="example-of-sub-heading-1">Example of Sub-Heading 1</h3>
 
@@ -361,24 +360,83 @@ u=\cfrac{dx}{dt};v=\cfrac{dy}{dt}\]
 
 <h2 id="introduction">Introduction</h2>
 
-<p>###</p>
+<p>For fluid simulation, the first step is to confirm the scale, because for different scales, we have different approaches. And, “realism” and “controllability” are very important. For realism, we need to solve the differential equations, while for controllability, we sometimes have to adjust the dependence on the numerical solution of the equations</p>
 
 <h2 id="fluid-simulation-at-different-scales">Fluid simulation at different scales</h2>
 <h3 id="small">Small</h3>
 
-<p>For example, a glass of water, using SPH or directly with particles to simulate, no mesh required.</p>
+<p>For example, a glass of water, <a href="http://mmacklin.com/pbf_sig_preprint.pdf">using SPH or directly with particles to simulate</a>, no mesh required.</p>
 
-<p><img src="https://picx.zhimg.com/v2-182256cfd17c43be2cc803fc73392b03_r.jpg?source=1940ef5c" alt="img" /></p>
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/fluid_simulation/SPH%20for%20small%20water-480.webp" />
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/fluid_simulation/SPH%20for%20small%20water-800.webp" />
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/fluid_simulation/SPH%20for%20small%20water-1400.webp" />
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/fluid_simulation/SPH%20for%20small%20water.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
 
 <h3 id="median">Median</h3>
 
-<p>A small lake is solved on a certain coarse grid using the Navier-Stokes equation (NS equation) or the Euler equation.</p>
+<p>A small lake is solved on a certain coarse grid using the Navier-Stokes equation (NS equation) or the Euler equation. And it can extend to the <a href="http://web.stanford.edu/class/cs237d/smoke.pdf">3D smoke simulation</a>.</p>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/fluid_simulation/smoke%20simulation-480.webp" />
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/fluid_simulation/smoke%20simulation-800.webp" />
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/fluid_simulation/smoke%20simulation-1400.webp" />
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/fluid_simulation/smoke%20simulation.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
 
 <h3 id="large">Large</h3>
 
-<p>Use FFT to simulate the ocean.</p>
+<p>Use <a href="http://www-evasion.imag.fr/Membres/Fabrice.Neyret/NaturalScenes/fluids/water/waves/fluids/waves/Jonathan/articlesCG/simulating-ocean-water-01.pdf">FFT</a> to simulate the ocean.</p>
 
-<h3 id="smoke">Smoke</h3>]]></content><author><name></name></author><category term="Graphics" /><category term="Simulation" /><category term="Report" /><summary type="html"><![CDATA[Fluid Simulation]]></summary></entry><entry><title type="html">CUDA</title><link href="https://jamesdemon923.github.io/blog/2023/CUDA/" rel="alternate" type="text/html" title="CUDA" /><published>2023-06-10T14:14:00+00:00</published><updated>2023-06-10T14:14:00+00:00</updated><id>https://jamesdemon923.github.io/blog/2023/CUDA</id><content type="html" xml:base="https://jamesdemon923.github.io/blog/2023/CUDA/"><![CDATA[<p>This post shows how to add a table of contents as a sidebar.</p>
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/fluid_simulation/FFT,png-480.webp" />
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/fluid_simulation/FFT,png-800.webp" />
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/fluid_simulation/FFT,png-1400.webp" />
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/fluid_simulation/FFT,png" class="img-fluid rounded z-depth-1" width="auto" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>]]></content><author><name></name></author><category term="Graphics" /><category term="Simulation" /><category term="Report" /><summary type="html"><![CDATA[Introduction to Fluid Simulation]]></summary></entry><entry><title type="html">CUDA</title><link href="https://jamesdemon923.github.io/blog/2023/CUDA/" rel="alternate" type="text/html" title="CUDA" /><published>2023-06-10T14:14:00+00:00</published><updated>2023-06-10T14:14:00+00:00</updated><id>https://jamesdemon923.github.io/blog/2023/CUDA</id><content type="html" xml:base="https://jamesdemon923.github.io/blog/2023/CUDA/"><![CDATA[<p>This post shows how to add a table of contents as a sidebar.</p>
 
 <h2 id="what-is-cuda">What is CUDA</h2>
 

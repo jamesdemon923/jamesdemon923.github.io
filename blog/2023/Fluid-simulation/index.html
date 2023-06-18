@@ -12,7 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Fluid Simulation | Haolan  Xu</title>
     <meta name="author" content="Haolan  Xu">
-    <meta name="description" content="Fluid Simulation">
+    <meta name="description" content="Introduction to Fluid Simulation">
     <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
 
 
@@ -157,24 +157,83 @@
 
 <h2 id="introduction">Introduction</h2>
 
-<p>###</p>
+<p>For fluid simulation, the first step is to confirm the scale, because for different scales, we have different approaches. And, “realism” and “controllability” are very important. For realism, we need to solve the differential equations, while for controllability, we sometimes have to adjust the dependence on the numerical solution of the equations</p>
 
 <h2 id="fluid-simulation-at-different-scales">Fluid simulation at different scales</h2>
 <h3 id="small">Small</h3>
 
-<p>For example, a glass of water, using SPH or directly with particles to simulate, no mesh required.</p>
+<p>For example, a glass of water, <a href="http://mmacklin.com/pbf_sig_preprint.pdf" rel="external nofollow noopener" target="_blank">using SPH or directly with particles to simulate</a>, no mesh required.</p>
 
-<p><img src="https://picx.zhimg.com/v2-182256cfd17c43be2cc803fc73392b03_r.jpg?source=1940ef5c" alt="img"></p>
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/fluid_simulation/SPH%20for%20small%20water-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/fluid_simulation/SPH%20for%20small%20water-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/fluid_simulation/SPH%20for%20small%20water-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/fluid_simulation/SPH%20for%20small%20water.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
 
 <h3 id="median">Median</h3>
 
-<p>A small lake is solved on a certain coarse grid using the Navier-Stokes equation (NS equation) or the Euler equation.</p>
+<p>A small lake is solved on a certain coarse grid using the Navier-Stokes equation (NS equation) or the Euler equation. And it can extend to the <a href="http://web.stanford.edu/class/cs237d/smoke.pdf" rel="external nofollow noopener" target="_blank">3D smoke simulation</a>.</p>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/fluid_simulation/smoke%20simulation-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/fluid_simulation/smoke%20simulation-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/fluid_simulation/smoke%20simulation-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/fluid_simulation/smoke%20simulation.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
 
 <h3 id="large">Large</h3>
 
-<p>Use FFT to simulate the ocean.</p>
+<p>Use <a href="http://www-evasion.imag.fr/Membres/Fabrice.Neyret/NaturalScenes/fluids/water/waves/fluids/waves/Jonathan/articlesCG/simulating-ocean-water-01.pdf" rel="external nofollow noopener" target="_blank">FFT</a> to simulate the ocean.</p>
 
-<h3 id="smoke">Smoke</h3>
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/fluid_simulation/FFT,png-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/fluid_simulation/FFT,png-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/fluid_simulation/FFT,png-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/fluid_simulation/FFT,png" class="img-fluid rounded z-depth-1" width="auto" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
 
     </div>
   </article>
@@ -211,7 +270,7 @@
   
 
   <li class="my-2">
-    <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2023/NeRF/">What is NeRF (Neural Radiance Fields)</a>
+    <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2023/NeRF/">NeRF (Neural Radiance Fields)</a>
   </li>
 
   
