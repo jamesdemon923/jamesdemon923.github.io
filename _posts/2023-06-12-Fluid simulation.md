@@ -10,8 +10,6 @@ related_posts: true
 toc:
   sidebar: left
 ---
-This post shows how to add a table of contents as a sidebar.
-
 ## Introduction
 
 For fluid simulation, the first step is to confirm the scale, because for different scales, we have different approaches. And, "realism" and "controllability" are very important. For realism, we need to solve the differential equations, while for controllability, we sometimes have to adjust the dependence on the numerical solution of the equations
@@ -43,6 +41,7 @@ Use [FFT](http://www-evasion.imag.fr/Membres/Fabrice.Neyret/NaturalScenes/fluids
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/fluid_simulation/FFT,png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.html path="assets/img/fluid_simulation/FFT.png" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
+
