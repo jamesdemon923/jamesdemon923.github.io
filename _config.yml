@@ -7,12 +7,11 @@ first_name: Haolan
 last_name: Xu
 email: jamesdemon923@gmail.com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+  A portfolio website of Haolan Xu. Based on [*folio](https://github.com/bogoli/-folio) design.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-  Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
-keywords: jekyll, jekyll-theme, academic-website, portfolio-website  # add your own keywords or leave empty
+keywords: Haolan_Xu, graphics, vision, portfolio-website  # add your own keywords or leave empty
 
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: Bunny.png  # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
@@ -105,7 +104,7 @@ discord_id: # your discord id (18-digit unique numerical identifier)
 
 contact_note: >
 # You can even add a little note about which of these is the best way to reach you.
-
+True master always with a heart of apprenticeship
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
 # -----------------------------------------------------------------------------

@@ -14,14 +14,15 @@ profile:
     <p>Computer Science.</p>
 
 news: false  # includes a list of news items
-selected_papers: true # includes a list of papers marked as "selected={true}"
 latest_posts: true  # includes a list of the newest posts
+selected_papers: true # includes a list of papers marked as "selected={true}"
+selected_projects: true 
 social: true  # includes social icons at the bottom of the page
 ---
 
 
 
-Hi! I'm Haolan Xu(许皓岚), currently a Master student in University of Florida, working with [Prof. Jorg Peters](https://www.cise.ufl.edu/~jorg/). I received my Bachelor's degree at Sichuan University, working with [Prof.Lizhou](https://ce.scu.edu.cn/info/1092/4061.htm).
+Hi! I'm Haolan Xu(许皓岚), currently a Master student in University of Florida, working with [Prof. Jorg Peters](https://www.cise.ufl.edu/~jorg/). I received my Bachelor's degree at Sichuan University, working with [Prof.Li Zhou](https://ce.scu.edu.cn/info/1092/4061.htm).
 
 My research mainly focuses on modeling and rendering, more specifically, real-time ray tracing, subdivision.
 
