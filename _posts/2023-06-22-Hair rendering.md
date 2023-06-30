@@ -14,10 +14,16 @@ toc:
 
 ### Example of Sub-Heading 1
 
-## Techniques
-### Example of Sub-Heading 1
+## Appearance modeling
+### Hair & Fur rendering
 
-### Algorithm
+#### Model
 
-### Topics
+##### Kajiya-Kay Model
+
+##### Marschner Model
+
+##### Dual Scattering Model
+
+##### Physically-based double cylinder fur reflectance Model
 
