@@ -12,7 +12,7 @@ toc:
 ---
 ## Introduction
 
-### Example of Sub-Heading 1
+## Multiple View Geometry
 
 ## 3D representation
 
@@ -26,8 +26,6 @@ toc:
 #### Structure from Motion (SFM)
 
 #### Simultaneous Localization and Mapping (SLAM)
-
-### Topics
 
 ## Understanding and synthesis
 
