@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Tiny path tracer
+title: Tiny pathtracer
 description: A tiny software path tracer rendering Cornell Box
 img: assets/img/Tinypathtracer/result/Perfect mirror reflection model spp128 rough0.25.jpg
 importance: 1
@@ -116,7 +116,7 @@ $$
 
 ### Russian roulette
 
-Previously, we always shoot a ray at a shading point and get the shading result $\mathbf{L_{o}}$. Suppose we manually set a probability P (0 < P < 1) With probability P, shoot a ray and return the shading result divided by P: $\mathbf{L_{o}}$ / P With probability 1-P, don’t shoot a ray and you’ll get 0. In this way, you can still expect to get $\mathbf{L_{o}}$:
+Previously, we always shoot a ray at a shading point and get the shading result $$\mathbf{L_{o}}$$. Suppose we manually set a probability P (0 < P < 1) With probability P, shoot a ray and return the shading result divided by P: $$\mathbf{L_{o}}$$ / P With probability 1-P, don’t shoot a ray and you’ll get 0. In this way, you can still expect to get $$\mathbf{L_{o}}$$:
 
 
 $$
@@ -131,8 +131,9 @@ $$
     </div>
 </div>
 <div class="caption">
-    The rendering equation
+    Sample the light source instead of the surface
 </div>
+
 
 The rendering equation becomes:
 
@@ -232,17 +233,20 @@ Microfacet BRDF:
     </div>
 </div>
 <div class="caption">
-    The Microfacet BRDF
+    The formula for Microfacet BRDF
 </div>
 
 
+We use the GGX for $$G(\mathbf{i,o,h})$$ and $$D(\mathbf{h})$$
 
-We use the GGX for $G(\mathbf{i,o,h})$ and $D(\mathbf{h})$
-
-<div align=center>
-    <img src="image\principle\GGX NDF.png" alt="GGX NDF" width="450" />
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/Tinypathtracer/principle/GGX NDF.png" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
 </div>
-
+<div class="caption">
+    GGX NDF
+</div>
 
 ```c++
 // Define the microfacet material in main.cpp
@@ -420,13 +424,12 @@ case MIRROR:
         <th colspan="5">Different SPP (sample per pixel):</th>
     </tr>
     <tr>
-        <td ><center><img src="image/result/spp2.jpg" >SPP = 2 </center></td>
-        <td ><center><img src="image/result/spp4.jpg"  >SPP = 4</center></td>
-        <td ><center><img src="image/result/spp16.jpg"  >SPP = 16</center></td>
-        <td ><center><img src="image/result/spp64.jpg"  >SPP = 64</center></td>
-        <td ><center><img src="image/result/spp128.jpg"  >SPP = 128</center></td>
+        <td ><center><img src="assets/img/Tinypathtracer/result/spp2.jpg" >SPP = 2 </center></td>
+        <td ><center><img src="assets/img/Tinypathtracer/result/spp4.jpg"  >SPP = 4</center></td>
+        <td ><center><img src="assets/img/Tinypathtracer/result/spp16.jpg"  >SPP = 16</center></td>
+        <td ><center><img src="assets/img/Tinypathtracer/result/spp64.jpg"  >SPP = 64</center></td>
+        <td ><center><img src="assets/img/Tinypathtracer/result/spp128.jpg"  >SPP = 128</center></td>
     </tr>
-
 
 <table>
     <tr>
@@ -434,41 +437,42 @@ case MIRROR:
         <th colspan="1">Non-accelerated</th>
     </tr>
     <tr>
-        <td ><center><img src="image/result/spp2_acc_time.jpg" >SPP=2 with acc </center></td>
-        <td ><center><img src="image/result/spp2_noacc_time.jpg"  >SPP=2 without acc</center></td>
+        <td ><center><img src="assets/img/Tinypathtracer/result/spp2_acc_time.jpg" >SPP=2 with acc </center></td>
+        <td ><center><img src="assets/img/Tinypathtracer/result/spp2_noacc_time.jpg"  >SPP=2 without acc</center></td>
     </tr>
     <tr>
-        <td ><center><img src="image/result/spp4_acc_time.jpg" >SPP=4 with acc </center></td>
-        <td ><center><img src="image/result/spp4_noacc_time.jpg"  >SPP=4 without acc</center></td>
+        <td ><center><img src="assets/img/Tinypathtracer/result/spp4_acc_time.jpg" >SPP=4 with acc </center></td>
+        <td ><center><img src="assets/img/Tinypathtracer/result/spp4_noacc_time.jpg"  >SPP=4 without acc</center></td>
     </tr>
     <tr>
-        <td ><center><img src="image/result/spp16_acc_time.jpg" >SPP=16 with acc </center></td>
-        <td ><center><img src="image/result/spp16_noacc_time.jpg"  >SPP=16 without acc</center></td>
+        <td ><center><img src="assets/img/Tinypathtracer/result/spp16_acc_time.jpg" >SPP=16 with acc </center></td>
+        <td ><center><img src="assets/img/Tinypathtracer/result/spp16_noacc_time.jpg"  >SPP=16 without acc</center></td>
     </tr>
         <tr>
-        <td ><center><img src="image/result/spp64_acc_time.jpg" >SPP=64 with acc </center></td>
-        <td ><center><img src="image/result/spp64_noacc_time.jpg"  >SPP=64 without acc</center></td>
+        <td ><center><img src="assets/img/Tinypathtracer/result/spp64_acc_time.jpg" >SPP=64 with acc </center></td>
+        <td ><center><img src="assets/img/Tinypathtracer/result/spp64_noacc_time.jpg"  >SPP=64 without acc</center></td>
     </tr>
         <tr>
-        <td ><center><img src="image/result/spp128_acc_time.jpg" >SPP=128 with acc </center></td>
-        <td ><center><img src="image/result/spp128_noacc_time.jpg"  >SPP=128 without acc</center></td>
+        <td ><center><img src="assets/img/Tinypathtracer/result/spp128_acc_time.jpg" >SPP=128 with acc </center></td>
+        <td ><center><img src="assets/img/Tinypathtracer/result/spp128_noacc_time.jpg"  >SPP=128 without acc</center></td>
     </tr>
-
 
 <table>
     <tr>
         <th colspan="4">Using microfacet (SPP=64):</th>
     </tr>
     <tr>
-        <td ><center><img src="image/result/spp64_rough0.jpg" >roughness=0</center></td>
-        <td ><center><img src="image/result/spp64_rough0.25.jpg"  >roughness=0.25</center></td>
-        <td ><center><img src="image/result/spp64_rough0.5.jpg"  >roughness=0.5</center></td>
-        <td ><center><img src="image/result/spp64_rough1.jpg"  >roughness=1</center></td>
+        <td ><center><img src="assets/img/Tinypathtracer/result/spp64_rough0.jpg" >roughness=0</center></td>
+        <td ><center><img src="assets/img/Tinypathtracer/result/spp64_rough0.25.jpg"  >roughness=0.25</center></td>
+        <td ><center><img src="assets/img/Tinypathtracer/result/spp64_rough0.5.jpg"  >roughness=0.5</center></td>
+        <td ><center><img src="assets/img/Tinypathtracer/result/spp64_rough1.jpg"  >roughness=1</center></td>
     </tr>
+
 <table>
     <tr>
         <th colspan="1">Perfect mirror reflection model:</th>
     </tr>
     <tr>
-        <td ><center><img src="image/result/Perfect mirror reflection model spp128 rough0.25.jpg" >SPP=128, roughness=0.25</center></td>
+        <td ><center><img src="assets/img/Tinypathtracer/result/Perfect mirror reflection model spp128 rough0.25.jpg" >SPP=128, roughness=0.25</center></td>
     </tr>
+
