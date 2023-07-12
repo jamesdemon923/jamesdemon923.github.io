@@ -125,9 +125,7 @@
           </header>
 
           <article>
-            <h1 id="implement-path-tracing">Implement path tracing</h1>
-
-<h2 id="set-up">Set up</h2>
+            <h2 id="set-up">Set up</h2>
 
 <p><strong>Operating &amp; compiling environment</strong>:</p>
 
@@ -168,7 +166,7 @@
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/Tinypathtracer/principle/BVH1.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    <img src="/assets/img/Tinypathtracer/principle/BVH1.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
   </picture>
 
@@ -186,16 +184,13 @@
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/Tinypathtracer/principle/BVH2.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    <img src="/assets/img/Tinypathtracer/principle/BVH2.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
   </picture>
 
 </figure>
 
     </div>
-</div>
-<div class="caption">
-    Principle of BVH
 </div>
 
 <p>Pseudocode:</p>
@@ -251,16 +246,13 @@
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/Tinypathtracer/principle/Rendering%20equation.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    <img src="/assets/img/Tinypathtracer/principle/Rendering%20equation.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
   </picture>
 
 </figure>
 
     </div>
-</div>
-<div class="caption">
-    The rendering equation
 </div>
 
 <p><strong>Monte Carlo integration</strong>:</p>
@@ -291,16 +283,13 @@
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/Tinypathtracer/principle/Sample%20the%20light.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    <img src="/assets/img/Tinypathtracer/principle/Sample%20the%20light.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
   </picture>
 
 </figure>
 
     </div>
-</div>
-<div class="caption">
-    Sample the light source instead of the surface
 </div>
 
 <p>The rendering equation becomes:</p>
@@ -401,16 +390,13 @@ L_{o}(x,\omega_{o}) &amp; = \int_{\Omega^{+}} L_{i}(x,\omega_{i})f_{r}(x,\omega_
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/Tinypathtracer/principle/Microfacet%20BRDF.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    <img src="/assets/img/Tinypathtracer/principle/Microfacet%20BRDF.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
   </picture>
 
 </figure>
 
     </div>
-</div>
-<div class="caption">
-    The formula for Microfacet BRDF
 </div>
 
 <p>We use the GGX for \(G(\mathbf{i,o,h})\) and \(D(\mathbf{h})\)</p>
@@ -427,16 +413,13 @@ L_{o}(x,\omega_{o}) &amp; = \int_{\Omega^{+}} L_{i}(x,\omega_{i})f_{r}(x,\omega_
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/Tinypathtracer/principle/GGX%20NDF.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    <img src="/assets/img/Tinypathtracer/principle/GGX%20NDF.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
   </picture>
 
 </figure>
 
     </div>
-</div>
-<div class="caption">
-    GGX NDF
 </div>
 
 <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Define the microfacet material in main.cpp</span>
@@ -607,8 +590,7 @@ L_{o}(x,\omega_{o}) &amp; = \int_{\Omega^{+}} L_{i}(x,\omega_{i})f_{r}(x,\omega_
         <th colspan="5">Different SPP (sample per pixel):</th>
     </tr>
     <tr>
-        <td><center>
-<img src="assets/img/Tinypathtracer/result/spp2.jpg">SPP = 2 </center></td>
+        <td><center><figure.html path="assets/img/Tinypathtracer/result/spp2.jpg">SPP = 2 &lt;/center&gt;&lt;/td&gt;
         <td><center>
 <img src="assets/img/Tinypathtracer/result/spp4.jpg">SPP = 4</center></td>
         <td><center>
@@ -617,7 +599,7 @@ L_{o}(x,\omega_{o}) &amp; = \int_{\Omega^{+}} L_{i}(x,\omega_{i})f_{r}(x,\omega_
 <img src="assets/img/Tinypathtracer/result/spp64.jpg">SPP = 64</center></td>
         <td><center>
 <img src="assets/img/Tinypathtracer/result/spp128.jpg">SPP = 128</center></td>
-    </tr>
+    &lt;/tr&gt;
 
 <table>
     <tr>
@@ -655,6 +637,7 @@ L_{o}(x,\omega_{o}) &amp; = \int_{\Omega^{+}} L_{i}(x,\omega_{i})f_{r}(x,\omega_
 <img src="assets/img/Tinypathtracer/result/spp128_noacc_time.jpg">SPP=128 without acc</center></td>
     </tr>
 
+
 <table>
     <tr>
         <th colspan="4">Using microfacet (SPP=64):</th>
@@ -681,7 +664,8 @@ L_{o}(x,\omega_{o}) &amp; = \int_{\Omega^{+}} L_{i}(x,\omega_{i})f_{r}(x,\omega_
 
 </table>
 </table>
-</table>
+</table></figure.html></center></td>
+</tr>
 </table>
 
           </article>
