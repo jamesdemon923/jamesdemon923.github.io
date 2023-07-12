@@ -10,9 +10,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>project 1 | Haolan  Xu</title>
+    <title>Tiny path tracer | Haolan  Xu</title>
     <meta name="author" content="Haolan  Xu">
-    <meta name="description" content="a project with a background image">
+    <meta name="description" content="A tiny software path tracer rendering Cornell Box">
     <meta name="keywords" content="Haolan_Xu, graphics, vision, portfolio-website">
 
 
@@ -120,24 +120,41 @@
         <div class="post">
 
           <header class="post-header">
-            <h1 class="post-title">project 1</h1>
-            <p class="post-description">a project with a background image</p>
+            <h1 class="post-title">Tiny path tracer</h1>
+            <p class="post-description">A tiny software path tracer rendering Cornell Box</p>
           </header>
 
           <article>
-            <p>Every project has a beautiful feature showcase page.
-It’s easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.</p>
+            <h1 id="implement-path-tracing">Implement path tracing</h1>
 
-<p>To give your project a background in the portfolio page, just add the img tag to the front matter like so:</p>
+<h2 id="set-up">Set up</h2>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
-layout: page
-title: project
-description: a project with a background image
-img: /assets/img/12.jpg
----
-</code></pre></div></div>
+<p><strong>Operating &amp; compiling environment</strong>:</p>
+
+<ul>
+  <li>Ubuntu (WSL2 in Windows11)</li>
+</ul>
+
+<p><strong>Software rendering</strong>:</p>
+
+<ul>
+  <li>CPU: AMD 5800H</li>
+</ul>
+
+<p><strong>Model</strong>:</p>
+
+<ul>
+  <li>Cornell Box</li>
+</ul>
+
+<p><strong>Command</strong>:</p>
+
+<ul>
+  <li>cmake ..</li>
+  <li>make</li>
+</ul>
+
+<h2 id="build-the-bounding-volume-hierarchy-bvh">Build the Bounding volume hierarchy (BVH)</h2>
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -145,13 +162,13 @@ img: /assets/img/12.jpg
 
   <picture>
     
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/1-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/1-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/1-1400.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/Tinypathtracer/principle/BVH1-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/Tinypathtracer/principle/BVH1-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/Tinypathtracer/principle/BVH1-1400.webp"></source>
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/1.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    <img src="/assets/img/Tinypathtracer/principle/BVH1.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
   </picture>
 
@@ -163,31 +180,13 @@ img: /assets/img/12.jpg
 
   <picture>
     
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/3-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/3-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/3-1400.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/Tinypathtracer/principle/BVH2-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/Tinypathtracer/principle/BVH2-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/Tinypathtracer/principle/BVH2-1400.webp"></source>
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/3.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        <figure>
-
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/5-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/5-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/5-1400.webp"></source>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/5.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    <img src="/assets/img/Tinypathtracer/principle/BVH2.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
   </picture>
 
@@ -196,21 +195,63 @@ img: /assets/img/12.jpg
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
+    Principle of BVH
 </div>
+
+<p>Pseudocode:</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">function</span> <span class="n">BVHAccel</span><span class="p">(</span><span class="n">objects</span><span class="p">)</span>
+    <span class="n">Create</span> <span class="n">a</span> <span class="k">new</span> <span class="n">node</span>
+    <span class="n">Calculate</span> <span class="n">the</span> <span class="n">bounding</span> <span class="n">box</span> <span class="n">of</span> <span class="n">all</span> <span class="n">objects</span>
+    <span class="n">Assign</span> <span class="n">it</span> <span class="n">to</span> <span class="n">the</span> <span class="n">node</span>
+    <span class="n">If</span> <span class="n">there</span> <span class="n">is</span> <span class="n">only</span> <span class="n">one</span> <span class="n">object</span>
+        <span class="n">Create</span> <span class="n">a</span> <span class="n">leaf</span> <span class="n">node</span>
+        <span class="n">Assign</span> <span class="n">object</span> <span class="n">to</span> <span class="k">this</span> <span class="n">node</span>
+        <span class="n">Return</span> <span class="k">this</span> <span class="n">node</span>
+    <span class="n">Else</span>
+        <span class="n">Calculate</span> <span class="n">the</span> <span class="n">centroid</span> <span class="n">of</span> <span class="n">the</span> <span class="n">bounding</span> <span class="n">box</span>
+        <span class="n">Determine</span> <span class="n">the</span> <span class="n">dimension</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">or</span> <span class="n">z</span><span class="p">)</span> <span class="n">with</span> <span class="n">the</span> <span class="n">maximum</span> <span class="n">spread</span> <span class="n">of</span> <span class="n">centroids</span>
+        <span class="n">Sort</span> <span class="n">objects</span> <span class="n">based</span> <span class="n">on</span> <span class="n">their</span> <span class="n">centroid</span> <span class="n">position</span> <span class="n">along</span> <span class="k">this</span> <span class="n">dimension</span>
+        <span class="n">Divide</span> <span class="n">the</span> <span class="n">objects</span> <span class="n">into</span> <span class="n">two</span> <span class="n">groups</span>
+        <span class="n">Recursively</span> <span class="n">call</span> <span class="n">BVHAccel</span> <span class="n">on</span> <span class="n">both</span> <span class="n">groups</span> <span class="n">to</span> <span class="n">create</span> <span class="n">left</span> <span class="n">and</span> <span class="n">right</span> <span class="n">children</span>
+        <span class="n">Calculate</span> <span class="n">the</span> <span class="n">bounding</span> <span class="n">box</span> <span class="n">of</span> <span class="n">node</span> <span class="n">as</span> <span class="k">union</span> <span class="n">of</span> <span class="n">bounding</span> <span class="n">boxes</span> <span class="n">of</span> <span class="n">children</span>
+        <span class="n">Return</span> <span class="k">this</span> <span class="n">node</span>
+    <span class="n">End</span> <span class="n">If</span>
+<span class="n">End</span> <span class="n">function</span>
+</code></pre></div></div>
+
+<p>Use the <strong>Surface Area Heuristic (SAH)</strong> to solve the problem that objects are not uniformly distributed.</p>
+
+\[C = C_{trav} + \frac {S_{A}}{S_{N}} N_{A} C_{isect}+ \frac {S_{B}}{S_{N}} N_{B} C_{isect}\]
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">For</span> <span class="n">each</span> <span class="n">axis</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
+    <span class="n">Sort</span> <span class="n">objects</span> <span class="n">based</span> <span class="n">on</span> <span class="n">their</span> <span class="n">centroid</span> <span class="n">position</span> <span class="n">along</span> <span class="k">this</span> <span class="n">axis</span>
+    <span class="n">For</span> <span class="n">each</span> <span class="n">possible</span> <span class="n">split</span> <span class="n">position</span> <span class="n">along</span> <span class="n">sorted</span> <span class="n">objects</span>
+        <span class="n">Calculate</span> <span class="n">the</span> <span class="n">bounding</span> <span class="n">boxes</span> <span class="n">and</span> <span class="n">counts</span> <span class="k">for</span> <span class="n">objects</span> <span class="n">on</span> <span class="n">the</span> <span class="n">left</span> <span class="n">and</span> <span class="n">right</span> <span class="n">of</span> <span class="n">split</span>
+        <span class="n">Calculate</span> <span class="n">cost</span> <span class="n">of</span> <span class="k">this</span> <span class="n">configuration</span> <span class="k">using</span> <span class="n">SAH</span>
+    <span class="n">End</span> <span class="n">For</span>
+<span class="n">End</span> <span class="n">For</span>
+</code></pre></div></div>
+
+<h2 id="patch-tracing">Patch tracing</h2>
+
+<h3 id="beginning">Beginning</h3>
+
+<p><strong>Rendering equation</strong>:</p>
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         <figure>
 
   <picture>
     
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/5-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/5-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/5-1400.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/Tinypathtracer/principle/Rendering%20equation-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/Tinypathtracer/principle/Rendering%20equation-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/Tinypathtracer/principle/Rendering%20equation-1400.webp"></source>
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/5.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    <img src="/assets/img/Tinypathtracer/principle/Rendering%20equation.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
   </picture>
 
@@ -219,44 +260,38 @@ img: /assets/img/12.jpg
     </div>
 </div>
 <div class="caption">
-    This image can also have a caption. It's like magic.
+    The rendering equation
 </div>
 
-<p>You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, <em>bled</em> for your project, and then… you reveal its glory in the next row of images.</p>
+<p><strong>Monte Carlo integration</strong>:</p>
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
+\[\int_{a}^{b}f(x)dx=\frac{1}{N}\sum_{i=1}^{N}\frac{f(X_{i})}{p(X_{i})}\]
+
+<p><strong>Global illumination</strong> = Direct illumination + indirect illumination</p>
+
+\[L = E + KE + K^{2}E + K^{3}E + ...\]
+
+<h3 id="russian-roulette">Russian roulette</h3>
+
+<p>Previously, we always shoot a ray at a shading point and get the shading result $\mathbf{L_{o}}$. Suppose we manually set a probability P (0 &lt; P &lt; 1) With probability P, shoot a ray and return the shading result divided by P: $\mathbf{L_{o}}$ / P With probability 1-P, don’t shoot a ray and you’ll get 0. In this way, you can still expect to get $\mathbf{L_{o}}$:</p>
+
+\[E = P * (\mathbf{L_{o}} / P) + (1 - P) * 0 = \mathbf{L_{o}}\]
+
+<h3 id="sample-light-source">Sample light source</h3>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
         <figure>
 
   <picture>
     
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/6-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/6-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/6-1400.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/Tinypathtracer/principle/Sample%20the%20light-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/Tinypathtracer/principle/Sample%20the%20light-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/Tinypathtracer/principle/Sample%20the%20light-1400.webp"></source>
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/6.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        <figure>
-
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/11-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/11-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/11-1400.webp"></source>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/11.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    <img src="/assets/img/Tinypathtracer/principle/Sample%20the%20light.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
   </picture>
 
@@ -265,24 +300,369 @@ You describe how you toiled, sweated, <em>bled</em> for your project, and then�
     </div>
 </div>
 <div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
+    The rendering equation
 </div>
 
-<p>The code is simple.
-Just wrap your images with <code class="language-plaintext highlighter-rouge">&lt;div class="col-sm"&gt;</code> and place them inside <code class="language-plaintext highlighter-rouge">&lt;div class="row"&gt;</code> (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/" rel="external nofollow noopener" target="_blank">Bootstrap Grid</a> system).
-To make images responsive, add <code class="language-plaintext highlighter-rouge">img-fluid</code> class to each; for rounded corners and shadows use <code class="language-plaintext highlighter-rouge">rounded</code> and <code class="language-plaintext highlighter-rouge">z-depth-1</code> classes.
-Here’s the code for the last row of images above:</p>
+<p>The rendering equation becomes:</p>
 
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row justify-content-sm-center"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-8 mt-3 mt-md-0"</span><span class="nt">&gt;</span>
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-4 mt-3 mt-md-0"</span><span class="nt">&gt;</span>
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
+\[\begin{align}
+L_{o}(x,\omega_{o}) &amp; = \int_{\Omega^{+}} L_{i}(x,\omega_{i})f_{r}(x,\omega_{i},\omega_{o})\cos\theta d\omega_{i}\\
+&amp; = \int_{A} L_{i}(x,\omega_{i})f_{r}(x,\omega_{i},\omega_{o})\frac{\cos\theta \cos\theta^{\prime}}{\left \|x^{\prime} - x \right \|^{2} } dA 
+\end{align}\]
+
+<h3 id="pseudocode-of-algorithm">Pseudocode of Algorithm:</h3>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">shade</span> <span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">wo</span><span class="p">)</span>
+    <span class="n">sampleLight</span> <span class="p">(</span> <span class="n">inter</span> <span class="p">,</span> <span class="n">pdf_light</span> <span class="p">)</span>
+    <span class="n">Get</span> <span class="n">x</span><span class="p">,</span> <span class="n">ws</span> <span class="p">,</span> <span class="n">NN</span> <span class="p">,</span> <span class="n">emit</span> <span class="n">from</span> <span class="n">inter</span>
+    <span class="n">Shoot</span> <span class="n">a</span> <span class="n">ray</span> <span class="n">from</span> <span class="n">p</span> <span class="n">to</span> <span class="n">x</span>
+    <span class="n">If</span> <span class="n">the</span> <span class="n">ray</span> <span class="n">is</span> <span class="n">not</span> <span class="n">blocked</span> <span class="n">in</span> <span class="n">the</span> <span class="n">middle</span>
+        <span class="n">L_dir</span> <span class="o">=</span> <span class="n">emit</span> <span class="o">*</span> <span class="n">eval</span><span class="p">(</span><span class="n">wo</span> <span class="p">,</span> <span class="n">ws</span> <span class="p">,</span> <span class="n">N</span><span class="p">)</span> <span class="o">*</span> <span class="n">dot</span><span class="p">(</span><span class="n">ws</span> <span class="p">,</span> <span class="n">N</span><span class="p">)</span> <span class="o">*</span> <span class="n">dot</span><span class="p">(</span><span class="n">ws</span> <span class="p">,</span> <span class="n">NN</span><span class="p">)</span> <span class="o">/</span> <span class="o">|</span><span class="n">x</span><span class="o">-</span><span class="n">p</span><span class="o">|^</span><span class="mi">2</span> <span class="o">/</span> <span class="n">pdf_light</span>
+    
+    <span class="n">L_indir</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="n">Test</span> <span class="n">Russian</span> <span class="n">Roulette</span> <span class="n">with</span> <span class="n">probability</span> <span class="n">RussianRoulette</span>
+    <span class="n">wi</span> <span class="o">=</span> <span class="n">sample</span> <span class="p">(</span><span class="n">wo</span> <span class="p">,</span> <span class="n">N</span><span class="p">)</span>
+    <span class="n">Trace</span> <span class="n">a</span> <span class="n">ray</span> <span class="n">r</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">wi</span><span class="p">)</span>
+    <span class="n">If</span> <span class="n">ray</span> <span class="n">r</span> <span class="n">hit</span> <span class="n">a</span> <span class="n">non</span> <span class="o">-</span> <span class="n">emitting</span> <span class="n">object</span> <span class="n">at</span> <span class="n">q</span>
+        <span class="n">L_indir</span> <span class="o">=</span> <span class="n">shade</span> <span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="o">-</span><span class="n">wi</span><span class="p">)</span> <span class="o">*</span> <span class="n">eval</span> <span class="p">(</span><span class="n">wo</span> <span class="p">,</span> <span class="n">wi</span> <span class="p">,</span> <span class="n">N</span><span class="p">)</span> <span class="o">*</span> <span class="n">dot</span><span class="p">(</span><span class="n">wi</span> <span class="p">,</span> <span class="n">N</span><span class="p">)</span> <span class="o">/</span> <span class="n">pdf</span><span class="p">(</span><span class="n">wo</span> <span class="p">,</span> <span class="n">wi</span> <span class="p">,</span> <span class="n">N</span><span class="p">)</span> <span class="o">/</span> <span class="n">RussianRoulette</span>
+    
+    <span class="n">Return</span> <span class="n">L_dir</span> <span class="o">+</span> <span class="n">L_indir</span>
 </code></pre></div></div>
 
+<h2 id="enhancement">Enhancement</h2>
+
+<h3 id="multi-threaded-acceleration">Multi-threaded acceleration</h3>
+
+<p>Maximize the amount of computation per thread, and use multiple threads for the entire frame computation.</p>
+
+<p>In this project,the rendering process can be accelerated by using multiple threads to chunk the image and perform path tracing for each part synchronously. Here, the rendering (process) implemented by Render() (program) can be executed concurrently using fragments (thread) for multiple pixel operations (multiple threads).</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;mutex&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;thread&gt;</span><span class="cp">
+</span>    <span class="p">...</span>
+    <span class="kt">int</span> <span class="n">thread_num</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span> <span class="c1">// AMD5800H, based on your own cpu</span>
+    <span class="kt">int</span> <span class="n">thread_height</span> <span class="o">=</span> <span class="n">scene</span><span class="p">.</span><span class="n">height</span> <span class="o">/</span> <span class="n">thread_num</span><span class="p">;</span>
+    <span class="c1">// thread is a right-valued reference</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="kr">thread</span><span class="o">&gt;</span> <span class="n">threads</span><span class="p">(</span><span class="n">thread_num</span><span class="p">);</span>
+    <span class="p">...</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">mutex</span> <span class="n">mtx</span><span class="p">;</span> <span class="c1">// Solve two multi-threaded resource contention problems</span>
+    <span class="kt">float</span> <span class="n">process</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">float</span> <span class="n">Reciprocal_Scene_height</span><span class="o">=</span><span class="mf">1.</span><span class="n">f</span><span class="o">/</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">scene</span><span class="p">.</span><span class="n">height</span><span class="p">;</span>
+    <span class="c1">// Refer to lambda function</span>
+    <span class="k">auto</span> <span class="n">castRay</span> <span class="o">=</span> <span class="p">[</span><span class="o">&amp;</span><span class="p">](</span><span class="kt">int</span> <span class="n">thread_index</span><span class="p">)</span> 
+    <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">height</span> <span class="o">=</span> <span class="n">thread_height</span> <span class="o">*</span> <span class="p">(</span><span class="n">thread_index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">uint32_t</span> <span class="n">j</span> <span class="o">=</span> <span class="n">height</span> <span class="o">-</span> <span class="n">thread_height</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">height</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">uint32_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">scene</span><span class="p">.</span><span class="n">width</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+                <span class="c1">// generate primary ray direction</span>
+                <span class="kt">float</span> <span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mf">0.5</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">scene</span><span class="p">.</span><span class="n">width</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span>
+                          <span class="n">imageAspectRatio</span> <span class="o">*</span> <span class="n">scale</span><span class="p">;</span>
+                <span class="kt">float</span> <span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">j</span> <span class="o">+</span> <span class="mf">0.5</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">scene</span><span class="p">.</span><span class="n">height</span><span class="p">)</span> <span class="o">*</span> <span class="n">scale</span><span class="p">;</span>
+
+                <span class="n">Vector3f</span> <span class="n">dir</span> <span class="o">=</span> <span class="n">normalize</span><span class="p">(</span><span class="n">Vector3f</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="mi">1</span><span class="p">));</span>
+                <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="n">spp</span><span class="p">;</span> <span class="n">k</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="n">framebuffer</span><span class="p">[</span><span class="n">j</span><span class="o">*</span><span class="n">scene</span><span class="p">.</span><span class="n">width</span><span class="o">+</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="n">scene</span><span class="p">.</span><span class="n">castRay</span><span class="p">(</span><span class="n">Ray</span><span class="p">(</span><span class="n">eye_pos</span><span class="p">,</span> <span class="n">dir</span><span class="p">),</span> <span class="mi">0</span><span class="p">)</span> <span class="o">/</span> <span class="n">spp</span><span class="p">;</span>  
+                <span class="p">}</span>
+            <span class="p">}</span>
+            <span class="n">mtx</span><span class="p">.</span><span class="n">lock</span><span class="p">();</span>
+            <span class="n">process</span> <span class="o">=</span> <span class="n">process</span> <span class="o">+</span> <span class="n">Reciprocal_Scene_height</span><span class="p">;</span>
+            <span class="n">UpdateProgress</span><span class="p">(</span><span class="n">process</span><span class="p">);</span> <span class="c1">// Every thread is used to update the process</span>
+            <span class="n">mtx</span><span class="p">.</span><span class="n">unlock</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">};</span>
+    <span class="c1">// from the 0th thread</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="n">thread_num</span><span class="p">;</span> <span class="n">k</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">threads</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="kr">thread</span><span class="p">(</span><span class="n">castRay</span><span class="p">,</span><span class="n">k</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="c1">// Execute join once for each thread</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="n">thread_num</span><span class="p">;</span> <span class="n">k</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">threads</span><span class="p">[</span><span class="n">k</span><span class="p">].</span><span class="n">join</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="n">UpdateProgress</span><span class="p">(</span><span class="mf">1.</span><span class="n">f</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h3 id="microfacet-material">Microfacet material</h3>
+
+<p>Microfacet BRDF:</p>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/Tinypathtracer/principle/Microfacet%20BRDF-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/Tinypathtracer/principle/Microfacet%20BRDF-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/Tinypathtracer/principle/Microfacet%20BRDF-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/Tinypathtracer/principle/Microfacet%20BRDF.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+<div class="caption">
+    The Microfacet BRDF
+</div>
+
+<p>We use the GGX for $G(\mathbf{i,o,h})$ and $D(\mathbf{h})$</p>
+
+<div align="center">
+    <img src="image\principle\GGX%20NDF.png" alt="GGX NDF" width="450">
+</div>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Define the microfacet material in main.cpp</span>
+<span class="n">Material</span><span class="o">*</span> <span class="n">microfacet</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">Material</span><span class="p">(</span><span class="n">MICROFACET</span><span class="p">,</span> <span class="n">Vector3f</span><span class="p">(</span><span class="mf">0.0</span><span class="n">f</span><span class="p">));</span>
+<span class="n">microfacet</span><span class="o">-&gt;</span><span class="n">Ks</span> <span class="o">=</span> <span class="n">Vector3f</span><span class="p">(</span><span class="mf">0.45</span><span class="p">,</span> <span class="mf">0.45</span><span class="p">,</span> <span class="mf">0.45</span><span class="p">);</span>
+<span class="n">microfacet</span><span class="o">-&gt;</span><span class="n">Kd</span> <span class="o">=</span> <span class="n">Vector3f</span><span class="p">(</span><span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">);</span>
+<span class="n">microfacet</span><span class="o">-&gt;</span><span class="n">ior</span> <span class="o">=</span> <span class="mf">12.85</span><span class="p">;</span>
+
+<span class="c1">// In sample and pdf function, it is the same as DIFFUSE</span>
+
+<span class="c1">// In eval function</span>
+<span class="k">case</span> <span class="n">MICROFACET</span><span class="p">:</span>
+        <span class="p">{</span>
+            <span class="c1">// Implement the Torrance-Sparrow Model</span>
+            <span class="kt">float</span> <span class="n">cosalpha</span> <span class="o">=</span> <span class="n">dotProduct</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">wo</span><span class="p">);</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">cosalpha</span> <span class="o">&gt;</span> <span class="mf">0.0</span><span class="n">f</span><span class="p">)</span> 
+            <span class="p">{</span>
+                <span class="c1">// calculate the contribution of Microfacet model</span>
+                <span class="kt">float</span> <span class="n">F</span><span class="p">,</span> <span class="n">G</span><span class="p">,</span> <span class="n">D</span><span class="p">;</span>
+
+                <span class="n">fresnel</span><span class="p">(</span><span class="n">wi</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">ior</span><span class="p">,</span> <span class="n">F</span><span class="p">);</span>
+
+                <span class="kt">float</span> <span class="n">Roughness</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span><span class="c1">// roughness</span>
+                <span class="k">auto</span> <span class="n">G_function</span> <span class="o">=</span> <span class="p">[</span><span class="o">&amp;</span><span class="p">](</span><span class="k">const</span> <span class="kt">float</span><span class="o">&amp;</span> <span class="n">Roughness</span><span class="p">,</span> <span class="k">const</span> <span class="n">Vector3f</span><span class="o">&amp;</span> <span class="n">wi</span><span class="p">,</span> <span class="k">const</span> <span class="n">Vector3f</span><span class="o">&amp;</span> <span class="n">wo</span><span class="p">,</span> <span class="k">const</span> <span class="n">Vector3f</span><span class="o">&amp;</span> <span class="n">N</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="kt">float</span> <span class="n">A_wi</span><span class="p">,</span> <span class="n">A_wo</span><span class="p">;</span>
+                    <span class="n">A_wi</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span> <span class="o">+</span> <span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">Roughness</span> <span class="o">*</span> <span class="n">Roughness</span> <span class="o">*</span> <span class="n">pow</span><span class="p">(</span><span class="n">tan</span><span class="p">(</span><span class="n">acos</span><span class="p">(</span><span class="n">dotProduct</span><span class="p">(</span><span class="n">wi</span><span class="p">,</span> <span class="n">N</span><span class="p">))),</span> <span class="mi">2</span><span class="p">)))</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+                    <span class="n">A_wo</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span> <span class="o">+</span> <span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">Roughness</span> <span class="o">*</span> <span class="n">Roughness</span> <span class="o">*</span> <span class="n">pow</span><span class="p">(</span><span class="n">tan</span><span class="p">(</span><span class="n">acos</span><span class="p">(</span><span class="n">dotProduct</span><span class="p">(</span><span class="n">wo</span><span class="p">,</span> <span class="n">N</span><span class="p">))),</span> <span class="mi">2</span><span class="p">)))</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+                    <span class="kt">float</span> <span class="n">divisor</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">A_wi</span> <span class="o">+</span> <span class="n">A_wo</span><span class="p">);</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="n">divisor</span> <span class="o">&lt;</span> <span class="mf">0.001</span><span class="p">)</span>
+                        <span class="k">return</span> <span class="mf">1.</span><span class="n">f</span><span class="p">;</span>
+                    <span class="k">else</span>
+                        <span class="k">return</span> <span class="mf">1.0</span><span class="n">f</span> <span class="o">/</span> <span class="n">divisor</span><span class="p">;</span>
+                <span class="p">};</span>
+                <span class="n">G</span> <span class="o">=</span> <span class="n">G_function</span><span class="p">(</span><span class="n">Roughness</span><span class="p">,</span> <span class="o">-</span><span class="n">wi</span><span class="p">,</span> <span class="n">wo</span><span class="p">,</span> <span class="n">N</span><span class="p">);</span>
+
+                <span class="k">auto</span> <span class="n">D_function</span> <span class="o">=</span> <span class="p">[</span><span class="o">&amp;</span><span class="p">](</span><span class="k">const</span> <span class="kt">float</span><span class="o">&amp;</span> <span class="n">Roughness</span><span class="p">,</span> <span class="k">const</span> <span class="n">Vector3f</span><span class="o">&amp;</span> <span class="n">h</span><span class="p">,</span> <span class="k">const</span> <span class="n">Vector3f</span><span class="o">&amp;</span> <span class="n">N</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="kt">float</span> <span class="n">cos_sita</span> <span class="o">=</span> <span class="n">dotProduct</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="n">N</span><span class="p">);</span>
+                    <span class="kt">float</span> <span class="n">divisor</span> <span class="o">=</span> <span class="p">(</span><span class="n">M_PI</span> <span class="o">*</span> <span class="n">pow</span><span class="p">(</span><span class="mf">1.0</span> <span class="o">+</span> <span class="n">cos_sita</span> <span class="o">*</span> <span class="n">cos_sita</span> <span class="o">*</span> <span class="p">(</span><span class="n">Roughness</span> <span class="o">*</span> <span class="n">Roughness</span> <span class="o">-</span> <span class="mi">1</span><span class="p">),</span> <span class="mi">2</span><span class="p">));</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="n">divisor</span> <span class="o">&lt;</span> <span class="mf">0.001</span><span class="p">)</span>
+                        <span class="k">return</span> <span class="mf">1.</span><span class="n">f</span><span class="p">;</span>
+                    <span class="k">else</span> 
+                        <span class="k">return</span> <span class="p">(</span><span class="n">Roughness</span> <span class="o">*</span> <span class="n">Roughness</span><span class="p">)</span> <span class="o">/</span> <span class="n">divisor</span><span class="p">;</span>
+                <span class="p">};</span>
+                <span class="n">Vector3f</span> <span class="n">h</span> <span class="o">=</span> <span class="n">normalize</span><span class="p">(</span><span class="o">-</span><span class="n">wi</span> <span class="o">+</span> <span class="n">wo</span><span class="p">);</span>
+                <span class="n">D</span> <span class="o">=</span> <span class="n">D_function</span><span class="p">(</span><span class="n">Roughness</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">N</span><span class="p">);</span>
+
+                <span class="c1">// energy balance</span>
+                <span class="n">Vector3f</span> <span class="n">diffuse</span> <span class="o">=</span> <span class="p">(</span><span class="n">Vector3f</span><span class="p">(</span><span class="mf">1.0</span><span class="n">f</span><span class="p">)</span> <span class="o">-</span> <span class="n">F</span><span class="p">)</span> <span class="o">*</span> <span class="n">Kd</span> <span class="o">/</span> <span class="n">M_PI</span><span class="p">;</span>
+                <span class="n">Vector3f</span> <span class="n">specular</span><span class="p">;</span>
+                <span class="kt">float</span> <span class="n">divisor</span><span class="o">=</span> <span class="p">((</span><span class="mi">4</span> <span class="o">*</span> <span class="p">(</span><span class="n">dotProduct</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="o">-</span><span class="n">wi</span><span class="p">))</span> <span class="o">*</span> <span class="p">(</span><span class="n">dotProduct</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">wo</span><span class="p">))));</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">divisor</span> <span class="o">&lt;</span> <span class="mf">0.001</span><span class="p">)</span>
+                    <span class="n">specular</span><span class="o">=</span> <span class="n">Vector3f</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+                <span class="k">else</span>
+                    <span class="n">specular</span> <span class="o">=</span> <span class="n">F</span> <span class="o">*</span><span class="n">G</span> <span class="o">*</span> <span class="n">D</span> <span class="o">/</span> <span class="n">divisor</span><span class="p">;</span>
+                <span class="c1">//std::cout &lt;&lt; "F:"&lt;&lt;F &lt;&lt; "\n";</span>
+                <span class="c1">//std::cout &lt;&lt; "diffuse:"&lt;&lt;diffuse&lt;&lt;"\n";</span>
+                <span class="c1">//std::cout &lt;&lt; "specular:" &lt;&lt; specular &lt;&lt; "\n";</span>
+                <span class="k">return</span> <span class="n">diffuse</span><span class="o">+</span><span class="n">specular</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">else</span>
+                <span class="k">return</span> <span class="nf">Vector3f</span><span class="p">(</span><span class="mf">0.0</span><span class="n">f</span><span class="p">);</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+</code></pre></div></div>
+
+<p>Remove the black noise:</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">In</span> <span class="n">Intersection</span> <span class="nf">getIntersection</span><span class="p">(</span><span class="n">Ray</span> <span class="n">ray</span><span class="p">)</span><span class="o">:</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">t0</span> <span class="o">&gt;</span> <span class="mf">0.5</span><span class="p">)</span> <span class="c1">// Remove black noise</span>
+<span class="p">{</span>
+    <span class="n">result</span><span class="p">.</span><span class="n">happened</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="n">result</span><span class="p">.</span><span class="n">coords</span> <span class="o">=</span> <span class="n">Vector3f</span><span class="p">(</span><span class="n">ray</span><span class="p">.</span><span class="n">origin</span> <span class="o">+</span> <span class="n">ray</span><span class="p">.</span><span class="n">direction</span> <span class="o">*</span> <span class="n">t0</span><span class="p">);</span>
+    <span class="n">result</span><span class="p">.</span><span class="n">normal</span> <span class="o">=</span> <span class="n">normalize</span><span class="p">(</span><span class="n">Vector3f</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">coords</span> <span class="o">-</span> <span class="n">center</span><span class="p">));</span>
+    <span class="n">result</span><span class="p">.</span><span class="n">m</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">m</span><span class="p">;</span>
+    <span class="n">result</span><span class="p">.</span><span class="n">obj</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+    <span class="n">result</span><span class="p">.</span><span class="n">distance</span> <span class="o">=</span> <span class="n">t0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Remove the white noise:</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">In</span> <span class="n">Vector3f</span> <span class="n">Scene</span><span class="o">::</span><span class="n">castRay</span><span class="p">(</span><span class="k">const</span> <span class="n">Ray</span> <span class="o">&amp;</span><span class="n">ray</span><span class="p">,</span> <span class="kt">int</span> <span class="n">depth</span><span class="p">)</span> <span class="k">const</span><span class="o">:</span>
+
+<span class="p">(</span><span class="n">hitColor</span><span class="p">).</span><span class="n">x</span><span class="o">=</span> <span class="p">(</span><span class="n">clamp</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="n">hitColor</span><span class="p">).</span><span class="n">x</span><span class="p">));</span>
+<span class="p">(</span><span class="n">hitColor</span><span class="p">).</span><span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="n">clamp</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="n">hitColor</span><span class="p">).</span><span class="n">y</span><span class="p">));</span>
+<span class="p">(</span><span class="n">hitColor</span><span class="p">).</span><span class="n">z</span> <span class="o">=</span> <span class="p">(</span><span class="n">clamp</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="n">hitColor</span><span class="p">).</span><span class="n">z</span><span class="p">));</span>
+</code></pre></div></div>
+
+<h3 id="perfect-mirror-reflection-model">Perfect mirror reflection model</h3>
+
+<p>In this model, only the coefficient of Fresnel reflection needs to be considered.</p>
+
+<p>The BRDF of Perfect mirror reflection model:</p>
+
+\[f_{r}(p,\omega_{o},\omega_{i})=F_{r}(\omega_{r})\frac{\delta (\omega_{i} - \omega_{r})}{\cos \theta_{i}}\]
+
+<p>Implementation:</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Material</span><span class="o">*</span> <span class="n">mirror</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">Material</span><span class="p">(</span><span class="n">MIRROR</span><span class="p">,</span> <span class="n">Vector3f</span><span class="p">(</span><span class="mf">0.0</span><span class="n">f</span><span class="p">));</span>
+<span class="n">mirror</span><span class="o">-&gt;</span><span class="n">Ks</span> <span class="o">=</span> <span class="n">Vector3f</span><span class="p">(</span><span class="mf">0.45</span><span class="p">,</span> <span class="mf">0.45</span><span class="p">,</span> <span class="mf">0.45</span><span class="p">);</span>
+<span class="n">mirror</span><span class="o">-&gt;</span><span class="n">Kd</span> <span class="o">=</span> <span class="n">Vector3f</span><span class="p">(</span><span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">);</span>
+<span class="n">mirror</span><span class="o">-&gt;</span><span class="n">ior</span> <span class="o">=</span> <span class="mf">12.85</span><span class="p">;</span>
+
+<span class="c1">// in sample</span>
+<span class="k">case</span> <span class="n">MIRROR</span><span class="p">:</span>
+<span class="p">{</span>
+    <span class="n">Vector3f</span> <span class="n">localRay</span> <span class="o">=</span> <span class="n">reflect</span><span class="p">(</span><span class="n">wi</span><span class="p">,</span> <span class="n">N</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">localRay</span><span class="p">;</span>
+    <span class="k">break</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">// in pdf</span>
+<span class="k">case</span> <span class="n">MIRROR</span><span class="p">:</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">dotProduct</span><span class="p">(</span><span class="n">wo</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mf">0.0</span><span class="n">f</span><span class="p">)</span>
+        <span class="k">return</span> <span class="mf">1.0</span><span class="n">f</span><span class="p">;</span>
+    <span class="k">else</span>
+        <span class="k">return</span> <span class="mf">0.0</span><span class="n">f</span><span class="p">;</span>
+    <span class="k">break</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">// in eval</span>
+<span class="k">case</span> <span class="n">MIRROR</span><span class="p">:</span>
+<span class="p">{</span>
+    <span class="kt">float</span> <span class="n">cosalpha</span> <span class="o">=</span> <span class="n">dotProduct</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">wo</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">cosalpha</span> <span class="o">&gt;</span> <span class="mf">0.0</span><span class="n">f</span><span class="p">)</span> 
+    <span class="p">{</span>
+        <span class="kt">float</span> <span class="n">divisor</span> <span class="o">=</span> <span class="n">cosalpha</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">divisor</span> <span class="o">&lt;</span> <span class="mf">0.001</span><span class="p">)</span> <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="n">Vector3f</span> <span class="n">mirror</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">divisor</span><span class="p">;</span>
+        <span class="kt">float</span> <span class="n">F</span><span class="p">;</span>
+        <span class="n">fresnel</span><span class="p">(</span><span class="n">wi</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">ior</span><span class="p">,</span> <span class="n">F</span><span class="p">);</span>
+        <span class="k">return</span> <span class="n">F</span> <span class="o">*</span> <span class="n">mirror</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">else</span>
+        <span class="k">return</span> <span class="nf">Vector3f</span><span class="p">(</span><span class="mf">0.0</span><span class="n">f</span><span class="p">);</span>
+    <span class="k">break</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// also need to do importance sampling by modifying the castRay to prevent overexposure (only sample the indir light)</span>
+<span class="k">case</span> <span class="n">MIRROR</span><span class="p">:</span>
+<span class="p">{</span>
+    <span class="kt">float</span> <span class="n">ksi</span> <span class="o">=</span> <span class="n">get_random_float</span><span class="p">();</span> <span class="c1">// random number</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">ksi</span> <span class="o">&lt;</span> <span class="n">RussianRoulette</span><span class="p">){</span>
+        <span class="n">Vector3f</span> <span class="n">wi</span> <span class="o">=</span> <span class="n">inter</span><span class="p">.</span><span class="n">m</span><span class="o">-&gt;</span><span class="n">sample</span><span class="p">(</span><span class="n">wo</span><span class="p">,</span> <span class="n">N</span><span class="p">).</span><span class="n">normalized</span><span class="p">();</span>
+
+        <span class="n">Ray</span> <span class="n">r</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">wi</span><span class="p">);</span>
+        <span class="n">Intersection</span> <span class="n">obj_to_scene</span> <span class="o">=</span> <span class="n">Scene</span><span class="o">::</span><span class="n">intersect</span><span class="p">(</span><span class="n">r</span><span class="p">);</span>
+
+        <span class="c1">// hit obj instead of light source</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">obj_to_scene</span><span class="p">.</span><span class="n">happened</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">Vector3f</span> <span class="n">f_r</span> <span class="o">=</span> <span class="n">inter</span><span class="p">.</span><span class="n">m</span><span class="o">-&gt;</span><span class="n">eval</span><span class="p">(</span><span class="n">wo</span><span class="p">,</span> <span class="n">wi</span><span class="p">,</span> <span class="n">N</span><span class="p">);</span>
+            <span class="kt">float</span> <span class="n">cos_theta</span> <span class="o">=</span> <span class="n">dotProduct</span><span class="p">(</span><span class="n">wi</span><span class="p">,</span> <span class="n">N</span><span class="p">);</span>
+            <span class="kt">float</span> <span class="n">pdf_hemi</span> <span class="o">=</span> <span class="n">inter</span><span class="p">.</span><span class="n">m</span><span class="o">-&gt;</span><span class="n">pdf</span><span class="p">(</span><span class="n">wo</span><span class="p">,</span> <span class="n">wi</span><span class="p">,</span> <span class="n">N</span><span class="p">);</span>
+            <span class="n">indir</span> <span class="o">=</span> <span class="n">castRay</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">depth</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">f_r</span> <span class="o">*</span> <span class="n">cos_theta</span> <span class="o">/</span> <span class="n">pdf_hemi</span> <span class="o">/</span> <span class="n">RussianRoulette</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+	<span class="k">break</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="result">Result</h2>
+
+<table>
+     <tr>
+        <th colspan="5">Different SPP (sample per pixel):</th>
+    </tr>
+    <tr>
+        <td><center>
+<img src="image/result/spp2.jpg">SPP = 2 </center></td>
+        <td><center>
+<img src="image/result/spp4.jpg">SPP = 4</center></td>
+        <td><center>
+<img src="image/result/spp16.jpg">SPP = 16</center></td>
+        <td><center>
+<img src="image/result/spp64.jpg">SPP = 64</center></td>
+        <td><center>
+<img src="image/result/spp128.jpg">SPP = 128</center></td>
+    </tr>
+
+
+<table>
+    <tr>
+        <th colspan="1">Accelerated</th>
+        <th colspan="1">Non-accelerated</th>
+    </tr>
+    <tr>
+        <td><center>
+<img src="image/result/spp2_acc_time.jpg">SPP=2 with acc </center></td>
+        <td><center>
+<img src="image/result/spp2_noacc_time.jpg">SPP=2 without acc</center></td>
+    </tr>
+    <tr>
+        <td><center>
+<img src="image/result/spp4_acc_time.jpg">SPP=4 with acc </center></td>
+        <td><center>
+<img src="image/result/spp4_noacc_time.jpg">SPP=4 without acc</center></td>
+    </tr>
+    <tr>
+        <td><center>
+<img src="image/result/spp16_acc_time.jpg">SPP=16 with acc </center></td>
+        <td><center>
+<img src="image/result/spp16_noacc_time.jpg">SPP=16 without acc</center></td>
+    </tr>
+        <tr>
+        <td><center>
+<img src="image/result/spp64_acc_time.jpg">SPP=64 with acc </center></td>
+        <td><center>
+<img src="image/result/spp64_noacc_time.jpg">SPP=64 without acc</center></td>
+    </tr>
+        <tr>
+        <td><center>
+<img src="image/result/spp128_acc_time.jpg">SPP=128 with acc </center></td>
+        <td><center>
+<img src="image/result/spp128_noacc_time.jpg">SPP=128 without acc</center></td>
+    </tr>
+
+
+<table>
+    <tr>
+        <th colspan="4">Using microfacet (SPP=64):</th>
+    </tr>
+    <tr>
+        <td><center>
+<img src="image/result/spp64_rough0.jpg">roughness=0</center></td>
+        <td><center>
+<img src="image/result/spp64_rough0.25.jpg">roughness=0.25</center></td>
+        <td><center>
+<img src="image/result/spp64_rough0.5.jpg">roughness=0.5</center></td>
+        <td><center>
+<img src="image/result/spp64_rough1.jpg">roughness=1</center></td>
+    </tr>
+<table>
+    <tr>
+        <th colspan="1">Perfect mirror reflection model:</th>
+    </tr>
+    <tr>
+        <td><center>
+<img src="image/result/Perfect%20mirror%20reflection%20model%20spp128%20rough0.25.jpg">SPP=128, roughness=0.25</center></td>
+    </tr>
+</table>
+</table>
+</table>
+</table>
 
           </article>
 
