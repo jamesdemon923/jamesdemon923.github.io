@@ -33,10 +33,9 @@ category: Fun
         {% include figure.html path="assets/img/Tinypathtracer/principle/BVH1.png" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/Tinypathtracer/principle/BVH2.png" image" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.html path="assets/img/Tinypathtracer/principle/BVH2.png" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
-
 
 Pseudocode:
 
@@ -408,7 +407,7 @@ case MIRROR:
         <th colspan="5">Different SPP (sample per pixel):</th>
     </tr>
     <tr>
-        <td ><center><img src="assets/img/Tinypathtracer/result/spp2.jpg" >SPP = 2 </center></td>
+        <td ><center><figure.html path="assets/img/Tinypathtracer/result/spp2.jpg" >SPP = 2 </center></td>
         <td ><center><img src="assets/img/Tinypathtracer/result/spp4.jpg"  >SPP = 4</center></td>
         <td ><center><img src="assets/img/Tinypathtracer/result/spp16.jpg"  >SPP = 16</center></td>
         <td ><center><img src="assets/img/Tinypathtracer/result/spp64.jpg"  >SPP = 64</center></td>
@@ -460,3 +459,4 @@ case MIRROR:
     <tr>
         <td ><center><img src="assets/img/Tinypathtracer/result/Perfect mirror reflection model spp128 rough0.25.jpg" >SPP=128, roughness=0.25</center></td>
     </tr>
+
