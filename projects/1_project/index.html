@@ -10,7 +10,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Tiny path tracer | Haolan  Xu</title>
+    <title>Tiny pathtracer | Haolan  Xu</title>
     <meta name="author" content="Haolan  Xu">
     <meta name="description" content="A tiny software path tracer rendering Cornell Box">
     <meta name="keywords" content="Haolan_Xu, graphics, vision, portfolio-website">
@@ -120,7 +120,7 @@
         <div class="post">
 
           <header class="post-header">
-            <h1 class="post-title">Tiny path tracer</h1>
+            <h1 class="post-title">Tiny pathtracer</h1>
             <p class="post-description">A tiny software path tracer rendering Cornell Box</p>
           </header>
 
@@ -273,7 +273,7 @@
 
 <h3 id="russian-roulette">Russian roulette</h3>
 
-<p>Previously, we always shoot a ray at a shading point and get the shading result $\mathbf{L_{o}}$. Suppose we manually set a probability P (0 &lt; P &lt; 1) With probability P, shoot a ray and return the shading result divided by P: $\mathbf{L_{o}}$ / P With probability 1-P, don’t shoot a ray and you’ll get 0. In this way, you can still expect to get $\mathbf{L_{o}}$:</p>
+<p>Previously, we always shoot a ray at a shading point and get the shading result \(\mathbf{L_{o}}\). Suppose we manually set a probability P (0 &lt; P &lt; 1) With probability P, shoot a ray and return the shading result divided by P: \(\mathbf{L_{o}}\) / P With probability 1-P, don’t shoot a ray and you’ll get 0. In this way, you can still expect to get \(\mathbf{L_{o}}\):</p>
 
 \[E = P * (\mathbf{L_{o}} / P) + (1 - P) * 0 = \mathbf{L_{o}}\]
 
@@ -300,7 +300,7 @@
     </div>
 </div>
 <div class="caption">
-    The rendering equation
+    Sample the light source instead of the surface
 </div>
 
 <p>The rendering equation becomes:</p>
@@ -410,13 +410,33 @@ L_{o}(x,\omega_{o}) &amp; = \int_{\Omega^{+}} L_{i}(x,\omega_{i})f_{r}(x,\omega_
     </div>
 </div>
 <div class="caption">
-    The Microfacet BRDF
+    The formula for Microfacet BRDF
 </div>
 
-<p>We use the GGX for $G(\mathbf{i,o,h})$ and $D(\mathbf{h})$</p>
+<p>We use the GGX for \(G(\mathbf{i,o,h})\) and \(D(\mathbf{h})\)</p>
 
-<div align="center">
-    <img src="image\principle\GGX%20NDF.png" alt="GGX NDF" width="450">
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/Tinypathtracer/principle/GGX%20NDF-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/Tinypathtracer/principle/GGX%20NDF-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/Tinypathtracer/principle/GGX%20NDF-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/Tinypathtracer/principle/GGX%20NDF.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+<div class="caption">
+    GGX NDF
 </div>
 
 <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Define the microfacet material in main.cpp</span>
@@ -588,17 +608,16 @@ L_{o}(x,\omega_{o}) &amp; = \int_{\Omega^{+}} L_{i}(x,\omega_{i})f_{r}(x,\omega_
     </tr>
     <tr>
         <td><center>
-<img src="image/result/spp2.jpg">SPP = 2 </center></td>
+<img src="assets/img/Tinypathtracer/result/spp2.jpg">SPP = 2 </center></td>
         <td><center>
-<img src="image/result/spp4.jpg">SPP = 4</center></td>
+<img src="assets/img/Tinypathtracer/result/spp4.jpg">SPP = 4</center></td>
         <td><center>
-<img src="image/result/spp16.jpg">SPP = 16</center></td>
+<img src="assets/img/Tinypathtracer/result/spp16.jpg">SPP = 16</center></td>
         <td><center>
-<img src="image/result/spp64.jpg">SPP = 64</center></td>
+<img src="assets/img/Tinypathtracer/result/spp64.jpg">SPP = 64</center></td>
         <td><center>
-<img src="image/result/spp128.jpg">SPP = 128</center></td>
+<img src="assets/img/Tinypathtracer/result/spp128.jpg">SPP = 128</center></td>
     </tr>
-
 
 <table>
     <tr>
@@ -607,35 +626,34 @@ L_{o}(x,\omega_{o}) &amp; = \int_{\Omega^{+}} L_{i}(x,\omega_{i})f_{r}(x,\omega_
     </tr>
     <tr>
         <td><center>
-<img src="image/result/spp2_acc_time.jpg">SPP=2 with acc </center></td>
+<img src="assets/img/Tinypathtracer/result/spp2_acc_time.jpg">SPP=2 with acc </center></td>
         <td><center>
-<img src="image/result/spp2_noacc_time.jpg">SPP=2 without acc</center></td>
+<img src="assets/img/Tinypathtracer/result/spp2_noacc_time.jpg">SPP=2 without acc</center></td>
     </tr>
     <tr>
         <td><center>
-<img src="image/result/spp4_acc_time.jpg">SPP=4 with acc </center></td>
+<img src="assets/img/Tinypathtracer/result/spp4_acc_time.jpg">SPP=4 with acc </center></td>
         <td><center>
-<img src="image/result/spp4_noacc_time.jpg">SPP=4 without acc</center></td>
+<img src="assets/img/Tinypathtracer/result/spp4_noacc_time.jpg">SPP=4 without acc</center></td>
     </tr>
     <tr>
         <td><center>
-<img src="image/result/spp16_acc_time.jpg">SPP=16 with acc </center></td>
+<img src="assets/img/Tinypathtracer/result/spp16_acc_time.jpg">SPP=16 with acc </center></td>
         <td><center>
-<img src="image/result/spp16_noacc_time.jpg">SPP=16 without acc</center></td>
+<img src="assets/img/Tinypathtracer/result/spp16_noacc_time.jpg">SPP=16 without acc</center></td>
     </tr>
         <tr>
         <td><center>
-<img src="image/result/spp64_acc_time.jpg">SPP=64 with acc </center></td>
+<img src="assets/img/Tinypathtracer/result/spp64_acc_time.jpg">SPP=64 with acc </center></td>
         <td><center>
-<img src="image/result/spp64_noacc_time.jpg">SPP=64 without acc</center></td>
+<img src="assets/img/Tinypathtracer/result/spp64_noacc_time.jpg">SPP=64 without acc</center></td>
     </tr>
         <tr>
         <td><center>
-<img src="image/result/spp128_acc_time.jpg">SPP=128 with acc </center></td>
+<img src="assets/img/Tinypathtracer/result/spp128_acc_time.jpg">SPP=128 with acc </center></td>
         <td><center>
-<img src="image/result/spp128_noacc_time.jpg">SPP=128 without acc</center></td>
+<img src="assets/img/Tinypathtracer/result/spp128_noacc_time.jpg">SPP=128 without acc</center></td>
     </tr>
-
 
 <table>
     <tr>
@@ -643,22 +661,24 @@ L_{o}(x,\omega_{o}) &amp; = \int_{\Omega^{+}} L_{i}(x,\omega_{i})f_{r}(x,\omega_
     </tr>
     <tr>
         <td><center>
-<img src="image/result/spp64_rough0.jpg">roughness=0</center></td>
+<img src="assets/img/Tinypathtracer/result/spp64_rough0.jpg">roughness=0</center></td>
         <td><center>
-<img src="image/result/spp64_rough0.25.jpg">roughness=0.25</center></td>
+<img src="assets/img/Tinypathtracer/result/spp64_rough0.25.jpg">roughness=0.25</center></td>
         <td><center>
-<img src="image/result/spp64_rough0.5.jpg">roughness=0.5</center></td>
+<img src="assets/img/Tinypathtracer/result/spp64_rough0.5.jpg">roughness=0.5</center></td>
         <td><center>
-<img src="image/result/spp64_rough1.jpg">roughness=1</center></td>
+<img src="assets/img/Tinypathtracer/result/spp64_rough1.jpg">roughness=1</center></td>
     </tr>
+
 <table>
     <tr>
         <th colspan="1">Perfect mirror reflection model:</th>
     </tr>
     <tr>
         <td><center>
-<img src="image/result/Perfect%20mirror%20reflection%20model%20spp128%20rough0.25.jpg">SPP=128, roughness=0.25</center></td>
+<img src="assets/img/Tinypathtracer/result/Perfect%20mirror%20reflection%20model%20spp128%20rough0.25.jpg">SPP=128, roughness=0.25</center></td>
     </tr>
+
 </table>
 </table>
 </table>
