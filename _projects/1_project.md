@@ -408,11 +408,11 @@ case MIRROR:
         <th colspan="5">Different SPP (sample per pixel):</th>
     </tr>
     <tr>
-        <td ><center><figure.html path="assets/img/Tinypathtracer/result/spp2.jpg" >SPP = 2 </center></td>
-        <td ><center><figure.html path="assets/img/Tinypathtracer/result/spp4.jpg"  >SPP = 4</center></td>
-        <td ><center><figure.html path="assets/img/Tinypathtracer/result/spp16.jpg"  >SPP = 16</center></td>
-        <td ><center><figure.html path="assets/img/Tinypathtracer/result/spp64.jpg"  >SPP = 64</center></td>
-        <td ><center><figure.html path="assets/img/Tinypathtracer/result/spp128.jpg"  >SPP = 128</center></td>
+        <td ><center><img src="assets/img/Tinypathtracer/result/spp2.jpg" >SPP = 2 </center></td>
+        <td ><center><img src="assets/img/Tinypathtracer/result/spp4.jpg"  >SPP = 4</center></td>
+        <td ><center><img src="assets/img/Tinypathtracer/result/spp16.jpg"  >SPP = 16</center></td>
+        <td ><center><img src="assets/img/Tinypathtracer/result/spp64.jpg"  >SPP = 64</center></td>
+        <td ><center><img src="assets/img/Tinypathtracer/result/spp128.jpg"  >SPP = 128</center></td>
     </tr>
 
 <table>
