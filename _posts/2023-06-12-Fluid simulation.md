@@ -12,12 +12,13 @@ toc:
 ---
 ## Introduction
 
-For fluid simulation, the first step is to confirm the scale, because for different scales, we have different approaches. And, "realism" and "controllability" are very important. For realism, we need to solve the differential equations, while for controllability, we sometimes have to adjust the dependence on the numerical solution of the equations
+## Representation
 
-## Fluid simulation at different scales
-### Small
+### Particle
 
-For example, a glass of water, [using SPH or directly with particles to simulate](http://mmacklin.com/pbf_sig_preprint.pdf), no mesh required.
+Use [Smoothed Particle Hydrodynamic (SPH)](https://en.wikipedia.org/wiki/Smoothed-particle_hydrodynamics)
+
+For example, a glass of water, [using SPH directly with particles to simulate](http://mmacklin.com/pbf_sig_preprint.pdf), no grid required.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -25,9 +26,11 @@ For example, a glass of water, [using SPH or directly with particles to simulate
     </div>
 </div>
 
-### Median
+### Grid
 
-A small lake is solved on a certain coarse grid using the Navier-Stokes equation (NS equation) or the Euler equation. And it can extend to the [3D smoke simulation](http://web.stanford.edu/class/cs237d/smoke.pdf).
+Solve [Navier Stokes Equations (NS equation)](https://en.wikipedia.org/wiki/Navier%E2%80%93Stokes_equations)
+
+A small lake is simulated on a certain coarse **grid** using the Navier-Stokes equation (NS equation) or the Euler equation. And it can extend to the [3D smoke simulation](http://web.stanford.edu/class/cs237d/smoke.pdf).
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -35,13 +38,19 @@ A small lake is solved on a certain coarse grid using the Navier-Stokes equation
     </div>
 </div>
 
-### Large
+## Other approaches to simulate
 
-Use [FFT](http://www-evasion.imag.fr/Membres/Fabrice.Neyret/NaturalScenes/fluids/water/waves/fluids/waves/Jonathan/articlesCG/simulating-ocean-water-01.pdf) to simulate the ocean.
+1. Use [FFT](http://www-evasion.imag.fr/Membres/Fabrice.Neyret/NaturalScenes/fluids/water/waves/fluids/waves/Jonathan/articlesCG/simulating-ocean-water-01.pdf) to simulate the ocean.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/fluid_simulation/FFT.png" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
+2. Use [wave curves](https://visualcomputing.ist.ac.at/publications/2020/WaveCurves/) to simulate the Lagrangian water waves
 
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/fluid_simulation/wave curves.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
