@@ -422,20 +422,20 @@ case MIRROR:
         <td ><center>{% include figure.html path="assets/img/Tinypathtracer/result/spp2_noacc_time.jpg" class="img-fluid rounded z-depth-1" zoomable=true caption="SPP=2 without acc" %}</center></td>
     </tr>
     <tr>
-        <td ><center><img src="assets/img/Tinypathtracer/result/spp4_acc_time.jpg" >SPP=4 with acc </center></td>
-        <td ><center><img src="assets/img/Tinypathtracer/result/spp4_noacc_time.jpg"  >SPP=4 without acc</center></td>
+        <td ><center>{% include figure.html path="assets/img/Tinypathtracer/result/spp4_acc_time.jpg" class="img-fluid rounded z-depth-1" zoomable=true caption="SPP=4 with acc" %}</center></td>
+        <td ><center>{% include figure.html path="assets/img/Tinypathtracer/result/spp4_noacc_time.jpg" class="img-fluid rounded z-depth-1" zoomable=true caption="SPP=4 without acc" %}</center></td>
     </tr>
     <tr>
-        <td ><center><img src="assets/img/Tinypathtracer/result/spp16_acc_time.jpg" >SPP=16 with acc </center></td>
-        <td ><center><img src="assets/img/Tinypathtracer/result/spp16_noacc_time.jpg"  >SPP=16 without acc</center></td>
+        <td ><center>{% include figure.html path="assets/img/Tinypathtracer/result/spp16_acc_time.jpg" class="img-fluid rounded z-depth-1" zoomable=true caption="SPP=16 with acc" %}</center></td>
+        <td ><center>{% include figure.html path="assets/img/Tinypathtracer/result/spp16_noacc_time.jpg" class="img-fluid rounded z-depth-1" zoomable=true caption="SPP=16 without acc" %}</center></td>
     </tr>
         <tr>
-        <td ><center><img src="assets/img/Tinypathtracer/result/spp64_acc_time.jpg" >SPP=64 with acc </center></td>
-        <td ><center><img src="assets/img/Tinypathtracer/result/spp64_noacc_time.jpg"  >SPP=64 without acc</center></td>
+        <td ><center>{% include figure.html path="assets/img/Tinypathtracer/result/spp64_acc_time.jpg" class="img-fluid rounded z-depth-1" zoomable=true caption="SPP=64 with acc" %}</center></td>
+        <td ><center>{% include figure.html path="assets/img/Tinypathtracer/result/spp4_noacc_time.jpg" class="img-fluid rounded z-depth-1" zoomable=true caption="SPP=64 without acc" %}</center></td>
     </tr>
         <tr>
-        <td ><center><img src="assets/img/Tinypathtracer/result/spp128_acc_time.jpg" >SPP=128 with acc </center></td>
-        <td ><center><img src="assets/img/Tinypathtracer/result/spp128_noacc_time.jpg"  >SPP=128 without acc</center></td>
+        <td ><center>{% include figure.html path="assets/img/Tinypathtracer/result/spp128_acc_time.jpg" class="img-fluid rounded z-depth-1" zoomable=true caption="SPP=128 with acc" %}</center></td>
+        <td ><center>{% include figure.html path="assets/img/Tinypathtracer/result/spp128_noacc_time.jpg" class="img-fluid rounded z-depth-1" zoomable=true caption="SPP=128 without acc" %}</center></td>
     </tr>
 
 
@@ -445,16 +445,17 @@ case MIRROR:
         <th colspan="4">Using microfacet (SPP=64):</th>
     </tr>
     <tr>
-        <td ><center><img src="assets/img/Tinypathtracer/result/spp64_rough0.jpg" >roughness=0</center></td>
-        <td ><center><img src="assets/img/Tinypathtracer/result/spp64_rough0.25.jpg"  >roughness=0.25</center></td>
-        <td ><center><img src="assets/img/Tinypathtracer/result/spp64_rough0.5.jpg"  >roughness=0.5</center></td>
-        <td ><center><img src="assets/img/Tinypathtracer/result/spp64_rough1.jpg"  >roughness=1</center></td>
+        <td ><center>{% include figure.html path="assets/img/Tinypathtracer/result/spp64_rough0.jpg" class="img-fluid rounded z-depth-1" zoomable=true caption="roughness=0" %}</center></td>
+        <td ><center>{% include figure.html path="assets/img/Tinypathtracer/result/spp64_rough0.25.jpg" class="img-fluid rounded z-depth-1" zoomable=true caption="roughness=0.25" %}</center></td>
+        <td ><center>{% include figure.html path="assets/img/Tinypathtracer/result/spp64_rough0.5.jpg" class="img-fluid rounded z-depth-1" zoomable=true caption="roughness=0.5" %}</center></td>
+        <td ><center>{% include figure.html path="assets/img/Tinypathtracer/result/spp64_rough1.jpg" class="img-fluid rounded z-depth-1" zoomable=true caption="roughness=1" %}</center></td>
     </tr>
+
 
 <table>
     <tr>
         <th colspan="1">Perfect mirror reflection model:</th>
     </tr>
     <tr>
-        <td ><center><img src="assets/img/Tinypathtracer/result/Perfect mirror reflection model spp128 rough0.25.jpg" >SPP=128, roughness=0.25</center></td>
+        <td ><center>{% include figure.html path="assets/img/Tinypathtracer/result/Perfect mirror reflection model spp128 rough0.25.jpg" class="img-fluid rounded z-depth-1" zoomable=true caption="SPP=128, roughness=0.25" %}</center></td>
     </tr>
