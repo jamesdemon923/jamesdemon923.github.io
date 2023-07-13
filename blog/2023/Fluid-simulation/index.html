@@ -155,12 +155,13 @@
     <div id="markdown-content">
       <h2 id="introduction">Introduction</h2>
 
-<p>For fluid simulation, the first step is to confirm the scale, because for different scales, we have different approaches. And, “realism” and “controllability” are very important. For realism, we need to solve the differential equations, while for controllability, we sometimes have to adjust the dependence on the numerical solution of the equations</p>
+<h2 id="representation">Representation</h2>
 
-<h2 id="fluid-simulation-at-different-scales">Fluid simulation at different scales</h2>
-<h3 id="small">Small</h3>
+<h3 id="particle">Particle</h3>
 
-<p>For example, a glass of water, <a href="http://mmacklin.com/pbf_sig_preprint.pdf" rel="external nofollow noopener" target="_blank">using SPH or directly with particles to simulate</a>, no mesh required.</p>
+<p>Use <a href="https://en.wikipedia.org/wiki/Smoothed-particle_hydrodynamics" rel="external nofollow noopener" target="_blank">Smoothed Particle Hydrodynamic (SPH)</a></p>
+
+<p>For example, a glass of water, <a href="http://mmacklin.com/pbf_sig_preprint.pdf" rel="external nofollow noopener" target="_blank">using SPH directly with particles to simulate</a>, no grid required.</p>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -183,9 +184,11 @@
     </div>
 </div>
 
-<h3 id="median">Median</h3>
+<h3 id="grid">Grid</h3>
 
-<p>A small lake is solved on a certain coarse grid using the Navier-Stokes equation (NS equation) or the Euler equation. And it can extend to the <a href="http://web.stanford.edu/class/cs237d/smoke.pdf" rel="external nofollow noopener" target="_blank">3D smoke simulation</a>.</p>
+<p>Solve <a href="https://en.wikipedia.org/wiki/Navier%E2%80%93Stokes_equations" rel="external nofollow noopener" target="_blank">Navier Stokes Equations (NS equation)</a></p>
+
+<p>A small lake is simulated on a certain coarse <strong>grid</strong> using the Navier-Stokes equation (NS equation) or the Euler equation. And it can extend to the <a href="http://web.stanford.edu/class/cs237d/smoke.pdf" rel="external nofollow noopener" target="_blank">3D smoke simulation</a>.</p>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -208,9 +211,11 @@
     </div>
 </div>
 
-<h3 id="large">Large</h3>
+<h2 id="other-approaches-to-simulate">Other approaches to simulate</h2>
 
-<p>Use <a href="http://www-evasion.imag.fr/Membres/Fabrice.Neyret/NaturalScenes/fluids/water/waves/fluids/waves/Jonathan/articlesCG/simulating-ocean-water-01.pdf" rel="external nofollow noopener" target="_blank">FFT</a> to simulate the ocean.</p>
+<ol>
+  <li>Use <a href="http://www-evasion.imag.fr/Membres/Fabrice.Neyret/NaturalScenes/fluids/water/waves/fluids/waves/Jonathan/articlesCG/simulating-ocean-water-01.pdf" rel="external nofollow noopener" target="_blank">FFT</a> to simulate the ocean.</li>
+</ol>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -232,7 +237,30 @@
 
     </div>
 </div>
+<ol>
+  <li>Use <a href="https://visualcomputing.ist.ac.at/publications/2020/WaveCurves/" rel="external nofollow noopener" target="_blank">wave curves</a> to simulate the Lagrangian water waves</li>
+</ol>
 
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/fluid_simulation/wave%20curves-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/fluid_simulation/wave%20curves-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/fluid_simulation/wave%20curves-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/fluid_simulation/wave%20curves.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
 
     </div>
   </article>
