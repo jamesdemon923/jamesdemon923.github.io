@@ -406,10 +406,10 @@ case MIRROR:
     </tr>
     <tr>
         <td ><center>{% include figure.html path="assets/img/Tinypathtracer/result/spp2.jpg" class="img-fluid rounded z-depth-1" zoomable=true caption="SPP = 2" %}</center></td>
-        <td ><center><img src="assets/img/Tinypathtracer/result/spp4.jpg"  >SPP = 4</center></td>
-        <td ><center><img src="assets/img/Tinypathtracer/result/spp16.jpg"  >SPP = 16</center></td>
-        <td ><center><img src="assets/img/Tinypathtracer/result/spp64.jpg"  >SPP = 64</center></td>
-        <td ><center><img src="assets/img/Tinypathtracer/result/spp128.jpg"  >SPP = 128</center></td>
+        <td ><center>{% include figure.html path="assets/img/Tinypathtracer/result/spp4.jpg" class="img-fluid rounded z-depth-1" zoomable=true caption="SPP = 4" %}</center></td>
+        <td ><center>{% include figure.html path="assets/img/Tinypathtracer/result/spp16.jpg" class="img-fluid rounded z-depth-1" zoomable=true caption="SPP = 16" %}</center></td>
+        <td ><center>{% include figure.html path="assets/img/Tinypathtracer/result/spp64.jpg" class="img-fluid rounded z-depth-1" zoomable=true caption="SPP = 64" %}</center></td>
+        <td ><center>{% include figure.html path="assets/img/Tinypathtracer/result/spp128.jpg" class="img-fluid rounded z-depth-1" zoomable=true caption="SPP = 128" %}</center></td>
     </tr>
 
 <table>
@@ -418,8 +418,8 @@ case MIRROR:
         <th colspan="1">Non-accelerated</th>
     </tr>
     <tr>
-        <td ><center><img src="assets/img/Tinypathtracer/result/spp2_acc_time.jpg" >SPP=2 with acc </center></td>
-        <td ><center><img src="assets/img/Tinypathtracer/result/spp2_noacc_time.jpg"  >SPP=2 without acc</center></td>
+        <td ><center>{% include figure.html path="assets/img/Tinypathtracer/result/spp2_acc_time.jpg" class="img-fluid rounded z-depth-1" zoomable=true caption="SPP=2 with acc" %}</center></td>
+        <td ><center>{% include figure.html path="assets/img/Tinypathtracer/result/spp2_noacc_time.jpg" class="img-fluid rounded z-depth-1" zoomable=true caption="SPP=2 without acc" %}</center></td>
     </tr>
     <tr>
         <td ><center><img src="assets/img/Tinypathtracer/result/spp4_acc_time.jpg" >SPP=4 with acc </center></td>
