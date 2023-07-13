@@ -405,7 +405,7 @@ case MIRROR:
         <th colspan="5">Different SPP (sample per pixel):</th>
     </tr>
     <tr>
-        <td ><center><img src="https://github.com/jamesdemon923/Pathtracer/blob/main/image/result/spp2.jpg"> SPP = 2 </center></td>
+        <td ><center>{% include figure.html path="assets/img/Tinypathtracer/result/spp2.jpg" class="img-fluid rounded z-depth-1" zoomable=true caption="SPP = 2" %}</center></td>
         <td ><center><img src="assets/img/Tinypathtracer/result/spp4.jpg"  >SPP = 4</center></td>
         <td ><center><img src="assets/img/Tinypathtracer/result/spp16.jpg"  >SPP = 16</center></td>
         <td ><center><img src="assets/img/Tinypathtracer/result/spp64.jpg"  >SPP = 64</center></td>
@@ -437,6 +437,7 @@ case MIRROR:
         <td ><center><img src="assets/img/Tinypathtracer/result/spp128_acc_time.jpg" >SPP=128 with acc </center></td>
         <td ><center><img src="assets/img/Tinypathtracer/result/spp128_noacc_time.jpg"  >SPP=128 without acc</center></td>
     </tr>
+
 
 
 <table>
