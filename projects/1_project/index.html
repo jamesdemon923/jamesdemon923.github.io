@@ -421,7 +421,6 @@ L_{o}(x,\omega_{o}) &amp; = \int_{\Omega^{+}} L_{i}(x,\omega_{i})f_{r}(x,\omega_
 
     </div>
 </div>
-
 <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Define the microfacet material in main.cpp</span>
 <span class="n">Material</span><span class="o">*</span> <span class="n">microfacet</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">Material</span><span class="p">(</span><span class="n">MICROFACET</span><span class="p">,</span> <span class="n">Vector3f</span><span class="p">(</span><span class="mf">0.0</span><span class="n">f</span><span class="p">));</span>
 <span class="n">microfacet</span><span class="o">-&gt;</span><span class="n">Ks</span> <span class="o">=</span> <span class="n">Vector3f</span><span class="p">(</span><span class="mf">0.45</span><span class="p">,</span> <span class="mf">0.45</span><span class="p">,</span> <span class="mf">0.45</span><span class="p">);</span>
@@ -590,7 +589,8 @@ L_{o}(x,\omega_{o}) &amp; = \int_{\Omega^{+}} L_{i}(x,\omega_{i})f_{r}(x,\omega_
         <th colspan="5">Different SPP (sample per pixel):</th>
     </tr>
     <tr>
-        <td><center><figure.html path="assets/img/Tinypathtracer/result/spp2.jpg">SPP = 2 &lt;/center&gt;&lt;/td&gt;
+        <td><center>
+<img src="https://github.com/jamesdemon923/Pathtracer/blob/main/image/result/spp2.jpg"> SPP = 2 </center></td>
         <td><center>
 <img src="assets/img/Tinypathtracer/result/spp4.jpg">SPP = 4</center></td>
         <td><center>
@@ -599,7 +599,7 @@ L_{o}(x,\omega_{o}) &amp; = \int_{\Omega^{+}} L_{i}(x,\omega_{i})f_{r}(x,\omega_
 <img src="assets/img/Tinypathtracer/result/spp64.jpg">SPP = 64</center></td>
         <td><center>
 <img src="assets/img/Tinypathtracer/result/spp128.jpg">SPP = 128</center></td>
-    &lt;/tr&gt;
+    </tr>
 
 <table>
     <tr>
@@ -661,11 +661,9 @@ L_{o}(x,\omega_{o}) &amp; = \int_{\Omega^{+}} L_{i}(x,\omega_{i})f_{r}(x,\omega_
         <td><center>
 <img src="assets/img/Tinypathtracer/result/Perfect%20mirror%20reflection%20model%20spp128%20rough0.25.jpg">SPP=128, roughness=0.25</center></td>
     </tr>
-
 </table>
 </table>
-</table></figure.html></center></td>
-</tr>
+</table>
 </table>
 
           </article>
