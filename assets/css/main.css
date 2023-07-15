@@ -264,13 +264,13 @@ blockquote {
   margin-bottom: -5px;
 }
 
-.ul-edu fa-ul {
+.ul-edu {
   margin-top: -5px;
 }
-.ul-edu fa-ul .course {
+.ul-edu .course {
   font-size: 16px;
 }
-.ul-edu fa-ul .institution {
+.ul-edu .institution {
   font-size: 13px;
 }
 
