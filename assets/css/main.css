@@ -261,14 +261,14 @@ blockquote {
 }
 
 .clearfix {
-  margin-bottom: -15px;
+  margin-bottom: 5px;
 }
 
 .ul-edu {
-  margin-top: -15px;
+  margin-top: 5px;
 }
 .ul-edu .education-header {
-  margin-top: 5px;
+  margin-bottom: 5px;
   font-size: 24px;
 }
 .ul-edu .course {
