@@ -170,11 +170,15 @@ blockquote {
 .ul-edu{
   margin-top: -5px;  // adjust as needed
 
+  .education-header {
+    font-size: 24px;  // adjust as needed
+  }
+  
   .course {
     font-size: 16px;  // adjust as needed
   }
   .institution {
-    font-size: 13px;  // adjust as needed
+    font-size: 14px;  // adjust as needed
   }
 }
 
