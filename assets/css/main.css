@@ -250,7 +250,7 @@ blockquote {
 }
 .post-description {
   margin-bottom: 2rem;
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 .post-description a {
   color: inherit;
@@ -260,18 +260,17 @@ blockquote {
   text-decoration: none;
 }
 
-.content-section {
+.content {
   margin-bottom: 5px;
 }
 
-.education-section {
+.education {
   margin-top: 5px;
 }
-
-.ul-edu .course {
+.education .course {
   font-size: 16px;
 }
-.ul-edu .institution {
+.education .institution {
   font-size: 10px;
 }
 
