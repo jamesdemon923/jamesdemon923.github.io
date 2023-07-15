@@ -261,17 +261,17 @@ blockquote {
 }
 
 .content {
-  margin-bottom: 5px;
+  margin-bottom: 2px;
 }
 
 .education {
-  margin-top: 5px;
+  margin-top: 2px;
 }
 .education .course {
   font-size: 16px;
 }
 .education .institution {
-  font-size: 10px;
+  font-size: 13px;
 }
 
 .navbar {
