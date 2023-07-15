@@ -28,33 +28,14 @@ My research mainly focuses on rendering and 3D reconstruction, more specifically
 
 Besides the research, I’m a video games player, a traveller, and a NBA big fan.
 
-    <div class="col-sm-7">
-    <h3>Education</h3>
+    ---
+    layout: default
+    title: Education
+    ---
+    
+    ### Education
+    
     <ul class="ul-edu fa-ul">
-    
-      <!-- <li>
-        <i class="fa-li fa fa-graduation-cap"></i>
-        <div class="description">
-          <p class="course">PhD in Computer Science</p>
-          <p class="institution">University of California, Berkeley [Ongoing]</p>
-        </div>
-      </li>
-    
-      <li>
-        <i class="fa-li fa fa-graduation-cap"></i>
-        <div class="description">
-          <p class="course">Master&#39;s in Computer Science (AI track)</p>
-          <p class="institution">Stanford University, USA [Dropout]</p>
-        </div>
-      </li>
-    
-      <li>
-        <i class="fa-li fa fa-graduation-cap"></i>
-        <div class="description">
-          <p class="course">Master&#39;s Semester Exchange, 2018</p>
-          <p class="institution">EPFL, Switzerland</p>
-        </div>
-      </li> -->
     
       <li>
         <i class="fa-li fa fa-graduation-cap"></i>
@@ -73,4 +54,3 @@ Besides the research, I’m a video games player, a traveller, and a NBA big fan
       </li>
     
     </ul>
-    </div>
