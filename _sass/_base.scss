@@ -151,7 +151,7 @@ blockquote {
 
 .post-description {
   margin-bottom: 2rem;
-  font-size: 0.875rem;
+  font-size: 1rem;
 
   a {
     color: inherit;
@@ -163,15 +163,12 @@ blockquote {
   }
 }
 
-.content-section {
+.content {
   margin-bottom: 5px; // adjust as needed
 }
 
-.education-section {
+.education {
   margin-top: 5px;  // adjust as needed
-}
-
-.ul-edu {
   .course {
     font-size: 16px;  // adjust as needed
   }
@@ -180,6 +177,7 @@ blockquote {
     font-size: 10px;  // adjust as needed
   }
 }
+
 // Navbar customization
 
 .navbar {
