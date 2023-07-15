@@ -260,6 +260,14 @@ blockquote {
   text-decoration: none;
 }
 
+.content-section {
+  margin-bottom: 10px;
+}
+
+.education-section {
+  margin-top: 10px;
+}
+
 .navbar {
   box-shadow: none;
   border-bottom: 1px solid var(--global-divider-color);
