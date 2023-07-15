@@ -260,17 +260,17 @@ blockquote {
   text-decoration: none;
 }
 
-.content {
+.clearfix {
   margin-bottom: -5px;
 }
 
-.education {
+.ul-edu fa-ul {
   margin-top: -5px;
 }
-.education .course {
+.ul-edu fa-ul .course {
   font-size: 16px;
 }
-.education .institution {
+.ul-edu fa-ul .institution {
   font-size: 13px;
 }
 
