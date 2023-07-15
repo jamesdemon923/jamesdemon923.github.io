@@ -13,25 +13,7 @@ profile:
     <!--<p>123 your address street</p>-->
     <p>Computer Science</p>
 
-<ul class="ul-edu fa-ul">
-  <li>
-    <i class="fa-li fa fa-graduation-cap"></i>
-    <div class="description">
-      <p class="course">Master's in Computer Science, 2022-2024</p>
-      <p class="institution">University of Florida, USA</p>
-    </div>
-  </li>
-
-  <li>
-    <i class="fa-li fa fa-graduation-cap"></i>
-    <div class="description">
-      <p class="course">B.S in Chemical Engineering (with Honors), 2018-2022</p>
-      <p class="institution">Sichuan University</p>
-    </div>
-  </li>
-
-</ul>
-
+education: true
 news: false  # includes a list of news items
 latest_posts: true  # includes a list of the newest posts
 selected_papers: true # includes a list of papers marked as "selected={true}"

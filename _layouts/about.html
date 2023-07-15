@@ -49,6 +49,27 @@ layout: default
             {{ content }}
           </div>
 
+          <!-- Education -->
+          {% if page.education %}
+          <h2>Education</h2>
+          <ul class="ul-edu fa-ul">
+            <li>
+              <i class="fa-li fa fa-graduation-cap"></i>
+              <div class="description">
+                <p class="course">Master's in Computer Science, 2022-2024</p>
+                <p class="institution">University of Florida, USA</p>
+              </div>
+            </li>
+            <li>
+              <i class="fa-li fa fa-graduation-cap"></i>
+              <div class="description">
+                <p class="course">B.S in Chemical Engineering (with Honors), 2018-2022</p>
+                <p class="institution">Sichuan University</p>
+              </div>
+            </li>
+          </ul>
+          {% endif %}
+
           <!-- News -->
           {% if page.news and site.announcements.enabled -%}
             <h2><a href="{{ '/news/' | relative_url }}" style="color: inherit;">news</a></h2>
