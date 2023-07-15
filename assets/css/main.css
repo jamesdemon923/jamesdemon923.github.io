@@ -267,11 +267,14 @@ blockquote {
 .ul-edu {
   margin-top: -5px;
 }
+.ul-edu .education-header {
+  font-size: 24px;
+}
 .ul-edu .course {
   font-size: 16px;
 }
 .ul-edu .institution {
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .navbar {
