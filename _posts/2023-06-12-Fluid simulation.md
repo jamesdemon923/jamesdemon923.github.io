@@ -16,6 +16,8 @@ toc:
 
 ### Particle
 
+Base on the **Lagrangian view**. Use the particle to represent the sensor moving with the materials.
+
 Use [Smoothed Particle Hydrodynamic (SPH)](https://en.wikipedia.org/wiki/Smoothed-particle_hydrodynamics)
 
 For example, a glass of water, [using SPH directly with particles to simulate](http://mmacklin.com/pbf_sig_preprint.pdf), no grid required.
@@ -25,10 +27,13 @@ For example, a glass of water, [using SPH directly with particles to simulate](h
         {% include figure.html path="assets/img/fluid_simulation/SPH for small water.png" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
+A [tutorial](http://sph-tutorial.physics-simulation.org/) about SPH
 
 ### Grid
 
-Solve [Navier Stokes Equations (NS equation)](https://en.wikipedia.org/wiki/Navier%E2%80%93Stokes_equations)
+Based on the **Eulerian view**. Use the grid to represent the still sensor.
+
+The key is to solve [Navier Stokes Equations (NS equation)](https://en.wikipedia.org/wiki/Navier%E2%80%93Stokes_equations)
 
 A small lake is simulated on a certain coarse **grid** using the Navier-Stokes equation (NS equation) or the Euler equation. And it can extend to the [3D smoke simulation](http://web.stanford.edu/class/cs237d/smoke.pdf).
 
