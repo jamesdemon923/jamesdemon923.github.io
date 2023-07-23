@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 3D reconstruction
-date: 2023-06-16
+date: 2023-06-24
 description: Introduction to 3D reconstruction
 tags: Report
 categories: Vision

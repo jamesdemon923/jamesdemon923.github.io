@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Hair & fur rendering
-date: 2023-06-16
+date: 2023-06-22
 description: Introduction to hair & fur rendering
 tags: Report
 categories: Graphics
