@@ -1,16 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://jamesdemon923.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jamesdemon923.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-07-22T18:35:57+00:00</updated><id>https://jamesdemon923.github.io/feed.xml</id><title type="html">blank</title><subtitle>A portfolio website of Haolan Xu. Based on [*folio](https://github.com/bogoli/-folio) design.
-</subtitle><entry><title type="html">Understand Nanite</title><link href="https://jamesdemon923.github.io/blog/2023/Nanite/" rel="alternate" type="text/html" title="Understand Nanite" /><published>2023-06-16T00:00:00+00:00</published><updated>2023-06-16T00:00:00+00:00</updated><id>https://jamesdemon923.github.io/blog/2023/Nanite</id><content type="html" xml:base="https://jamesdemon923.github.io/blog/2023/Nanite/"><![CDATA[<h2 id="introduction">Introduction</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://jamesdemon923.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jamesdemon923.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-07-23T03:38:35+00:00</updated><id>https://jamesdemon923.github.io/feed.xml</id><title type="html">blank</title><subtitle>A portfolio website of Haolan Xu. Based on [*folio](https://github.com/bogoli/-folio) design.
+</subtitle><entry><title type="html">Differentiable rendering</title><link href="https://jamesdemon923.github.io/blog/2023/Differentiable-rendering/" rel="alternate" type="text/html" title="Differentiable rendering" /><published>2023-07-10T00:00:00+00:00</published><updated>2023-07-10T00:00:00+00:00</updated><id>https://jamesdemon923.github.io/blog/2023/Differentiable%20rendering</id><content type="html" xml:base="https://jamesdemon923.github.io/blog/2023/Differentiable-rendering/"><![CDATA[<h2 id="introduction">Introduction</h2>
 
-<h3 id="cluster">Cluster</h3>
+<p>###</p>
 
-<h3 id="rasterization-for-pixel-triangles">Rasterization for pixel triangles</h3>
+<h2 id="differentiable-rendering">Differentiable rendering</h2>
 
-<h3 id="withdraw-problem">Withdraw problem</h3>
-
-<h2 id="what-is-nanite">What is Nanite</h2>
-<h3 id="gpu-driven-pipeline-for-vertex-processing">GPU Driven Pipeline for Vertex Processing</h3>
-
-<h3 id="visibility-buffer-with-software-rasterization-for-pixel-processing">Visibility Buffer with Software Rasterization for Pixel Processing</h3>]]></content><author><name></name></author><category term="Graphics" /><category term="Report" /><summary type="html"><![CDATA[Nanite in UE5]]></summary></entry><entry><title type="html">3D reconstruction</title><link href="https://jamesdemon923.github.io/blog/2023/3D-reconstruction/" rel="alternate" type="text/html" title="3D reconstruction" /><published>2023-06-16T00:00:00+00:00</published><updated>2023-06-16T00:00:00+00:00</updated><id>https://jamesdemon923.github.io/blog/2023/3D%20reconstruction</id><content type="html" xml:base="https://jamesdemon923.github.io/blog/2023/3D-reconstruction/"><![CDATA[<h2 id="introduction">Introduction</h2>
+<p>####</p>]]></content><author><name></name></author><category term="Graphics" /><category term="Report" /><summary type="html"><![CDATA[Introduction to Differentiable rendering]]></summary></entry><entry><title type="html">3D reconstruction</title><link href="https://jamesdemon923.github.io/blog/2023/3D-reconstruction/" rel="alternate" type="text/html" title="3D reconstruction" /><published>2023-06-24T00:00:00+00:00</published><updated>2023-06-24T00:00:00+00:00</updated><id>https://jamesdemon923.github.io/blog/2023/3D%20reconstruction</id><content type="html" xml:base="https://jamesdemon923.github.io/blog/2023/3D-reconstruction/"><![CDATA[<h2 id="introduction">Introduction</h2>
 
 <h2 id="multiple-view-geometry">Multiple View Geometry</h2>
 
@@ -27,7 +22,7 @@
 
 <h4 id="simultaneous-localization-and-mapping-slam">Simultaneous Localization and Mapping (SLAM)</h4>
 
-<h2 id="understanding-and-synthesis">Understanding and synthesis</h2>]]></content><author><name></name></author><category term="Vision" /><category term="Report" /><summary type="html"><![CDATA[Introduction to 3D reconstruction]]></summary></entry><entry><title type="html">Hair &amp;amp; fur rendering</title><link href="https://jamesdemon923.github.io/blog/2023/Hair-and-fur-rendering/" rel="alternate" type="text/html" title="Hair &amp;amp; fur rendering" /><published>2023-06-16T00:00:00+00:00</published><updated>2023-06-16T00:00:00+00:00</updated><id>https://jamesdemon923.github.io/blog/2023/Hair%20and%20fur%20rendering</id><content type="html" xml:base="https://jamesdemon923.github.io/blog/2023/Hair-and-fur-rendering/"><![CDATA[<h2 id="introduction">Introduction</h2>
+<h2 id="understanding-and-synthesis">Understanding and synthesis</h2>]]></content><author><name></name></author><category term="Vision" /><category term="Report" /><summary type="html"><![CDATA[Introduction to 3D reconstruction]]></summary></entry><entry><title type="html">Hair &amp;amp; fur rendering</title><link href="https://jamesdemon923.github.io/blog/2023/Hair-and-fur-rendering/" rel="alternate" type="text/html" title="Hair &amp;amp; fur rendering" /><published>2023-06-22T00:00:00+00:00</published><updated>2023-06-22T00:00:00+00:00</updated><id>https://jamesdemon923.github.io/blog/2023/Hair%20and%20fur%20rendering</id><content type="html" xml:base="https://jamesdemon923.github.io/blog/2023/Hair-and-fur-rendering/"><![CDATA[<h2 id="introduction">Introduction</h2>
 
 <h3 id="example-of-sub-heading-1">Example of Sub-Heading 1</h3>
 
@@ -52,7 +47,18 @@
 
 <h4 id="dual-scattering-model">Dual Scattering Model</h4>
 
-<h4 id="physically-based-double-cylinder-fur-reflectance-model">Physically-based double cylinder fur reflectance Model</h4>]]></content><author><name></name></author><category term="Graphics" /><category term="Report" /><summary type="html"><![CDATA[Introduction to hair & fur rendering]]></summary></entry><entry><title type="html">How to use ImGui</title><link href="https://jamesdemon923.github.io/blog/2023/IMGUI/" rel="alternate" type="text/html" title="How to use ImGui" /><published>2023-06-14T00:00:00+00:00</published><updated>2023-06-14T00:00:00+00:00</updated><id>https://jamesdemon923.github.io/blog/2023/IMGUI</id><content type="html" xml:base="https://jamesdemon923.github.io/blog/2023/IMGUI/"><![CDATA[<h2 id="what-is-imgui">What is ImGui</h2>
+<h4 id="physically-based-double-cylinder-fur-reflectance-model">Physically-based double cylinder fur reflectance Model</h4>]]></content><author><name></name></author><category term="Graphics" /><category term="Report" /><summary type="html"><![CDATA[Introduction to hair & fur rendering]]></summary></entry><entry><title type="html">Understand Nanite</title><link href="https://jamesdemon923.github.io/blog/2023/Nanite/" rel="alternate" type="text/html" title="Understand Nanite" /><published>2023-06-16T00:00:00+00:00</published><updated>2023-06-16T00:00:00+00:00</updated><id>https://jamesdemon923.github.io/blog/2023/Nanite</id><content type="html" xml:base="https://jamesdemon923.github.io/blog/2023/Nanite/"><![CDATA[<h2 id="introduction">Introduction</h2>
+
+<h3 id="cluster">Cluster</h3>
+
+<h3 id="rasterization-for-pixel-triangles">Rasterization for pixel triangles</h3>
+
+<h3 id="withdraw-problem">Withdraw problem</h3>
+
+<h2 id="what-is-nanite">What is Nanite</h2>
+<h3 id="gpu-driven-pipeline-for-vertex-processing">GPU Driven Pipeline for Vertex Processing</h3>
+
+<h3 id="visibility-buffer-with-software-rasterization-for-pixel-processing">Visibility Buffer with Software Rasterization for Pixel Processing</h3>]]></content><author><name></name></author><category term="Graphics" /><category term="Report" /><summary type="html"><![CDATA[Nanite in UE5]]></summary></entry><entry><title type="html">How to use ImGui</title><link href="https://jamesdemon923.github.io/blog/2023/IMGUI/" rel="alternate" type="text/html" title="How to use ImGui" /><published>2023-06-14T00:00:00+00:00</published><updated>2023-06-14T00:00:00+00:00</updated><id>https://jamesdemon923.github.io/blog/2023/IMGUI</id><content type="html" xml:base="https://jamesdemon923.github.io/blog/2023/IMGUI/"><![CDATA[<h2 id="what-is-imgui">What is ImGui</h2>
 
 <p>ImGui stands for “Immediate Mode Graphical User Interface”. It is a programming paradigm used in user interface development where UI elements are updated and rendered each frame. In contrast to retained mode GUI, IMGUI does not keep a persistent model of the UI state.</p>
 
@@ -541,20 +547,4 @@ ImGui::End();
 <h2 id="cuda">CUDA</h2>
 <h3 id="example-of-sub-heading-1-1">Example of Sub-Heading 1</h3>
 
-<h3 id="example-of-sub-heading-2">Example of Sub-Heading 2</h3>]]></content><author><name></name></author><category term="Graphics" /><category term="Report" /><summary type="html"><![CDATA[CUDA]]></summary></entry><entry><title type="html">a post with math</title><link href="https://jamesdemon923.github.io/blog/2015/math/" rel="alternate" type="text/html" title="a post with math" /><published>2015-10-20T15:12:00+00:00</published><updated>2015-10-20T15:12:00+00:00</updated><id>https://jamesdemon923.github.io/blog/2015/math</id><content type="html" xml:base="https://jamesdemon923.github.io/blog/2015/math/"><![CDATA[<p>This theme supports rendering beautiful math in inline and display modes using <a href="https://www.mathjax.org/">MathJax 3</a> engine. You just need to surround your math expression with <code class="language-plaintext highlighter-rouge">$$</code>, like <code class="language-plaintext highlighter-rouge">$$ E = mc^2 $$</code>. If you leave it inside a paragraph, it will produce an inline expression, just like \(E = mc^2\).</p>
-
-<p>To use display mode, again surround your expression with <code class="language-plaintext highlighter-rouge">$$</code> and place it as a separate paragraph. Here is an example:</p>
-
-\[\sum_{k=1}^\infty |\langle x, e_k \rangle|^2 \leq \|x\|^2\]
-
-<p>You can also use <code class="language-plaintext highlighter-rouge">\begin{equation}...\end{equation}</code> instead of <code class="language-plaintext highlighter-rouge">$$</code> for display mode math.
-MathJax will automatically number equations:</p>
-
-<p>\begin{equation}
-\label{eq:cauchy-schwarz}
-\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
-\end{equation}</p>
-
-<p>and by adding <code class="language-plaintext highlighter-rouge">\label{...}</code> inside the equation environment, we can now refer to the equation using <code class="language-plaintext highlighter-rouge">\eqref</code>.</p>
-
-<p>Note that MathJax 3 is <a href="https://docs.mathjax.org/en/latest/upgrading/whats-new-3.0.html">a major re-write of MathJax</a> that brought a significant improvement to the loading and rendering speed, which is now <a href="http://www.intmath.com/cg5/katex-mathjax-comparison.php">on par with KaTeX</a>.</p>]]></content><author><name></name></author><category term="sample-posts" /><category term="formatting" /><category term="math" /><summary type="html"><![CDATA[an example of a blog post with some math]]></summary></entry></feed>
+<h3 id="example-of-sub-heading-2">Example of Sub-Heading 2</h3>]]></content><author><name></name></author><category term="Graphics" /><category term="Report" /><summary type="html"><![CDATA[CUDA]]></summary></entry></feed>
