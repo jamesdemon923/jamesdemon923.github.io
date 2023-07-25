@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- Head -->
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    <!-- Metadata, OpenGraph and Schema.org -->
+    
+
+    <!-- Standard metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Soft shadow | Haolan  Xu</title>
+    <meta name="author" content="Haolan  Xu">
+    <meta name="description" content="Implement soft shadow using PCF and PCSS">
+    <meta name="keywords" content="Haolan_Xu, graphics, vision, portfolio-website">
+
+
+    <!-- Bootstrap & MDB -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-DF7Zhf293AJxJNTmh5zhoYYIMs2oXitRfBjY+9L//AY=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous">
+
+    <!-- Bootstrap Table -->
+    <link defer rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.21.4/dist/bootstrap-table.min.css">
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+
+    <!-- Code Syntax Highlighting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="" id="highlight_theme_light">
+
+    
+
+    <!-- Styles -->
+    
+    <link rel="shortcut icon" href="/assets/img/Bunny.png">
+    
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="canonical" href="https://jamesdemon923.github.io/projects/2_project/">
+
+    <!-- Dark Mode -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/native.css" media="none" id="highlight_theme_dark">
+
+    <script src="/assets/js/theme.js"></script>
+    <script src="/assets/js/dark_mode.js"></script>
+    
+
+  </head>
+
+  <!-- Body -->
+  <body class="fixed-top-nav ">
+
+    <!-- Header -->
+    <header>
+
+      <!-- Nav Bar -->
+      <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+        <div class="container">
+          <a class="navbar-brand title font-weight-lighter" href="/"><span class="font-weight-bold">Haolan </span>Xu</a>
+          <!-- Navbar Toggle -->
+          <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar top-bar"></span>
+            <span class="icon-bar middle-bar"></span>
+            <span class="icon-bar bottom-bar"></span>
+          </button>
+
+          <div class="collapse navbar-collapse text-right" id="navbarNav">
+            <ul class="navbar-nav ml-auto flex-nowrap">
+
+              <!-- About -->
+              <li class="nav-item ">
+                <a class="nav-link" href="/">about</a>
+              </li>
+              
+              <!-- Blog -->
+              <li class="nav-item ">
+                <a class="nav-link" href="/blog/">blog</a>
+              </li>
+
+              <!-- Other pages -->
+              <li class="nav-item ">
+                <a class="nav-link" href="/publications/">publications</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="/projects/">projects</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="/assets/pdf/HaolanXu_Resume.pdf">cv</a>
+              </li>
+
+              <!-- Toogle theme mode -->
+              <li class="toggle-container">
+                <button id="light-toggle" title="Change theme">
+                  <i class="fas fa-moon"></i>
+                  <i class="fas fa-sun"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Scrolling Progress Bar -->
+      <progress id="progress" value="0">
+        <div class="progress-container">
+          <span class="progress-bar"></span>
+        </div>
+      </progress>
+    </header>
+
+
+    <!-- Content -->
+    <div class="container mt-5">
+      
+        <!-- page.html -->
+        <div class="post">
+
+          <header class="post-header">
+            <h1 class="post-title">Soft shadow</h1>
+            <p class="post-description">Implement soft shadow using PCF and PCSS</p>
+          </header>
+
+          <article>
+            <h2 id="set-up">Set up</h2>
+
+<p><strong>Operating &amp; compiling environment</strong>:</p>
+
+<ul>
+  <li>Visual studio code (Windows 11) &amp; Live server</li>
+</ul>
+
+<p><strong>Library</strong>:</p>
+
+<ul>
+  <li>WebGL</li>
+</ul>
+
+<h2 id="implementation">Implementation</h2>
+
+<h3 id="hard-shadow-mapping">Hard Shadow Mapping</h3>
+
+<p><strong>Two pass approaches:</strong></p>
+
+<p>The 1st Pass: render a depth map from the light source which is also known as ShadowMap.</p>
+
+<p>The 2nd Pass: render the real scene from the current camera and transform pixel point to the light source space, take its depth in the light source space with the same uv coordinates recorded in ShadowMap for comparison. If the depth is is greater than the depth in ShadowMap, the point is in the shadow.</p>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/soft_shadow/principle/first%20pass-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/soft_shadow/principle/first%20pass-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/soft_shadow/principle/first%20pass-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/soft_shadow/principle/first%20pass.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="First pass" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/soft_shadow/principle/second%20pass-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/soft_shadow/principle/second%20pass-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/soft_shadow/principle/second%20pass-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/soft_shadow/principle/second%20pass.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="Second pass" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// WebGLRenderer.js</span>
+<span class="c1">// Shadow pass</span>
+<span class="c1">// Create a shadow map stored in shadowMeshes[]</span>
+<span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">lights</span><span class="p">[</span><span class="n">l</span><span class="p">].</span><span class="n">entity</span><span class="p">.</span><span class="n">hasShadowMap</span> <span class="o">==</span> <span class="nb">true</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">let</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="k">this</span><span class="p">.</span><span class="n">shadowMeshes</span><span class="p">.</span><span class="n">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">shadowMeshes</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">draw</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">camera</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Camera pass</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">let</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="k">this</span><span class="p">.</span><span class="n">meshes</span><span class="p">.</span><span class="n">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="n">gl</span><span class="p">.</span><span class="n">useProgram</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">meshes</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">shader</span><span class="p">.</span><span class="n">program</span><span class="p">.</span><span class="n">glShaderProgram</span><span class="p">);</span>
+    <span class="k">this</span><span class="p">.</span><span class="n">gl</span><span class="p">.</span><span class="n">uniform3fv</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">meshes</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">shader</span><span class="p">.</span><span class="n">program</span><span class="p">.</span><span class="n">uniforms</span><span class="p">.</span><span class="n">uLightPos</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="n">lights</span><span class="p">[</span><span class="n">l</span><span class="p">].</span><span class="n">entity</span><span class="p">.</span><span class="n">lightPos</span><span class="p">);</span>
+    <span class="k">this</span><span class="p">.</span><span class="n">meshes</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">draw</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">camera</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><a href="https://digitalrune.github.io/DigitalRune-Documentation/html/3f4d959e-9c98-4a97-8d85-7a73c26145d7.htm" rel="external nofollow noopener" target="_blank"><strong>Self occlusion:</strong> </a></p>
+
+<p>This is a problem caused by the limited resolution of the shadow map. And we introduce the bias to move pixels closer to the light source during the shadow test. Since simple bias can also cause Peter-panning problem, we use the adaptive shadow bias algorithm.</p>
+
+\[A=(1+ceil(R))\frac{frustumSize}{shadowMapSize * 2}\]
+
+\[B = 1-dot(lightDir,normal)\]
+
+<p align="center">   <img src="https://latex.codecogs.com/svg.image?DepthBias=C_%7Bdepth%7D*A*B"> </p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// phongFragment.glsl</span>
+<span class="cp">#define SHADOW_MAP_SIZE 2048.
+#define FRUSTUM_SIZE 400.
+</span>
+<span class="kt">float</span> <span class="nf">getShadowBias</span><span class="p">(</span><span class="kt">float</span> <span class="n">c</span><span class="p">,</span> <span class="kt">float</span> <span class="n">filterRadiusUV</span><span class="p">){</span>
+  <span class="n">vec3</span> <span class="n">normal</span> <span class="o">=</span> <span class="n">normalize</span><span class="p">(</span><span class="n">vNormal</span><span class="p">);</span>
+  <span class="n">vec3</span> <span class="n">lightDir</span> <span class="o">=</span> <span class="n">normalize</span><span class="p">(</span><span class="n">uLightPos</span> <span class="o">-</span> <span class="n">vFragPos</span><span class="p">);</span>
+  <span class="kt">float</span> <span class="n">fragSize</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1.</span> <span class="o">+</span> <span class="n">ceil</span><span class="p">(</span><span class="n">filterRadiusUV</span><span class="p">))</span> <span class="o">*</span> <span class="p">(</span><span class="n">FRUSTUM_SIZE</span> <span class="o">/</span> <span class="n">SHADOW_MAP_SIZE</span> <span class="o">/</span> <span class="mf">2.</span><span class="p">);</span>
+  <span class="k">return</span> <span class="n">max</span><span class="p">(</span><span class="n">fragSize</span><span class="p">,</span> <span class="n">fragSize</span> <span class="o">*</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">-</span> <span class="n">dot</span><span class="p">(</span><span class="n">normal</span><span class="p">,</span> <span class="n">lightDir</span><span class="p">)))</span> <span class="o">*</span> <span class="n">c</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><strong>Use the shadow map:</strong></p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// phongFragment.glsl</span>
+<span class="c1">// Use shadow map</span>
+<span class="kt">float</span> <span class="nf">useShadowMap</span><span class="p">(</span><span class="n">sampler2D</span> <span class="n">shadowMap</span><span class="p">,</span> <span class="n">vec4</span> <span class="n">shadowCoord</span><span class="p">,</span> <span class="kt">float</span> <span class="n">biasC</span><span class="p">,</span> <span class="kt">float</span> <span class="n">filterRadiusUV</span><span class="p">){</span>
+  <span class="c1">// The pack function can encode a [0,1) float value into the four RGBA channels.</span>
+  <span class="c1">// The purpose of unpack function is to decode</span>
+  <span class="kt">float</span> <span class="n">depth</span> <span class="o">=</span> <span class="n">unpack</span><span class="p">(</span><span class="n">texture2D</span><span class="p">(</span><span class="n">shadowMap</span><span class="p">,</span> <span class="n">shadowCoord</span><span class="p">.</span><span class="n">xy</span><span class="p">));</span>
+  <span class="kt">float</span> <span class="n">cur_depth</span> <span class="o">=</span> <span class="n">shadowCoord</span><span class="p">.</span><span class="n">z</span><span class="p">;</span>
+  <span class="kt">float</span> <span class="n">bias</span> <span class="o">=</span> <span class="n">getShadowBias</span><span class="p">(</span><span class="n">biasC</span><span class="p">,</span> <span class="n">filterRadiusUV</span><span class="p">);</span>
+  <span class="k">if</span><span class="p">(</span><span class="n">cur_depth</span> <span class="o">-</span> <span class="n">bias</span> <span class="o">&gt;=</span> <span class="n">depth</span> <span class="o">+</span> <span class="n">EPS</span><span class="p">)</span> <span class="k">return</span> <span class="mf">0.</span><span class="p">;</span>
+  <span class="k">else</span> <span class="k">return</span> <span class="mf">1.0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">vec3</span> <span class="n">shadowCoord</span> <span class="o">=</span> <span class="n">vPositionFromLight</span><span class="p">.</span><span class="n">xyz</span> <span class="o">/</span> <span class="n">vPositionFromLight</span><span class="p">.</span><span class="n">w</span><span class="p">;</span>
+  <span class="c1">//Transfrom the NDC coordinate to coordinate[0,1]</span>
+  <span class="n">shadowCoord</span><span class="p">.</span><span class="n">xyz</span> <span class="o">=</span> <span class="p">(</span><span class="n">shadowCoord</span><span class="p">.</span><span class="n">xyz</span> <span class="o">+</span> <span class="mf">1.0</span><span class="p">)</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">;</span>
+  <span class="kt">float</span> <span class="n">visibility</span><span class="p">;</span>
+  <span class="kt">float</span> <span class="n">bias</span> <span class="o">=</span> <span class="mf">.4</span><span class="p">;</span>
+  <span class="n">visibility</span> <span class="o">=</span> <span class="n">useShadowMap</span><span class="p">(</span><span class="n">uShadowMap</span><span class="p">,</span> <span class="n">vec4</span><span class="p">(</span><span class="n">shadowCoord</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">),</span> <span class="n">bias</span><span class="p">,</span> <span class="mf">0.</span><span class="p">);</span>
+  <span class="n">vec3</span> <span class="n">phongColor</span> <span class="o">=</span> <span class="n">blinnPhong</span><span class="p">();</span>
+  <span class="n">gl_FragColor</span> <span class="o">=</span> <span class="n">vec4</span><span class="p">(</span><span class="n">phongColor</span> <span class="o">*</span> <span class="n">visibility</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="percentage-closer-filtering-pcf">Percentage Closer Filtering (PCF)</h3>
+
+<p>PCF can sum up the results of depth comparison after multiple ShadowMap sampling and averages them to get a result, and uses it as a new visibility item, which can make the shadow boundary become soft.</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">float</span> <span class="nf">PCF</span><span class="p">(</span><span class="n">sampler2D</span> <span class="n">shadowMap</span><span class="p">,</span> <span class="n">vec4</span> <span class="n">coords</span><span class="p">,</span> <span class="kt">float</span> <span class="n">biasC</span><span class="p">,</span> <span class="kt">float</span> <span class="n">filterRadiusUV</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// poissonDiskSamples function is used for random sampling</span>
+  <span class="n">poissonDiskSamples</span><span class="p">(</span><span class="n">coords</span><span class="p">.</span><span class="n">xy</span><span class="p">);</span>
+  <span class="kt">float</span> <span class="n">visibility</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span>
+  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">NUM_SAMPLES</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">vec2</span> <span class="n">offset</span> <span class="o">=</span> <span class="n">poissonDisk</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">filterRadiusUV</span><span class="p">;</span>
+    <span class="kt">float</span> <span class="n">shadowDepth</span> <span class="o">=</span> <span class="n">useShadowMap</span><span class="p">(</span><span class="n">shadowMap</span><span class="p">,</span> <span class="n">coords</span> <span class="o">+</span> <span class="n">vec4</span><span class="p">(</span><span class="n">offset</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">),</span> <span class="n">biasC</span><span class="p">,</span> <span class="n">filterRadiusUV</span><span class="p">);</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">coords</span><span class="p">.</span><span class="n">z</span> <span class="o">&gt;</span> <span class="n">shadowDepth</span> <span class="o">+</span> <span class="n">EPS</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">visibility</span><span class="o">++</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="mf">1.0</span> <span class="o">-</span> <span class="n">visibility</span> <span class="o">/</span> <span class="kt">float</span><span class="p">(</span><span class="n">NUM_SAMPLES</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="percentage-closer-soft-shadows">Percentage Closer Soft Shadows</h3>
+
+<p>In PCSS, the further a point is from the blocker, the fainter the shadow appears, and based on similar triangles, we can derive the formula:</p>
+
+\[w_{Penumbra} = (d_{Receiver}-d_{Blocker}) \cdot w_{Light} / d_{Blocker}\]
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/soft_shadow/principle/PCSS-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/soft_shadow/principle/PCSS-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/soft_shadow/principle/PCSS-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/soft_shadow/principle/PCSS.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+
+<p>For \(d_{Blocker}\), we use the approach in the following picture to get the average blocker depth.</p>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/soft_shadow/principle/Blocker%20depth-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/soft_shadow/principle/Blocker%20depth-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/soft_shadow/principle/Blocker%20depth-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/soft_shadow/principle/Blocker%20depth.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+
+<h2 id="result">Result</h2>
+
+<table>
+    <tr>
+        <th colspan="1">Hard Shadow with bias</th>
+        <th colspan="1">Hard Shadow without bias</th>
+    </tr>
+    <tr>
+        <td><center>
+<figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/soft_shadow/result/Hard%20shadow%20with%20bias-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/soft_shadow/result/Hard%20shadow%20with%20bias-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/soft_shadow/result/Hard%20shadow%20with%20bias-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/soft_shadow/result/Hard%20shadow%20with%20bias.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+</center></td>
+        <td><center>
+<figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/soft_shadow/result/Hard%20shadow%20without%20bias-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/soft_shadow/result/Hard%20shadow%20without%20bias-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/soft_shadow/result/Hard%20shadow%20without%20bias-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/soft_shadow/result/Hard%20shadow%20without%20bias.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+</center></td>
+    </tr>
+
+<table>
+    <tr>
+        <th colspan="1">Hard Shadow</th>
+        <th colspan="1">PCF</th>
+        <th colspan="1">PCSS</th>
+    </tr>
+    <tr>
+        <td><center>
+<figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/soft_shadow/result/Hard%20shadow-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/soft_shadow/result/Hard%20shadow-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/soft_shadow/result/Hard%20shadow-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/soft_shadow/result/Hard%20shadow.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+</center></td>
+        <td><center>
+<figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/soft_shadow/result/PCF%20with%2050%20samples-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/soft_shadow/result/PCF%20with%2050%20samples-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/soft_shadow/result/PCF%20with%2050%20samples-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/soft_shadow/result/PCF%20with%2050%20samples.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+</center></td>
+        <td><center>
+<figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/soft_shadow/result/PCSS-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/soft_shadow/result/PCSS-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/soft_shadow/result/PCSS-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/soft_shadow/result/PCSS.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+</center></td>
+    </tr>
+
+
+<table>
+    <tr>
+        <th colspan="1">Final result</th>
+    </tr>
+    <tr>
+        <td><center>
+<figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/soft_shadow/result/Final%20result.gif-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/soft_shadow/result/Final%20result.gif-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/soft_shadow/result/Final%20result.gif-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/soft_shadow/result/Final%20result.gif" class="img-fluid rounded z-depth-1" width="auto" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+</center></td>
+    </tr>
+
+</table>
+</table>
+</table>
+
+          </article>
+
+        </div>
+
+      
+    </div>
+
+    <!-- Footer -->    
+    <footer class="fixed-bottom">
+      <div class="container mt-0">
+        © Copyright 2023 Haolan  Xu. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>.
+
+      </div>
+    </footer>
+
+    <!-- JavaScripts -->
+    <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- Bootsrap & MDB scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha256-fgLAgv7fyCGopR/gBNq2iW3ZKIdqIcyshnUULC4vex8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script>
+
+    <!-- Masonry & imagesLoaded -->
+  <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script defer src="/assets/js/masonry.js" type="text/javascript"></script>
+    
+  <!-- Medium Zoom JS -->
+  <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.8/dist/medium-zoom.min.js" integrity="sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8=" crossorigin="anonymous"></script>
+  <script defer src="/assets/js/zoom.js"></script>
+
+  <!-- Bootstrap Table -->
+  <script defer src="https://unpkg.com/bootstrap-table@1.21.4/dist/bootstrap-table.min.js"></script>
+
+  <!-- Load Common JS -->
+  <script src="/assets/js/no_defer.js"></script>
+  <script defer src="/assets/js/common.js"></script>
+  <script defer src="/assets/js/copy_code.js" type="text/javascript"></script>
+
+    
+  <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+  <script async src="https://badge.dimensions.ai/badge.js"></script>
+
+    <!-- MathJax -->
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        tags: 'ams'
+      }
+    };
+  </script>
+  <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
+  <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+    
+    
+
+<!-- Scrolling Progress Bar -->
+<script type="text/javascript">
+  /*
+   * This JavaScript code has been adapted from the article 
+   * https://css-tricks.com/reading-position-indicator/ authored by Pankaj Parashar, 
+   * published on the website https://css-tricks.com on the 7th of May, 2014.
+   * Couple of changes were made to the original code to make it compatible 
+   * with the `al-foio` theme.
+   */
+  const progressBar = $("#progress");
+  /*
+   * We set up the bar after all elements are done loading.
+   * In some cases, if the images in the page are larger than the intended
+   * size they'll have on the page, they'll be resized via CSS to accomodate
+   * the desired size. This mistake, however, breaks the computations as the
+   * scroll size is computed as soon as the elements finish loading.
+   * To account for this, a minimal delay was introduced before computing the
+   * values.
+   */
+  window.onload = function () {
+    setTimeout(progressBarSetup, 50);
+  };
+  /*
+   * We set up the bar according to the browser.
+   * If the browser supports the progress element we use that.
+   * Otherwise, we resize the bar thru CSS styling
+   */
+  function progressBarSetup() {
+    if ("max" in document.createElement("progress")) {
+      initializeProgressElement();
+      $(document).on("scroll", function() {
+        progressBar.attr({ value: getCurrentScrollPosition() });
+      });
+      $(window).on("resize", initializeProgressElement);
+    } else {
+      resizeProgressBar();
+      $(document).on("scroll", resizeProgressBar);
+      $(window).on("resize", resizeProgressBar);
+    }
+  }
+  /*
+   * The vertical scroll position is the same as the number of pixels that
+   * are hidden from view above the scrollable area. Thus, a value > 0 is
+   * how much the user has scrolled from the top
+   */
+  function getCurrentScrollPosition() {
+    return $(window).scrollTop();
+  }
+
+  function initializeProgressElement() {
+    let navbarHeight = $("#navbar").outerHeight(true);
+    $("body").css({ "padding-top": navbarHeight });
+    $("progress-container").css({ "padding-top": navbarHeight });
+    progressBar.css({ top: navbarHeight });
+    progressBar.attr({
+      max: getDistanceToScroll(),
+      value: getCurrentScrollPosition(),
+    });
+  }
+  /*
+   * The offset between the html document height and the browser viewport
+   * height will be greater than zero if vertical scroll is possible.
+   * This is the distance the user can scroll
+   */
+  function getDistanceToScroll() {
+    return $(document).height() - $(window).height();
+  }
+
+  function resizeProgressBar() {
+    progressBar.css({ width: getWidthPercentage() + "%" });
+  }
+  // The scroll ratio equals the percentage to resize the bar
+  function getWidthPercentage() {
+    return (getCurrentScrollPosition() / getDistanceToScroll()) * 100;
+  }
+</script>
+
+  </body>
+</html>
