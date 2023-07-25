@@ -16,5 +16,18 @@ toc:
 
 ## Differentiable rendering
 
-#### 
+### Motivation
 
+### Difficulty
+
+### Solution
+
+#### Edge sampling
+
+#### Path space
+
+### Application
+
+#### Reconstruction
+
+### Recent progress
