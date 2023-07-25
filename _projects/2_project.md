@@ -2,7 +2,7 @@
 layout: page
 title: Soft shadow
 description: Implement soft shadow using PCF and PCSS
-img: assets/img/soft_shadow/result/final result.gif
+img: assets/img/soft_shadow/result/cover.jpg
 importance: 1
 category: Fun
 
@@ -131,7 +131,7 @@ float PCF(sampler2D shadowMap, vec4 coords, float biasC, float filterRadiusUV) {
 }
 ```
 
-### Percentage Closer Soft Shadows
+### Percentage Closer Soft Shadows (PCSS)
 
 In PCSS, the further a point is from the blocker, the fainter the shadow appears, and based on similar triangles, we can derive the formula:
 
@@ -190,4 +190,3 @@ For $$d_{Blocker}$$, we use the approach in the following picture to get the ave
     <tr>
         <td ><center>{% include figure.html path="assets/img/soft_shadow/result/Final result.gif" class="img-fluid rounded z-depth-1" zoomable=true %}</center></td>
     </tr>
-
