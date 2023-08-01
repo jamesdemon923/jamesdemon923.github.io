@@ -9,7 +9,6 @@ email: jamesdemon923@gmail.com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   A portfolio website of Haolan Xu. Based on [*folio](https://github.com/bogoli/-folio) design.
 footer_text: >
-  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 keywords: Haolan_Xu, graphics, vision, portfolio-website  # add your own keywords or leave empty
 
