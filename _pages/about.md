@@ -21,8 +21,8 @@ social: true  # includes social icons at the bottom of the page
 
 ---
 
-Hi! I'm Haolan Xu(许皓岚), currently a Master student in University of Florida, working with [Prof. Jorg Peters](https://www.cise.ufl.edu/~jorg/). I received my Bachelor's degree at Sichuan University, working with [Prof.Li Zhou](https://ce.scu.edu.cn/info/1092/4061.htm).
+Hi! I'm **Haolan Xu(许皓岚)**, currently a Master student in University of Florida, working with [Prof. Jorg Peters](https://www.cise.ufl.edu/~jorg/). I received my Bachelor's degree at Sichuan University, working with [Prof.Li Zhou](https://ce.scu.edu.cn/info/1092/4061.htm).
 
-My research mainly focuses on rendering and 3D reconstruction, more specifically, differentiable rendering and multiple view synthesis. Also, I am interested in hair & fur rendering and the fluid simulation using smoothed particle hydrodynamics (SPH).
+My research mainly focuses on **rendering** and **3D reconstruction**, more specifically, **differentiable rendering**, **neural rendering**, and **multiple view synthesis**. Also, I am interested in **hair & fur rendering** and the **fluid simulation using smoothed particle hydrodynamics (SPH)**.
 
 Besides the research, I’m a video games player, a traveller, and a NBA big fan.
