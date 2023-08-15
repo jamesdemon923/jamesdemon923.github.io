@@ -25,4 +25,6 @@ Hi! I'm **Haolan Xu(许皓岚)**, currently a Master student in University of Fl
 
 My research mainly focuses on **Inverse Rendering** and **3D Reconstruction**, more specifically, **Physics-Based Differentiable Rendering**, **Neural Rendering**, and **Multiple View Synthesis**. Also, I am interested in **Hair & Fur Rendering** and the **Fluid Simulation using Smoothed Particle Hydrodynamics (SPH)**.
 
+**Welcome to delve into these topics with me. Exchanging ideas and expanding our understanding is something I truly value. I look forward to a deeper collaboration with you! Feel free to contact me!**
+
 Besides the research, I’m a video games player, a traveller, and a NBA big fan.
