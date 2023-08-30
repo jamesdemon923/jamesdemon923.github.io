@@ -60,8 +60,6 @@ In the following picture, **A and B need considering depth; B and C need conside
         {% include figure.html path="assets/img/denoise_in_RTRT/Equation/Dplane.png" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
-
-
 In the above equations, $$\widetilde{C}$$ is the noisy input image, $$D_{normal}$$ is the angle between the normals of two points (**for normal information**), $$D_{plane}$$ provides a better metric than just simply calculating the difference between two depths (**for depth information**).
 
 ### Temporal Accumulation:
@@ -75,8 +73,6 @@ The projection equation:
         {% include figure.html path="assets/img/denoise_in_RTRT/Equation/Projection.png" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
-
-
 This is the advantage of graphics: **mastering the matrices of the entire pipeline for calculating conveniently.**
 
 #### Accumulation:
@@ -94,18 +90,17 @@ For clamping, it is first necessary to compute the mean $$\mu$$ and variance $$\
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/denoise_in_RTRT/Equation/A-Trous Wavelet.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.html path="assets/img/denoise_in_RTRT/Theory/A-Trous Wavelet.png" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
 
-
 ## Pipeline
 
-| Step |                          Operation                           |
-| :--: | :----------------------------------------------------------: |
-|  1   |                    Denoise for per frame                     |
-|  2   | Project the last frame into the present one to implement the temporal accumulation |
-|  3   |       Accelerate the denoise based on A-Trous wavelet        |
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/denoise_in_RTRT/Theory/pipeline.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
 
 ## Result
 
@@ -131,10 +126,9 @@ For clamping, it is first necessary to compute the mean $$\mu$$ and variance $$\
         <td ><center>{% include figure.html path="assets/img/denoise_in_RTRT/Result/box-After TemAccumulation.gif" class="img-fluid rounded z-depth-1" zoomable=true caption="After temporal accumulation" %}</center></td>
         <td ><center>{% include figure.html path="assets/img/denoise_in_RTRT/Result/box-with A-Trous.gif" class="img-fluid rounded z-depth-1" zoomable=true caption="Accelerated by A-Trous" %}</center></td>
     </tr>
-
 <table>
     <tr>
-        <th colspan="2">Result of pink house (see the original results in images/result/.mp4 file)</th>
+        <th colspan="2">Result of pink house</th>
     </tr>
     <tr>
         <td ><center>{% include figure.html path="assets/img/denoise_in_RTRT/Result/pinkroom-input.gif" class="img-fluid rounded z-depth-1" zoomable=true caption="Input" %}</center></td>
@@ -145,9 +139,10 @@ For clamping, it is first necessary to compute the mean $$\mu$$ and variance $$\
         <td ><center>{% include figure.html path="assets/img/denoise_in_RTRT/Result/pinkroom-with A-Trous.gif" class="img-fluid rounded z-depth-1" zoomable=true caption="Accelerated by A-Trous" %}</center></td>
     </tr>
 
-
-|                 | Cornell Box | Pink House |
-| :-------------: | :---------: | :--------: |
-| Without A-Trous |    38''     |   9'22''   |
-|  With A-Trous   |     8''     |   1'42''   |
-
+<table>
+    <tr>
+        <th colspan="1">Cost of time</th>
+    </tr>
+    <tr>
+        <td ><center>{% include figure.html path="assets/img/denoise_in_RTRT/Result/Time.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}</center></td>
+    </tr>

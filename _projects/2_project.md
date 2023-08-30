@@ -188,4 +188,3 @@ For $$d_{Blocker}$$, we use the approach in the following picture to get the ave
     <tr>
         <td ><center>{% include figure.html path="assets/img/soft_shadow/result/Final result.gif" class="img-fluid rounded z-depth-1" zoomable=true %}</center></td>
     </tr>
-
