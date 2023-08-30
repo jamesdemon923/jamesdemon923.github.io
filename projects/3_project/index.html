@@ -242,7 +242,6 @@
 
     </div>
 </div>
-
 <p>In the above equations, \(\widetilde{C}\) is the noisy input image, \(D_{normal}\) is the angle between the normals of two points (<strong>for normal information</strong>), \(D_{plane}\) provides a better metric than just simply calculating the difference between two depths (<strong>for depth information</strong>).</p>
 
 <h3 id="temporal-accumulation">Temporal Accumulation:</h3>
@@ -271,7 +270,6 @@
 
     </div>
 </div>
-
 <p>This is the advantage of graphics: <strong>mastering the matrices of the entire pipeline for calculating conveniently.</strong></p>
 
 <h4 id="accumulation">Accumulation:</h4>
@@ -307,13 +305,13 @@
 
   <picture>
     
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/denoise_in_RTRT/Equation/A-Trous%20Wavelet-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/denoise_in_RTRT/Equation/A-Trous%20Wavelet-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/denoise_in_RTRT/Equation/A-Trous%20Wavelet-1400.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/denoise_in_RTRT/Theory/A-Trous%20Wavelet-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/denoise_in_RTRT/Theory/A-Trous%20Wavelet-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/denoise_in_RTRT/Theory/A-Trous%20Wavelet-1400.webp"></source>
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/denoise_in_RTRT/Equation/A-Trous%20Wavelet.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    <img src="/assets/img/denoise_in_RTRT/Theory/A-Trous%20Wavelet.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
   </picture>
 
@@ -324,28 +322,26 @@
 
 <h2 id="pipeline">Pipeline</h2>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center">Step</th>
-      <th style="text-align: center">Operation</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center">1</td>
-      <td style="text-align: center">Denoise for per frame</td>
-    </tr>
-    <tr>
-      <td style="text-align: center">2</td>
-      <td style="text-align: center">Project the last frame into the present one to implement the temporal accumulation</td>
-    </tr>
-    <tr>
-      <td style="text-align: center">3</td>
-      <td style="text-align: center">Accelerate the denoise based on A-Trous wavelet</td>
-    </tr>
-  </tbody>
-</table>
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/denoise_in_RTRT/Theory/pipeline-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/denoise_in_RTRT/Theory/pipeline-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/denoise_in_RTRT/Theory/pipeline-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/denoise_in_RTRT/Theory/pipeline.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
 
 <h2 id="result">Result</h2>
 
@@ -469,10 +465,9 @@
 </figure>
 </center></td>
     </tr>
-
 <table>
     <tr>
-        <th colspan="2">Result of pink house (see the original results in images/result/.mp4 file)</th>
+        <th colspan="2">Result of pink house</th>
     </tr>
     <tr>
         <td><center>
@@ -549,12 +544,30 @@
 </center></td>
     </tr>
 
+<table>
+    <tr>
+        <th colspan="1">Cost of time</th>
+    </tr>
+    <tr>
+        <td><center>
+<figure>
 
-|                 | Cornell Box | Pink House |
-| :-------------: | :---------: | :--------: |
-| Without A-Trous |    38''     |   9'22''   |
-|  With A-Trous   |     8''     |   1'42''   |
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/denoise_in_RTRT/Result/Time-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/denoise_in_RTRT/Result/Time-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/denoise_in_RTRT/Result/Time-1400.webp"></source>
+    
 
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/denoise_in_RTRT/Result/Time.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+</center></td>
+    </tr>
+</table>
 </table>
 </table>
 </table>
