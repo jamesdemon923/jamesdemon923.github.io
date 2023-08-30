@@ -18,6 +18,10 @@ category: Fun
 
 * WebGL
 
+## Code
+
+**[Github repository](https://github.com/jamesdemon923/Soft_Shadow)**
+
 ## Implementation
 
 ### Hard Shadow Mapping
@@ -154,10 +158,6 @@ For $$d_{Blocker}$$, we use the approach in the following picture to get the ave
         {% include figure.html path="assets/img/soft_shadow/principle/Blocker depth.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
-
-
-
-
 ## Result
 
 <table>
@@ -181,8 +181,6 @@ For $$d_{Blocker}$$, we use the approach in the following picture to get the ave
         <td ><center>{% include figure.html path="assets/img/soft_shadow/result/PCF with 50 samples.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}</center></td>
         <td ><center>{% include figure.html path="assets/img/soft_shadow/result/PCSS.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}</center></td>
     </tr>
-
-
 <table>
     <tr>
         <th colspan="1">Final result</th>
@@ -190,3 +188,4 @@ For $$d_{Blocker}$$, we use the approach in the following picture to get the ave
     <tr>
         <td ><center>{% include figure.html path="assets/img/soft_shadow/result/Final result.gif" class="img-fluid rounded z-depth-1" zoomable=true %}</center></td>
     </tr>
+

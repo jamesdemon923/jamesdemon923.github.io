@@ -26,6 +26,10 @@ category: Fun
 * cmake ..
 * make
 
+## Code
+
+**[Github repository](https://github.com/jamesdemon923/Pathtracer)**
+
 ## Build the Bounding volume hierarchy (BVH)
 
 <div class="row">
@@ -459,3 +463,4 @@ case MIRROR:
     <tr>
         <td ><center>{% include figure.html path="assets/img/Tinypathtracer/result/Perfect mirror reflection model spp128 rough0.25.jpg" class="img-fluid rounded z-depth-1" zoomable=true caption="SPP=128, roughness=0.25" %}</center></td>
     </tr>
+
