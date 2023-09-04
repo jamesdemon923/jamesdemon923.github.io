@@ -46,19 +46,19 @@ In the following picture, **A and B need considering depth; B and C need conside
 
 <div class="row">
     <div class="col mt-3 mt-md-0">
-        {% include figure.html path="assets/img/denoise_in_RTRT/Equation/Filter Kernel.png" class="rounded" zoomable=true %}
+        {% include figure.html path="assets/img/denoise_in_RTRT/Equation/Filter Kernel.png" class="img-fluid rounded" zoomable=true %}
     </div>
 </div>
 
 <div class="row">
     <div class="col mt-3 mt-md-0">
-        {% include figure.html path="assets/img/denoise_in_RTRT/Equation/Dnormal.png" class="rounded" zoomable=true %}
+        {% include figure.html path="assets/img/denoise_in_RTRT/Equation/Dnormal.png" class="img-fluid rounded" zoomable=true %}
     </div>
 </div>
 
 <div class="row">
     <div class="col mt-3 mt-md-0">
-        {% include figure.html path="assets/img/denoise_in_RTRT/Equation/Dplane.png" class="rounded" zoomable=true %}
+        {% include figure.html path="assets/img/denoise_in_RTRT/Equation/Dplane.png" class="img-fluid rounded" zoomable=true %}
     </div>
 </div>
 
@@ -72,7 +72,7 @@ The projection equation:
 
 <div class="row">
     <div class="col mt-3 mt-md-0">
-        {% include figure.html path="assets/img/denoise_in_RTRT/Equation/Projection.png" class="rounded" zoomable=true %}
+        {% include figure.html path="assets/img/denoise_in_RTRT/Equation/Projection.png" class="img-fluid rounded" zoomable=true %}
     </div>
 </div>
 
@@ -82,7 +82,7 @@ This is the advantage of graphics: **mastering the matrices of the entire pipeli
 
 <div class="row">
     <div class="col mt-3 mt-md-0">
-        {% include figure.html path="assets/img/denoise_in_RTRT/Equation/Temporal accumulation.png" class="rounded" zoomable=true %}
+        {% include figure.html path="assets/img/denoise_in_RTRT/Equation/Temporal accumulation.png" class="img-fluid rounded" zoomable=true %}
     </div>
 </div>
 
