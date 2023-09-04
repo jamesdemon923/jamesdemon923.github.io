@@ -90,7 +90,7 @@ End For
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0 d-flex justify-content-center">
-        <div style="max-width: 50%; margin: auto;">
+        <div style="max-width: 20%; margin: auto;">
         {% include figure.html path="assets/img/Tinypathtracer/principle/Rendering equation.jpg" class="rounded" zoomable=true %}
         </div> 
     </div>
@@ -103,7 +103,6 @@ End For
 $$
 \int_{a}^{b}f(x)dx=\frac{1}{N}\sum_{i=1}^{N}\frac{f(X_{i})}{p(X_{i})}
 $$
-
 
 **Global illumination** = Direct illumination + indirect illumination
 

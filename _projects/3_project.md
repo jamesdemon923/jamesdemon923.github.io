@@ -36,10 +36,11 @@ The simplest one is **Gaussian filter**. For the final color of a target pixel, 
 In the following picture, **A and B need considering depth; B and C need considering normal; D and E need considering color.**
 
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col mt-3 mt-md-0 d-flex justify-content-center">
         {% include figure.html path="assets/img/denoise_in_RTRT/Theory/Joint Bilateral Filtering.png" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
+
 
 ### Filter kernel:
 
@@ -84,8 +85,6 @@ This is the advantage of graphics: **mastering the matrices of the entire pipeli
         {% include figure.html path="assets/img/denoise_in_RTRT/Equation/Temporal accumulation.png" class="rounded" zoomable=true %}
     </div>
 </div>
-
-
 
 For clamping, it is first necessary to compute the mean $$\mu$$ and variance $$\sigma$$ of $$\bar{C}^{(i)}$$ in a 7x7 neighborhood, and then to clamp the color of the previous frame $$C^{i-1}$$ into the range $$(\mu-k\sigma,\mu+k\sigma)$$.
 
