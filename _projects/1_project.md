@@ -90,7 +90,7 @@ End For
 
 <div class="row">
     <div class="col mt-3 mt-md-0 d-flex justify-content-center">
-        <div style="max-width: 40%; margin: auto;">
+        <div style="max-width: 50%; margin: auto;">
         {% include figure.html path="assets/img/Tinypathtracer/principle/Rendering equation.jpg" class="img-fluid rounded" zoomable=true %}
         </div> 
     </div>
@@ -124,10 +124,13 @@ $$
 ### Sample light source
 
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col mt-3 mt-md-0 d-flex justify-content-center">
+        <div style="max-width: 60%; margin: auto;">
         {% include figure.html path="assets/img/Tinypathtracer/principle/Sample the light.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+        </div>
     </div>
 </div>
+
 
 The rendering equation becomes:
 
@@ -222,18 +225,24 @@ In this project,the rendering process can be accelerated by using multiple threa
 Microfacet BRDF:
 
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col mt-3 mt-md-0 d-flex justify-content-center">
+        <div style="max-width: 60%; margin: auto;">
         {% include figure.html path="assets/img/Tinypathtracer/principle/Microfacet BRDF.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+        </div>
     </div>
 </div>
+
 
 We use the GGX for $$G(\mathbf{i,o,h})$$ and $$D(\mathbf{h})$$
 
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col mt-3 mt-md-0 d-flex justify-content-center">
+        <div style="max-width: 60%; margin: auto;">
         {% include figure.html path="assets/img/Tinypathtracer/principle/GGX NDF.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        </div>
     </div>
 </div>
+
 ```c++
 // Define the microfacet material in main.cpp
 Material* microfacet = new Material(MICROFACET, Vector3f(0.0f));
