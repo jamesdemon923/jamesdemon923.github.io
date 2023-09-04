@@ -90,7 +90,7 @@ End For
 
 <div class="row">
     <div class="col mt-3 mt-md-0 d-flex justify-content-center">
-        <div style="max-width: 50%; margin: auto;">
+        <div style="max-width: 55%; margin: auto;">
         {% include figure.html path="assets/img/Tinypathtracer/principle/Rendering equation.jpg" class="img-fluid rounded" zoomable=true %}
         </div> 
     </div>
@@ -473,3 +473,4 @@ case MIRROR:
     <tr>
         <td ><center>{% include figure.html path="assets/img/Tinypathtracer/result/Perfect mirror reflection model spp128 rough0.25.jpg" class="img-fluid rounded z-depth-1" zoomable=true caption="SPP=128, roughness=0.25" %}</center></td>
     </tr>
+

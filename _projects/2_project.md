@@ -148,11 +148,12 @@ $$
 
 <div class="row">
     <div class="col mt-3 mt-md-0 d-flex justify-content-center">
-        <div style="max-width: 60%; margin: auto;">
+        <div style="max-width: 30%; margin: auto;">
         {% include figure.html path="assets/img/soft_shadow/principle/PCSS.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
         </div>    
     </div>
 </div>
+
 
 
 For $$d_{Blocker}$$, we use the approach in the following picture to get the average blocker depth.
@@ -199,4 +200,3 @@ For $$d_{Blocker}$$, we use the approach in the following picture to get the ave
     <tr>
         <td ><center>{% include figure.html path="assets/img/soft_shadow/result/Final result.gif" class="img-fluid rounded z-depth-1" zoomable=true %}</center></td>
     </tr>
-

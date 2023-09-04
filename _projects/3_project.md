@@ -46,11 +46,12 @@ In the following picture, **A and B need considering depth; B and C need conside
 
 <div class="row">
     <div class="col mt-3 mt-md-0 d-flex justify-content-center">
-        <div style="max-width: 50%; margin: auto;">
+        <div style="max-width: 55%; margin: auto;">
         {% include figure.html path="assets/img/denoise_in_RTRT/Equation/Filter Kernel.png" class="img-fluid rounded" zoomable=true %}
         </div>    
     </div>
 </div>
+
 
 <div class="row">
     <div class="col mt-3 mt-md-0 d-flex justify-content-center">
@@ -90,11 +91,12 @@ This is the advantage of graphics: **mastering the matrices of the entire pipeli
 
 <div class="row">
     <div class="col mt-3 mt-md-0 d-flex justify-content-center">
-        <div style="max-width: 50%; margin: auto;">
+        <div style="max-width: 45%; margin: auto;">
         {% include figure.html path="assets/img/denoise_in_RTRT/Equation/Temporal accumulation.png" class="img-fluid rounded" zoomable=true %}
         </div>
     </div>
 </div>
+
 
 For clamping, it is first necessary to compute the mean $$\mu$$ and variance $$\sigma$$ of $$\bar{C}^{(i)}$$ in a 7x7 neighborhood, and then to clamp the color of the previous frame $$C^{i-1}$$ into the range $$(\mu-k\sigma,\mu+k\sigma)$$.
 
@@ -158,4 +160,3 @@ For clamping, it is first necessary to compute the mean $$\mu$$ and variance $$\
     <tr>
         <td ><center>{% include figure.html path="assets/img/denoise_in_RTRT/Result/Time.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}</center></td>
     </tr>
-
