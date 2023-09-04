@@ -147,7 +147,7 @@ w_{Penumbra} = (d_{Receiver}-d_{Blocker}) \cdot w_{Light} / d_{Blocker}
 $$
 
 <div class="row">
-    <div class="col mt-3 mt-md-0">
+    <div class="col mt-3 mt-md-0 d-flex justify-content-center">
         {% include figure.html path="assets/img/soft_shadow/principle/PCSS.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
@@ -156,7 +156,7 @@ $$
 For $$d_{Blocker}$$, we use the approach in the following picture to get the average blocker depth.
 
 <div class="row">
-    <div class="col mt-3 mt-md-0">
+    <div class="col mt-3 mt-md-0 d-flex justify-content-center">
         {% include figure.html path="assets/img/soft_shadow/principle/Blocker depth.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
