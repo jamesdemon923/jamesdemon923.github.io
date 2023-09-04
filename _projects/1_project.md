@@ -33,13 +33,14 @@ category: Fun
 ## Build the Bounding volume hierarchy (BVH)
 
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col-sm-4 mt-3 mt-md-0">
         {% include figure.html path="assets/img/Tinypathtracer/principle/BVH1.png" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col-sm-8 mt-3 mt-md-0">
         {% include figure.html path="assets/img/Tinypathtracer/principle/BVH2.png" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
+
 
 Pseudocode:
 
@@ -463,4 +464,3 @@ case MIRROR:
     <tr>
         <td ><center>{% include figure.html path="assets/img/Tinypathtracer/result/Perfect mirror reflection model spp128 rough0.25.jpg" class="img-fluid rounded z-depth-1" zoomable=true caption="SPP=128, roughness=0.25" %}</center></td>
     </tr>
-

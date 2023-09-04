@@ -41,6 +41,7 @@ The 2nd Pass: render the real scene from the current camera and transform pixel 
     </div>
 </div>
 
+
 ```c++
 // WebGLRenderer.js
 // Shadow pass
