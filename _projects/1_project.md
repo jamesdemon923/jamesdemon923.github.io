@@ -89,9 +89,9 @@ End For
 **Rendering equation**:
 
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0 d-flex justify-content-center">
-        <div style="max-width: 20%; margin: auto;">
-        {% include figure.html path="assets/img/Tinypathtracer/principle/Rendering equation.jpg" class="rounded" zoomable=true %}
+    <div class="col mt-3 mt-md-0 d-flex justify-content-center">
+        <div style="max-width: 40%; margin: auto;">
+        {% include figure.html path="assets/img/Tinypathtracer/principle/Rendering equation.jpg" class="img-fluid rounded" zoomable=true %}
         </div> 
     </div>
 </div>
