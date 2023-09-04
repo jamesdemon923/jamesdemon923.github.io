@@ -33,10 +33,10 @@ The 1st Pass: render a depth map from the light source which is also known as Sh
 The 2nd Pass: render the real scene from the current camera and transform pixel point to the light source space, take its depth in the light source space with the same uv coordinates recorded in ShadowMap for comparison. If the depth is is greater than the depth in ShadowMap, the point is in the shadow.
 
 <div class="row">
-    <div class="col-sm-8 mt-3 mt-md-0">
+    <div class="col mt-3 mt-md-0">
         {% include figure.html path="assets/img/soft_shadow/principle/first pass.jpg" title="First pass" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
+    <div class="col mt-3 mt-md-0">
         {% include figure.html path="assets/img/soft_shadow/principle/second pass.jpg" title="Second pass" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
@@ -147,18 +147,20 @@ w_{Penumbra} = (d_{Receiver}-d_{Blocker}) \cdot w_{Light} / d_{Blocker}
 $$
 
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col mt-3 mt-md-0">
         {% include figure.html path="assets/img/soft_shadow/principle/PCSS.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
 
+
 For $$d_{Blocker}$$, we use the approach in the following picture to get the average blocker depth.
 
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col mt-3 mt-md-0">
         {% include figure.html path="assets/img/soft_shadow/principle/Blocker depth.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
+
 ## Result
 
 <table>
@@ -171,6 +173,8 @@ For $$d_{Blocker}$$, we use the approach in the following picture to get the ave
         <td ><center>{% include figure.html path="assets/img/soft_shadow/result/Hard shadow without bias.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}</center></td>
     </tr>
 
+​    
+
 <table>
     <tr>
         <th colspan="1">Hard Shadow</th>
@@ -182,6 +186,8 @@ For $$d_{Blocker}$$, we use the approach in the following picture to get the ave
         <td ><center>{% include figure.html path="assets/img/soft_shadow/result/PCF with 50 samples.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}</center></td>
         <td ><center>{% include figure.html path="assets/img/soft_shadow/result/PCSS.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}</center></td>
     </tr>
+
+​    
 <table>
     <tr>
         <th colspan="1">Final result</th>
