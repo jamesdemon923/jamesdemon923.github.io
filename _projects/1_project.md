@@ -33,10 +33,10 @@ category: Fun
 ## Build the Bounding volume hierarchy (BVH)
 
 <div class="row">
-    <div class="col-sm-4 mt-3 mt-md-0">
+    <div class="col-sm-2.64 mt-3 mt-md-0">
         {% include figure.html path="assets/img/Tinypathtracer/principle/BVH1.png" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
-    <div class="col-sm-8 mt-3 mt-md-0">
+    <div class="col-sm-1 mt-3 mt-md-0">
         {% include figure.html path="assets/img/Tinypathtracer/principle/BVH2.png" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
@@ -90,10 +90,9 @@ End For
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/Tinypathtracer/principle/Rendering equation.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.html path="assets/img/Tinypathtracer/principle/Rendering equation.jpg" class="img-fluid rounded z-depth-1" style="max-width: 50%; margin: auto;" zoomable=true %}
     </div>
 </div>
-
 
 **Monte Carlo integration**:
 
