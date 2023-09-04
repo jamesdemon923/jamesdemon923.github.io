@@ -45,19 +45,19 @@ In the following picture, **A and B need considering depth; B and C need conside
 ### Filter kernel:
 
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col mt-3 mt-md-0">
         {% include figure.html path="assets/img/denoise_in_RTRT/Equation/Filter Kernel.png" class="rounded" zoomable=true %}
     </div>
 </div>
 
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col mt-3 mt-md-0">
         {% include figure.html path="assets/img/denoise_in_RTRT/Equation/Dnormal.png" class="rounded" zoomable=true %}
     </div>
 </div>
 
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col mt-3 mt-md-0">
         {% include figure.html path="assets/img/denoise_in_RTRT/Equation/Dplane.png" class="rounded" zoomable=true %}
     </div>
 </div>
@@ -71,7 +71,7 @@ In the above equations, $$\widetilde{C}$$ is the noisy input image, $$D_{normal}
 The projection equation:
 
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col mt-3 mt-md-0">
         {% include figure.html path="assets/img/denoise_in_RTRT/Equation/Projection.png" class="rounded" zoomable=true %}
     </div>
 </div>
@@ -81,7 +81,7 @@ This is the advantage of graphics: **mastering the matrices of the entire pipeli
 #### Accumulation:
 
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col mt-3 mt-md-0">
         {% include figure.html path="assets/img/denoise_in_RTRT/Equation/Temporal accumulation.png" class="rounded" zoomable=true %}
     </div>
 </div>
