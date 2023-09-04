@@ -45,21 +45,22 @@ In the following picture, **A and B need considering depth; B and C need conside
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/denoise_in_RTRT/Equation/Filter Kernel.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.html path="assets/img/denoise_in_RTRT/Equation/Filter Kernel.png" class="rounded" zoomable=true %}
     </div>
 </div>
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/denoise_in_RTRT/Equation/Dnormal.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.html path="assets/img/denoise_in_RTRT/Equation/Dnormal.png" class="rounded" zoomable=true %}
     </div>
 </div>
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/denoise_in_RTRT/Equation/Dplane.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.html path="assets/img/denoise_in_RTRT/Equation/Dplane.png" class="rounded" zoomable=true %}
     </div>
 </div>
+
 In the above equations, $$\widetilde{C}$$ is the noisy input image, $$D_{normal}$$ is the angle between the normals of two points (**for normal information**), $$D_{plane}$$ provides a better metric than just simply calculating the difference between two depths (**for depth information**).
 
 ### Temporal Accumulation:
@@ -146,3 +147,4 @@ For clamping, it is first necessary to compute the mean $$\mu$$ and variance $$\
     <tr>
         <td ><center>{% include figure.html path="assets/img/denoise_in_RTRT/Result/Time.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}</center></td>
     </tr>
+
