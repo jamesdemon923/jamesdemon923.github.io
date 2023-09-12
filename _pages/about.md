@@ -26,9 +26,9 @@ Hi! I'm **Haolan Xu(许皓岚)**, currently a Master student in University of Fl
 I have been exploring the following research directions:
 
 - **Inverse rendering (Differentiable Rendering, Neural Scene Representations and Rendering)**
-- **3D reconstruction (Multiple View Synthesis)**
-- Hair & Fur appearance
-- Fluid Simulation using Smoothed Particle Hydrodynamics (SPH)
+- **Generative models (StyleGAN)**
+- Importance sampling (RIS, ReSTIR)
+- Fluid simulation using Smoothed Particle Hydrodynamics (SPH)
 
 **Welcome to delve into these topics with me. Sharing ideas is something I truly value. I look forward to a deeper collaboration with you. Feel free to contact me!**
 
