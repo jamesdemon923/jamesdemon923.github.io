@@ -28,7 +28,7 @@ I have been exploring the following research directions:
 - **Inverse rendering (Differentiable Rendering, Neural Scene Representations and Rendering)**
 - **Generative models (StyleGAN)**
 - Importance sampling (RIS, ReSTIR)
-- Fluid simulation using Smoothed Particle Hydrodynamics (SPH)
+- Appearance modeling (Subsurface scattering)
 
 **Welcome to delve into these topics with me. Sharing ideas is something I truly value. I look forward to a deeper collaboration with you. Feel free to contact me!**
 
