@@ -51,7 +51,7 @@ layout: default
 
           <!-- Education -->
           {% if page.education %}
-          <h2 class="education-header">Education</h2>
+          <h3 class="education-header">Education</h3>
           <ul class="ul-edu fa-ul">
             <li>
               <i class="fa-li fa fa-graduation-cap"></i>
@@ -72,22 +72,27 @@ layout: default
 
           <!-- News -->
           {% if page.news and site.announcements.enabled -%}
-            <h2><a href="{{ '/news/' | relative_url }}" style="color: inherit;">News</a></h2>
+            <h3><a href="{{ '/news/' | relative_url }}" style="color: inherit;">News</a></h3>
             {%- include news.html limit=true %}
           {%- endif %}
 
-          <!-- Selected papers -->
+          <!-- Publications -->
           {% if page.selected_papers -%}
-            <h2><a href="{{ '/publications/' | relative_url }}" style="color: inherit;">Selected publications</a></h2>
+            <h3><a href="{{ '/publications/' | relative_url }}" style="color: inherit;">Publications</a></h3>
             {%- include selected_papers.html %}
           {%- endif %}
 
-          <!-- Latest posts -->
+
+          <!--
+          Latest posts
           {% if page.latest_posts -%}
-            <h2><a href="{{ '/blog/' | relative_url }}" style="color: inherit;">Latest posts</a></h2>
+            <h3><a href="{{ '/blog/' | relative_url }}" style="color: inherit;">Latest posts</a></h3>
             {%- include latest_posts.html %}
           {%- endif %}
+          -->
 
+
+          
           <!-- Social -->
           {%- if page.social %}
             <div class="social">
