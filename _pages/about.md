@@ -18,7 +18,6 @@ experience: true
 news: false  # includes a list of news items
 latest_posts: false  # includes a list of the newest posts
 selected_papers: true # includes a list of papers marked as "selected={true}"
-
 social: true  # includes social icons at the bottom of the page
 
 ---
@@ -28,7 +27,7 @@ Hi! I'm **Haolan Xu(许皓岚)**, currently a Master student in University of Fl
 I have been exploring the following research directions:
 
 - **Inverse rendering (Differentiable Rendering, Neural Scene Representations and Rendering)**
-- **Generative models (StyleGAN)**
+- **Generative models (GANs, Diffusion models)**
 - Importance sampling (RIS, ReSTIR)
 - Appearance modeling (Subsurface scattering)
 
