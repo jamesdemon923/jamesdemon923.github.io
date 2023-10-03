@@ -28,7 +28,7 @@ I have been exploring the following research directions:
 - Inverse rendering (Differentiable Rendering, Neural Representations)
 - Generative models (GANs, Diffusion models)
 - Importance sampling (RIS, ReSTIR)
-- Appearance modeling (Subsurface scattering)
+- Appearance modeling (SVBRDF, Subsurface scattering)
 
 **Welcome to delve into these topics with me. Sharing ideas is something I truly value. I look forward to a deeper collaboration with you. Feel free to contact me!**
 
