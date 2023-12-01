@@ -25,11 +25,11 @@ Hi! I'm **Haolan Xu(许皓岚)**, currently a Master student in University of Fl
 
 I have been exploring the following research directions:
 
-- Inverse rendering (Differentiable Rendering, Neural Representations)
-- Generative models (GANs, Diffusion models)
+- Inverse rendering (Differentiable Rendering, Neural Implicits)
+- Generative models (GANs, Diffusion Models)
 - Importance sampling (RIS, ReSTIR)
-- Appearance modeling (SVBRDF, Subsurface scattering)
+- Appearance modeling (SVBRDF, Subsurface Scattering)
 
-**Welcome to delve into these topics with me. Sharing ideas is something I truly value. I look forward to a deeper collaboration with you. Feel free to contact me!**
+**If you are also interested and engaged in these topics, feel free to reach out to me! Sharing and discussion are very welcome. I look forward to deeper collaborations on these topics.**
 
 Besides the research, I’m a video games player, a traveller, and a NBA big fan.
