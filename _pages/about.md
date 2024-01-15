@@ -21,15 +21,18 @@ social: true  # includes social icons at the bottom of the page
 
 ---
 
-Hi! I'm **Haolan Xu(许皓岚)**, currently a Master student in University of Florida, working with [Prof. Jorg Peters](https://www.cise.ufl.edu/~jorg/). I received my Bachelor's degree at Sichuan University, working with [Prof.Li Zhou](https://ce.scu.edu.cn/info/1092/4061.htm).
+Hi! I'm **Haolan Xu (许皓岚)**, currently a Master student in University of Florida, working with [Prof. Jorg Peters](https://www.cise.ufl.edu/~jorg/). I received my Bachelor's degree at Sichuan University, working with [Prof. Li Zhou](https://ce.scu.edu.cn/info/1092/4061.htm).
 
-I have been exploring the following research directions:
+My aim is to create realistic virtual assets with enough physical accuracy for immersive experiences, making advanced graphics and vision accessible to all. I have been exploring the following research directions:
 
 - Inverse rendering (Differentiable Rendering, Neural Implicits)
 - Generative models (GANs, Diffusion Models)
-- Importance sampling (RIS, ReSTIR)
-- Appearance modeling (SVBRDF, Subsurface Scattering)
+- Importance sampling (ReSTIR)
+- Appearance modeling (SVBRDF, BSDF)
 
-**If you are also interested and engaged in these topics, feel free to reach out to me! Sharing and discussion are very welcome. I look forward to deeper collaborations on these topics.**
+Besides the research, I’m a video game player, a NBA big fan, and a traveler.
 
-Besides the research, I’m a video games player, a traveller, and a NBA big fan.
+**I'm happy to chat about research or anything else and eager for more collaborations on these topics. Feel free to reach out!**
+
+
+
