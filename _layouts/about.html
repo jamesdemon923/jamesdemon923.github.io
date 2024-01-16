@@ -51,7 +51,7 @@ layout: default
 
           <!-- Education -->
           {% if page.education %}
-          <h4 class="education-header">Education</h4>
+          <h5 class="education-header">Education</h5>
           <ul class="ul-edu fa-ul">
             <li>
               <i class="fa-li fa fa-graduation-cap"></i>
@@ -72,13 +72,13 @@ layout: default
 
           <!-- News -->
           {% if page.news and site.announcements.enabled -%}
-            <h4><a href="{{ '/news/' | relative_url }}" style="color: inherit;">News</a></h4>
+            <h5><a href="{{ '/news/' | relative_url }}" style="color: inherit;">News</a></h5>
             {%- include news.html limit=true %}
           {%- endif %}
 
           <!-- Publications -->
           {% if page.selected_papers -%}
-            <h4><a href="{{ '/publications/' | relative_url }}" style="color: inherit;">Publications</a></h4>
+            <h5><a href="{{ '/publications/' | relative_url }}" style="color: inherit;">Publications</a></h5>
             {%- include selected_papers.html %}
           {%- endif %}
 
