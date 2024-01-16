@@ -30,7 +30,7 @@ My aim is to create realistic virtual assets with enough physical accuracy for i
 - Importance sampling (ReSTIR)
 - Appearance modeling (SVBRDF, BSDF)
 
-Besides the research, I’m a video game player, a NBA big fan, and a traveler.
+Outside of work, I love traveling, NBA, and video games.
 
 **I'm happy to chat about research or anything else and eager for more collaborations on these topics. Feel free to reach out!**
 
