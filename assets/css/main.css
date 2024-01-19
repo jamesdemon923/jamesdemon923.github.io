@@ -266,11 +266,6 @@ blockquote {
   align-items: center; /* Centers vertically if needed */
 }
 
-.ul-edu .edu-logo {
-  width: 25px;
-  height: auto;
-  margin-right: 3px;
-}
 .ul-edu .education-header {
   margin-bottom: 5px;
   font-size: 22px;
