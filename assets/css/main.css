@@ -271,6 +271,15 @@ blockquote {
   margin-bottom: 5px;
   font-size: 22px;
 }
+.ul-edu .edu-flex {
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+}
+.ul-edu .edu-logo {
+  width: 25px;
+  height: auto;
+  margin-right: 3px; /* Adjust as needed */
+}
 .ul-edu .course {
   font-size: 16px;
 }
