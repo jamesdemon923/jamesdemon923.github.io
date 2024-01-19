@@ -261,13 +261,15 @@ blockquote {
 }
 
 .image-container {
-  text-align: center; /* Centers content horizontally */
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically if needed */
 }
 
 .ul-edu .edu-logo {
   width: 20px;
   height: auto;
-  margin-right: 3px;
+  margin-right: 1px;
 }
 .ul-edu .education-header {
   margin-bottom: 5px;
