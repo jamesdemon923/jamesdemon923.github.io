@@ -177,10 +177,6 @@ blockquote {
     font-size: 22px;  // adjust as needed
   }
 
-  li {
-    list-style-type: none; // Removes the default list styling if necessary
-  }
-
   .edu-flex {
     display: flex;
     align-items: center; /* Align items vertically in the center */
@@ -192,12 +188,6 @@ blockquote {
     margin-right: 10px;
   }
 
-  .description {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; // This centers the text vertically if the description area is taller than the image
-  }
-  
   .course {
     font-size: 16px;  // adjust as needed
   }
