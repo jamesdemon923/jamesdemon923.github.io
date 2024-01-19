@@ -260,6 +260,10 @@ blockquote {
   text-decoration: none;
 }
 
+.image-container {
+  text-align: center; /* Centers content horizontally */
+}
+
 .ul-edu .edu-logo {
   width: 20px;
   height: auto;
