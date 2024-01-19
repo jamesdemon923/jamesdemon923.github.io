@@ -120,7 +120,8 @@ blockquote {
   .address {
     margin-bottom: 5px;
     margin-top: 5px;
-    font-family: monospace;
+    font-family: sans-serif;
+    text-align: center;
 
     p {
       display: inline-block;
@@ -170,7 +171,7 @@ blockquote {
 }
 
 .ul-edu{
-  
+
   .education-header {
     margin-bottom: 5px;
     font-size: 22px;  // adjust as needed
