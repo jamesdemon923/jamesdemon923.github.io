@@ -177,6 +177,17 @@ blockquote {
     font-size: 22px;  // adjust as needed
   }
 
+  .edu-flex {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+  }
+
+  .edu-logo {
+    width: 25px;
+    height: auto;
+    margin-right: 3px; /* Adjust as needed */
+  }
+
   .course {
     font-size: 16px;  // adjust as needed
   }
