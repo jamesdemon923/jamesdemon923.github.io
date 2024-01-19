@@ -278,7 +278,7 @@ blockquote {
 .ul-edu .edu-logo {
   width: 40px;
   height: auto;
-  margin-right: 3px; /* Adjust as needed */
+  margin-right: 10px; /* Adjust as needed */
 }
 .ul-edu .course {
   font-size: 16px;
