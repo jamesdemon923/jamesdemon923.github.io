@@ -263,6 +263,7 @@ blockquote {
 .ul-edu .edu-logo {
   width: 50px;
   height: auto;
+  margin-right: 10px;
 }
 .ul-edu .education-header {
   margin-bottom: 5px;
