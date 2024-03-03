@@ -25,7 +25,7 @@ Hi! I'm **Haolan Xu (许皓岚)**, currently a Master student in University of F
 
 My aim is to create high-quality virtual assets with enough physical accuracy for immersive experiences (Inverse Graphics), making advanced 3D graphics and vision accessible to all. I have been exploring the following research directions:
 
-- Physics-based Differentiable Rendering
+- Differentiable Rendering
 - Neural Rendering & Scene Representations
 - Generative models 
 - Importance sampling (ReSTIR)
