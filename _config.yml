@@ -69,7 +69,7 @@ og_image: # The site-wide (default for all links) Open Graph preview image
 
 github_username: jamesdemon923 # your GitHub user name
 gitlab_username: # your GitLab user name
-x_username: HaolanXu09 # your Twitter handle
+x_username: HaolanXu09 # your X(Twitter) handle
 mastodon_username: # your mastodon instance+username in the format instance.tld/@username
 linkedin_username: haolanxu923 # your LinkedIn user name
 telegram_username: # your Telegram user name
@@ -377,8 +377,8 @@ bootstrap:
 bootstrap-table:
   version: "1.21.4"
 fontawesome:
-  version: "6.5.1"
-  integrity: "sha256-C22CFB6520A7FDBB738632834019ACF47C78B1279462C0EB4CB83BAE83ECB5A7"
+  version: "6.4.0"
+  integrity: "sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8="
 jquery:
   version: "3.6.0"
   integrity: "sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
