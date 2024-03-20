@@ -27,8 +27,7 @@ My aim is to generate high-quality assets with enough physical accuracy for the 
 
 - Differentiable Rendering
 - Neural Rendering & Scene Representations
-- Generative models 
-- Importance sampling (ReSTIR)
+- Generative models
 
 Outside of work, I love traveling, NBA, and video games.
 
@@ -36,3 +35,4 @@ Outside of work, I love traveling, NBA, and video games.
 
 
 
+#### ✨I am currently looking for related research collaboration!✨
