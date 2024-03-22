@@ -35,4 +35,4 @@ Outside of work, I love traveling, NBA, and video games.
 
 
 
-##### ✨I am looking for research collaborations!!!✨
+##### ✨I am looking for research collaboration!!!✨
