@@ -23,11 +23,11 @@ social: true  # includes social icons at the bottom of the page
 
 Hi! I'm **Haolan Xu (许皓岚)**, currently a Master student in University of Florida, working with [Prof. Jorg Peters](https://www.cise.ufl.edu/~jorg/). I received my Bachelor's degree at Sichuan University, working with [Prof. Li Zhou](https://ce.scu.edu.cn/info/1092/4061.htm).
 
-My aim is to generate high-quality assets with enough physical accuracy for the immersive virtual environment, help machines understand the world, and make advanced 3D graphics and vision accessible to non-specialists. I have been exploring the following research directions:
+My aim is to help machines understand the world and generate high-quality 3D assets with enough physical accuracy while making advanced 3D graphics and vision techniques accessible to non-specialists. I have been exploring the following research directions:
 
-- Differentiable Rendering
 - Neural Rendering & Scene Representations
-- Generative models
+- Differentiable Rendering
+- Diffusion Generative Models
 
 Outside of work, I love traveling, NBA, and video games.
 
