@@ -4,7 +4,7 @@
 
 title: blank # the website title (if blank, full name will be used instead)
 first_name: Haolan
-last_name: Xu (许皓岚)
+last_name: Xu
 email: jamesdemon923@gmail.com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   A portfolio website of Haolan Xu. Based on [*folio](https://github.com/bogoli/-folio) design.
