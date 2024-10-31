@@ -23,7 +23,7 @@ social: true  # includes social icons at the bottom of the page
 
 Hi! I'm **Haolan Xu (许皓岚)**, currently a visiting student in [University of Illinois Urbana-Champaign](https://ece.illinois.edu/), working with [Narendra Ahuja](https://vision.ai.illinois.edu/). Before that, I got my MSCS in [University of Florida](https://www.cise.ufl.edu/), working with [Prof. Jorg Peters](https://www.cise.ufl.edu/~jorg/), and my Bachelor's degree in Sichuan University.
 
-My aim is to help machines understand the world and generate scene-aware 3D/4D assets with enough physical accuracy while making advanced 3D graphics and vision techniques accessible to non-specialists. I have been exploring the following research directions:
+My aim is to help machines understand the world and generate scene-aware 3D/4D assets with enough physical accuracy while making them accessible to non-specialists. I have been exploring the following research directions:
 
 - Neural Rendering & Scene Representations
 - 3D/4D Generative Models
