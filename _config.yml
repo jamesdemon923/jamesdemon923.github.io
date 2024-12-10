@@ -102,7 +102,6 @@ youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
 discord_id: # your discord id (18-digit unique numerical identifier)
 
 contact_note: >
-  <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=n&d=Mx-9H2kDGKQuQOoOujHCqLKbKIAqziSHZWGzC_bnbYQ&co=2d78ad&cmo=3acc3a&cmn=ff5353&ct=ffffff'></script>
   A true master is an eternal student.
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
