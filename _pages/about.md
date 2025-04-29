@@ -9,9 +9,8 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   address: >
-    <p>Graphics & Vision</p>
+    <p>jamesdemon923@gmail.com</p>
     <!--<p>123 your address street</p>-->
-    <p>Computer Science</p>
 
 education: true
 news: false  # includes a list of news items
@@ -26,7 +25,8 @@ Hi! I'm **Haolan Xu (许皓岚)**, currently a visiting student in [University o
 My aim is to generate physically accurate 3D & 4D assets with scene awareness to help machines understand the world. I have been exploring the following research directions:
 
 - Inverse Rendering
-- 3D & 4D Generative Models
+- Generative Models
+- Physics Simulation
 
 Outside of work, I love traveling, NBA, and F1.
 
