@@ -20,7 +20,7 @@ social: true  # includes social icons at the bottom of the page
 
 ---
 
-Hi! I'm **Haolan Xu (许皓岚)**, currently a visiting student in [University of Illinois Urbana-Champaign](https://ece.illinois.edu/), working with [Prof. Narendra Ahuja](https://vision.ai.illinois.edu/). Before that, I got my MSCS in [University of Florida](https://www.cise.ufl.edu/), working with [Prof. Jorg Peters](https://www.cise.ufl.edu/~jorg/), and my Bachelor's degree in Sichuan University.
+Hi! I'm **Haolan Xu (许皓岚)**, currently a visiting student in [Michigan State University](https://engineering.msu.edu/about/departments/cse), working with [Prof. Xiaoming Liu](https://cvlab.cse.msu.edu/). Previously, I was a visiting student at the [University of Illinois Urbana-Champaign](https://ece.illinois.edu/), working with [Prof. Narendra Ahuja](https://vision.ai.illinois.edu/). Before that, I got my MSCS in [University of Florida](https://www.cise.ufl.edu/), working with [Prof. Jorg Peters](https://www.cise.ufl.edu/~jorg/), and my Bachelor's degree in Sichuan University.
 
 My aim is to generate physically accurate 3D & 4D assets with scene awareness to help machines understand the world. I have been exploring the following research directions:
 
