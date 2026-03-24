@@ -140,7 +140,7 @@ blockquote {
 
 @media (min-width: 576px) {
   .profile {
-    width: 32%;
+    width: 40%;
 
     .address {
       p {
@@ -639,10 +639,10 @@ footer.sticky-bottom {
 
   h2.year {
     color: var(--global-divider-color);
-    border-top: 1px solid var(--global-divider-color);
-    padding-top: 1rem;
+    border-bottom: 1px solid var(--global-divider-color);
+    padding-bottom: 0.5rem;
     margin-top: 2rem;
-    margin-bottom: -2rem;
+    margin-bottom: 1.5rem;
     text-align: right;
   }
 
